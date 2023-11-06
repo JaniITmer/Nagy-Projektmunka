@@ -58,7 +58,19 @@ A mérföldkövek későbbi fázisai előzetes eggyeztetés alapján megbeszéle
 
 ### 3.1 Üzleti szereplők
 
+Vendég: A kérdőív témákat  tekintheti át.
+Regisztrált felhasználó: Aki használja a React projektet a kérdőivek kitöltéséhez.
+Adminisztrátor: A rendszer működését és biztonságát felügyeli.
+
 ### 3.2 Üzleti folyamatok
+
+-Felhasználói regisztráció: A felhasználók regisztrálják magukat a rendszerbe, megadva a szükséges információkat, mint például a felhasználónév, az e-mail cím  és jelszó.
+-Bejelentkezés: A regisztrált felhasználók bejelentkezhetnek a rendszerbe az e-mail címük és jelszavuk megadásával.
+Felhasználói profil: A felhasználók megtekinthetik a saját profiljukat, szerkeszthetnek pár adatot, valamint megtekinthetik a már kitöltött kérdőíveket.
+-Kérdőívek böngészése: A felhasználók áttekinthetik a rendelkezésre álló kérdőíveket.
+-Kérdőív beküldése: A felhasználók véglegesíthetik a kérdőívjüket és beadküldhetik azokat.
+-Adminisztrátori felület: Az adminisztrátorok azonosíthatják a felhasználókat, kérdőíveket módosíthatnak, tölthetnek fel.
+
 
 ## 4. Követelmények
 

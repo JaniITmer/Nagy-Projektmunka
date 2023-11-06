@@ -74,17 +74,20 @@ Adminisztrátor: A rendszer működését és biztonságát felügyeli.
 
 ## 4. Követelmények
 
-### Funkcionális követelmények
+### Funkcionális követelmények:
 
-| ID | Megnevezés | Leírás |
-| --- | --- | --- |
-| K1 | ... | ... |
+- Webes környezeten való működés.
+- Felhasználói fiókok létrehozásának a lehetősége.
+- Különböző jogkörrel rendelkező felhasználók tárolása .
+- Kérdőívek  kitöltése és tárolása felhasználói fiókonként.
 
-### Nemfunkcionális követelmények
 
-| ID | Megnevezés | Leírás |
-| --- | --- | --- |
-| K4 | ... | ... |
+
+### Nem funkcionális követelmények:
+
+A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
+
+
 
 ### Támogatott eszközök
 

@@ -24,29 +24,35 @@ A rendszer webböngészőben lesz elérhető, amit React keretrendszerben kész�
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
-   * Scrum masters:
-   * Product owner: 
-   * Üzleti szereplő:
+   * Scrum masters:Katona Bálint Sándor
+   * Product owner: Bagoly Gábor
+   
      
 ### 2.2 Projektmunkások és felelőségek:
-   * Frontend:
-   * Backend:
-   * Tesztelés:
+   * Frontend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, 
+   * Backend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, v
+   * Tesztelés: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, 
      
 ### 2.3 Ütemterv:
 
 |Funkció                  | Feladat                                | Prioritás | Becslés (nap) | Aktuális becslés (nap) | Eltelt idő (nap) | Becsült idő (nap) |
 |-------------------------|----------------------------------------|-----------|---------------|------------------------|------------------|---------------------|
-|Követelmény specifikáció |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |             
-|Funkcionális specifikáció|Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Rendszerterv             |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Program                  |Képernyőtervek elkészítése              |         2 |             1 |                      1 |                1 |                   1 |
-|Program                  |Prototípus elkészítése                  |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Alapfunkciók elkészítése                |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Tesztelés                               |         4 |             2 |                      2 |                2 |                   2 |
+|Követelmény specifikáció |Megírás                                 |         1 |             1 |                      1 |                 |                   1 |             
+|Funkcionális specifikáció|Megírás                                 |         1 |             1 |                      1 |                 |                   1 |
+|Rendszerterv             |Megírás                                 |         1 |             1 |                      1 |                 |                   1 |
+|Program                  |Képernyőtervek elkészítése              |         1 |             1 |                      1 |                 |                   1 |
+|Program                  |Prototípus elkészítése                  |         3 |             7 |                      8 |                 |                   8 |
+|Program                  |Alapfunkciók elkészítése                |         3 |             10 |                      8 |                 |                   8 |
+|Program                  |Tesztelés                               |         4 |             4 |                      4 |                 |                   2 |
 
 ### 2.4 Mérföldkövek:
-   * Prototípus átadása
+- Követelmény specifikáció elkészítése
+
+- Funkcionális specifikáció elkészítése
+
+- Rendszerterv elkészítése
+-
+A mérföldkövek későbbi fázisai előzetes eggyeztetés alapján megbeszélendőek.
 
 ## 3. Üzleti folyamatok modellje
 

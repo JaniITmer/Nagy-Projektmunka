@@ -9,11 +9,11 @@ A sikeres rigisztráció után a felhasználónak lehetősége van kérdőíveke
 
 A regisztrációhoz szükséges adatok(a többi felhasználó számára nem publikus adatok):
 
--email cím*
--teljes név*
--születési idő
--lakcím
--telefonszám
+- email cím*
+- teljes név*
+- születési idő
+- lakcím
+- telefonszám
 
 
 A rendszer webböngészőben lesz elérhető, amit React keretrendszerben készítünk el.
@@ -28,9 +28,9 @@ A rendszer webböngészőben lesz elérhető, amit React keretrendszerben kész�
    
      
 ### 2.2 Projektmunkások és felelőségek:
-   * Frontend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, 
-   * Backend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, v
-   * Tesztelés: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János, 
+   * Frontend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János
+   * Backend: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János
+   * Tesztelés: Buru Ádám, Guba Ádám,Juhász Gergő, Nagy János
      
 ### 2.3 Ütemterv:
 

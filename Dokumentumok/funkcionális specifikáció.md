@@ -33,6 +33,10 @@ Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre
 ![képnév](gitlink ahol a kép van)
 
 ## 9. Forgatókönyvek
+- A felhasználó megnyitja az oldalt, nem jelentkezik be, megtekinti a kérdőívek témáit
+- A felhasználó regisztrál az oldalon, majd bejelentkezik, ekkor két lehetőség van:
+   - ha admin, kérdőíveket hozhat létre az oldalon
+   - ha nem admin, kitöltheti a kérdőíveket, megnézheti a statisztikákat
 
 ## 10. Funkció - követelmény megfeleltetése
 

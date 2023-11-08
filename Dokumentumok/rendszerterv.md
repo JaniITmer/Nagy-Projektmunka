@@ -57,9 +57,9 @@ A mérföldkövek későbbi fázisai előzetes eggyeztetés alapján megbeszéle
 
 ### 3.1 Üzleti szereplők
 
-Vendég: A kérdőív témákat  tekintheti át.
-Regisztrált felhasználó: Aki használja a React projektet a kérdőivek kitöltéséhez.
-Adminisztrátor: A rendszer működését és biztonságát felügyeli.
+- Vendég: A kérdőív témákat  tekintheti át.
+- Regisztrált felhasználó: Aki használja a React projektet a kérdőivek kitöltéséhez.
+- Adminisztrátor: A rendszer működését és biztonságát felügyeli.
 
 ### 3.2 Üzleti folyamatok
 

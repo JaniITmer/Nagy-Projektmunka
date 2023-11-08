@@ -1,7 +1,7 @@
 # Követelmény specifikáció
 
 ## 1. Áttekintés
-
+Az applikáció célja, hogy statisztikát tudjunk gyűjteni különböző kérdőívek alapján. Az alkalmazás web felületen elérhető. A felhasználó bejelentkezés nélkül csak a kérdőív témákat látja. Ahhoz, hogy kitölteni is tudja őket, be kell jelentkezni. Ha nem rendelkezik fiókkal a felhasználó, regisztrálnia szükséges. Az adminok különböző témájú kérdőíveket tudnak létrehozni.
 ## 2. A jelenlegi helyzet leírása
 
 ## 3. Vágyálomrendszer

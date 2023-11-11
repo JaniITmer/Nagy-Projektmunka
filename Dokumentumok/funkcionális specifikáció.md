@@ -43,6 +43,11 @@ A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit
 
 | Id | Követelmény | Funkció |
 | :---: | --- | --- |
-| K4 | ... | ... |
+| K1 | Könnyen kezelhető, figyelemfelkeltő főoldal | Jól átláható design, gombok a felületen, az elérhető kérdőívek témái megjelenítve a főoldalon |
+| K2 | Kérdőívek kialakítása | A kérdőívek témák szerint rendszerezve |
+| K3 | Bejelentkező fül | Egy felület, ami lehetőséget biztosít a bejelentkezésre  |
+| K4 | Regisztrációs fül | Egy felület, ami lehetőséget biztosít a regisztrációra  |
+| K5 | Vendég, Felhasználó, Admin jogosultság | A különböző jogosultsági szintekhez, különböző funkciók tartoznak |
+| K6 | Kérdőív design | A kérdőíveket a témára kattintás után érjük el |
 
 ## 11 Fogalomszótár

@@ -14,15 +14,25 @@ A következőképpen nézz ki a kérdőív portál vágyálom rendszere:
    8. Kérdőívek létrehozásának lehetősége. (admin jogosultsággal).
    9. Egyértelmű, felhasználóbarát kezelhetőség.
 
-A projektben a vágyálom rendszerben leírtaknak mind szerepelnie kell, ahhoz hogy mai weboldalakhoz hasonló módon tudjon működni. 
-Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témákban.
+A projektben a vágyálom rendszerben leírtaknak mind szerepelnie kell, ahhoz hogy mai weboldalakhoz hasonló módon tudjon működni. Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témákban.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
-A kérdőíveknek számos felhasználási módja létezik pl.: piackutatás, egészségügyi felmérések, szociális és pszichológiai kutatások, politikai és társadalmi kutatások, std. A kérdőív szolgál az adatközlők válaszainak rögzítésére, általában strukturált, előre rögzített kérdéssorokból tevődik össze.
-Segítségükkel jobban megismerhetsz bizonyos csoportokat, közösségeket, mint például egy bolt vásárlóit.  
-A kérdőívek kitöltése a felhasználó részéről energiabefektetést igényel, így a hosszabb kérdőíveket jellemzően nem töltik ki csak úgy, ingyen, ezért is kell lényegretörőnek lennie.
-## 4. Igényelt üzleti folyamatok modellje
+A kérdőíveknek számos felhasználási módja létezik pl.: 
+   - piackutatás,
+   - egészségügyi felmérések,
+   - szociális és pszichológiai kutatások,
+   - politikai és társadalmi kutatások,
+   - std.
+A kérdőív szolgál az adatközlők válaszainak rögzítésére, általában strukturált, előre rögzített kérdéssorokból tevődik össze. Segítségükkel jobban megismerhetsz bizonyos csoportokat, közösségeket, mint például egy bolt vásárlóit. A kérdőívek kitöltése a felhasználó részéről energiabefektetést igényel, így a hosszabb kérdőíveket jellemzően nem töltik ki csak úgy, ingyen, ezért is kell lényegretörőnek lennie.
 
+## 4. Igényelt üzleti folyamatok modellje
+A kérdőív portál lényege, hogy különböző témákban statisztikákat készítsünk és következtetéseket vonjunk le. Célunk, hogy a felhasználók könnyedén és hatékonyan hozzáférhessenek a kívánt információkhoz, miközben a kérdőívek minősége is magas szintű legyen. Ennek érdekében számos kulcsfontosságú szempontot kell figyelembe vennünk: 
+   - Felhasználói barát felület
+   - Kreatív kérdőív kialakítás
+   - Automatizált tatisztikai elemzés
+   - Gyors visszajelzés
+A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében, hogy az minél hatékonyabb és népszerűbb legyen.
+   
 ## 5. Követelménylista
 
 | Id | Modul | Név | Leírás |

@@ -146,8 +146,11 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ## 12. Telepítési terv
 
 Fizikai telepítési terv: 
+- A programot Githubon keresztül tudjuk letölteni, utána kibontjuk a mappát, ahová szeretnénk. ([A letöltéshez segítség](https://crast.net/150687/downloading-files-from-github-is-very-simple-this-is-how-you-can-do-it-from-your-mobile-or-pc "Segítség a letöltéshez")) 
 
 Szoftver telepítési terv: 
+- React ([React telepítéséhez segítség](https://react.dev/learn/installation "Installation - React"))
+- Visual Code beállítása ([Visual Code beállításához segítség](https://react.dev/learn/editor-setup "Editor Setup - React"))
 
 ## 13. Karbantartási terv
 

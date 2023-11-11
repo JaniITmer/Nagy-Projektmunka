@@ -27,6 +27,7 @@ Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre
 ## 6. Használati esetek
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
+A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit, ilyenkor vendég módban van. Ezenkívül a megfelelő gombra kattintva egy bejelentkező, illetve regisztációs felületen regisztrálhat, majd bejelentkezhet, hogy további funkciókat érjen el. A bejelentkezés után a felhasználó jogosultsággal rendelkezők kitölthetnek kérdőíveket, megnézhetik a statiszikát, jelszót módosíthatnak. Az admin jogosultsággal rendelkezőknek lehetőségük van a kérdőívek létrehozására is. Válogathatunk a különböző témák közül, a témára kattintással pedig felsorolásra kerülnek az ahhoz tartozó kérdőívek.
 
 ## 8. Képernyőtervek
 

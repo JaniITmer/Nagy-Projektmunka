@@ -39,7 +39,14 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| K1 | ...| ... | ... |
+| K1 | Főoldal | Design, Gombok | Könnyen kezelhető, figyelemfelkeltő főoldal |
+| K2 | Főoldal | Kérdőív témák | Témák kialakítása |
+| K3 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
+| K4 | Regisztráció | Design | Regisztrációs felület kialakítása |
+| K5 | Funkció | Jelszó megváltoztatása | A felhasználó megtudja változtatni a jelszavát a profilján |
+| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés, Témák láthatósága</li><li> Felhasználó: kérdőívek kitöltése, statisztika megnézése, jelszó módosítás </li><li>Admin: Kérdőív létrehozása</li></ul>|
+| K7 | Főoldal | Kérdőív témák | Kérdőívek kialakítása |
+| K8 | Kérdőív | Design | Témára kattintás után kérdőívek felsorolása |
 
 ## 6. Használati esetek
 

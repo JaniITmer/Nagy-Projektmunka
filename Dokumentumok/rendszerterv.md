@@ -118,6 +118,14 @@ A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
 ## 9. Adatbázis terv
 
 ## 10. Implementációs terv
+1. Adatbázis tervezése és létrehozása: Egy relációs adatbázist használunk, amelyben a felhasználók profil adatait(jelszó, email, felhasználónév), illetve a kitöltött kérdőívekre adaott válaszokat tároljuk.
+2. Projekt létrehozása: Visual Studio Code-ban egy projektet hozunk létre, amiben a weboldalt tudjuk formázni, megalkotni, valamint összeköttetni az adatbázissal.
+3. Felhasználók kezelése: A felhasználók kezelése is fontos része az alkalmazásnak. A regisztráció előtt csak vendégfelhasználóként, utánna felhasználóként vagy adminként léphetnek be a weboldalba.
+4. Főoldal: Kérdőívek létrehozása.
+5. Válaszok tárolása, statisztika készítése: A kérdőívekre adott válaszokat egy adatbázisba elmentjük, hogy abból statisztikát tudjunk készíteni.
+7. Tesztelés és hibajavítás: A weboldal tesztelése a projekt végén történik. A tesztelés során ellenőrizzük, hogy a weboldal minden funkciója helyesen működik-e, és kijavítjuk a hibákat, ha szükséges.
+8. Design: A weboldal designja a tesztelés után történik, ha megbizonyosodtunk róla, hogy megfelelően működik.
+9. Kész weboldal karbantartása: Az elkészült weboldalt karbantartjuk az esetleges hibák és frissítések miatt. A weboldal frissítéseket és karbantartást igényelhet a továbbiakban is.
 
 ## 11. Tesztterv
 

@@ -10,13 +10,17 @@ A következőképpen nézz ki a kérdőív portál vágyálom rendszere:
    4. A felhasználó adatainak és a kérdőívekben leadott válaszoknak adatbázisban való kezelése. 
    5. Több oldalas megjelítés (Főoldal, regisztrációs/bejelentkzős oldal, kérdőív oldalak).
    6. A főoldal tartalmazza a profilt, a kérdőveket.
-   7. Egyértelmű, felhasználóbarát kezelhetőség.
+   7. Több jogosultság (admin, felhasználó, vendég felhasznló) létrehozása.
+   8. Kérdőívek létrehozásának lehetősége. (admin jogosultsággal).
+   9. Egyértelmű, felhasználóbarát kezelhetőség.
 
 A projektben a vágyálom rendszerben leírtaknak mind szerepelnie kell, ahhoz hogy mai weboldalakhoz hasonló módon tudjon működni. 
 Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témákban.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
-
+A kérdőíveknek számos felhasználási módja létezik pl.: piackutatás, egészségügyi felmérések, szociális és pszichológiai kutatások, politikai és társadalmi kutatások, std. A kérdőív szolgál az adatközlők válaszainak rögzítésére, általában strukturált, előre rögzített kérdéssorokból tevődik össze.
+Segítségükkel jobban megismerhetsz bizonyos csoportokat, közösségeket, mint például egy bolt vásárlóit.  
+A kérdőívek kitöltése a felhasználó részéről energiabefektetést igényel, így a hosszabb kérdőíveket jellemzően nem töltik ki csak úgy, ingyen, ezért is kell lényegretörőnek lennie.
 ## 4. Igényelt üzleti folyamatok modellje
 
 ## 5. Követelménylista

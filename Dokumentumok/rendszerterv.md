@@ -153,11 +153,12 @@ Szoftver telepítési terv:
 - Visual Code beállítása ([Visual Code beállításához segítség](https://react.dev/learn/editor-setup "Editor Setup - React"))
 
 ## 13. Karbantartási terv
-
-Fontos ellenőrizni:
-...
-
-Figyelembe kell venni a felhasználó által jött visszajelzést is a programmal kapcsolatban.
-Ha hibát talált, mielőbb orvosolni kell, lehet az:
-*	Működéssel kapcsolatos
-*	Kinézet, dizájnnal kapcsolatos
+- Az alkalmazás folyamatos üzemeltetése, naprakészen tartása
+- Rendszeres frissítések kiadása
+- Esetleges technológiai változások miatti módosítások kezelése
+- Az program felkészítése azokra problémákra, amik most még nem, de a későbbiekben felmerülhetnek
+- Teljesítménybeli javítások, optimalizálás
+- A felhasználók visszajelzéseinek figyelembevétele:
+  - Felfedezett hibák elhárítása, kiküszöbölése
+  - Felhasználói élmény javítása
+  - Új funkciók létrehozása, a meglévők bővítése az igényekhez igazodva

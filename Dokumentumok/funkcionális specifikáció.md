@@ -1,6 +1,6 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
-
+A mai viálágban már mindenki találkozott valamilyen kérdőívvel, legyen szó papír vagy akár elektronikus alpú kérdőívekről. A papír alapú kérdőívekkel a következők a problémák: a nyomtatás, a postaköltségek, a beérkező kérdőívek kódolásának bonyodalmai és költségei. Az elektronikus kérdőívek esetében viszont a visszaérkezett adatokat nem kell kódolni, egy jól megírt program automatikusan kitudja értékelni vagy akár statisztikát is tud készíteni belőle. A felhasználó(kitöltő) számára ez egy könnyű, komfortos módszer, így a válaszadási hajlandóság is növelhető. Összességében az online kérdőívek egyre csak népszerűbb alternatíva, hiszen kényelmes, és az otthon melegében is egyszerűen kitölthető.
 ## 2. Vágyálomrendszer leírása
 A következőképpen nézz ki a kérdőív portál vágyálom rendszere:
 
@@ -12,7 +12,7 @@ A következőképpen nézz ki a kérdőív portál vágyálom rendszere:
    6. Egyértelmű, felhasználóbarát kezelhetőség.
 
 A projektben a vágyálom rendszerben leírtaknak mind szerepelnie kell, ahhoz hogy mai weboldalakhoz hasonló módon tudjon működni. 
-Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témekban.
+Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témákban.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 

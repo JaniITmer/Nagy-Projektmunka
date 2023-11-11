@@ -93,8 +93,42 @@ A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
+- Admin
+- Felhasználó
+- Vendég
 
+### Rendszerhasználati esetek és lefutásaik
+#### Admin
+- Kérdőív létrehozása, törlése
+- Téma létrehozása, törlése
+- Jelszó módosítása
+- Kérdőív kitöltése
+- Statisztika megnézése
+- Kijelentkezés
+
+#### Felhasználó
+- Kérdőív kitöltése
+- Kijelentkezés
+- Statisztika megnézése
+- Jelszó módosítása
+
+#### Vendég
+- Főoldal megnézése
+- Bejelentkezés
+- Regisztráció
+  
 ### 5.2 Menühierarchiák
+#### Főoldal bejelentkezés előtt
+- Témák megtekintése
+- Bejentkezés
+- Regisztáció
+
+#### Főoldal bejelentkezés után
+- Témák szerint kérdőív kitöltése
+- Kijelentkezés
+- Statisztika megnézése
+- Jelszó módosítás
+- Profil adatok megnézése
 
 ## 6. Fizikai környezet
 

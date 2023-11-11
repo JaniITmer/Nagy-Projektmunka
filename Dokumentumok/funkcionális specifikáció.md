@@ -23,6 +23,7 @@ A kérdőíveknek számos felhasználási módja létezik pl.:
    - szociális és pszichológiai kutatások,
    - politikai és társadalmi kutatások,
    - std.
+
 A kérdőív szolgál az adatközlők válaszainak rögzítésére, általában strukturált, előre rögzített kérdéssorokból tevődik össze. Segítségükkel jobban megismerhetsz bizonyos csoportokat, közösségeket, mint például egy bolt vásárlóit. A kérdőívek kitöltése a felhasználó részéről energiabefektetést igényel, így a hosszabb kérdőíveket jellemzően nem töltik ki csak úgy, ingyen, ezért is kell lényegretörőnek lennie.
 
 ## 4. Igényelt üzleti folyamatok modellje
@@ -31,6 +32,7 @@ A kérdőív portál lényege, hogy különböző témákban statisztikákat ké
    - Kreatív kérdőív kialakítás
    - Automatizált tatisztikai elemzés
    - Gyors visszajelzés
+
 A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében, hogy az minél hatékonyabb és népszerűbb legyen.
    
 ## 5. Követelménylista
@@ -66,3 +68,15 @@ A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit
 | K6 | Kérdőív design | A kérdőíveket a témára kattintás után érjük el |
 
 ## 11 Fogalomszótár
+* Admin: Elsődleges jogosultság - teljes hozzáféréssel a weboldal összes funkciójához.
+* Felhasználó: Másodlagos jogosultsági - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására.
+* Vendég felhasználó: Harmadlagos jogosultság - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására, kérdőív kitöltésére, profil szerkeztésére.
+* Adatbázis: Strukturált adatgyűjtemény, amelyet úgy tárolnak és szerveznek, hogy hatékony visszakeresést tesz lehetővé.
+* XAMPP: Olyan szoftvercsomag, amely tartalmazza az Apache webszervert, a MySQL adatbázist és a PHP szkriptnyelvet.
+* React: A React.js egy nyílt forráskódú JavaScript könyvtár, melyet a felhasználói felületek fejlesztésére terveztek, és a deklaratív, komponensalapú megközelítésével segít az alkalmazások dinamikus és hatékony kialakításában.
+* Webszerver: Egy számítógépes rendszer, amely weboldalakat és más webes tartalmakat szállít felhasználóknak.
+* Adatbázis: Strukturált adatgyűjtemény, amelyet úgy tárolnak és szerveznek, hogy hatékony visszakeresést tesz lehetővé.
+* API: Az alkalmazásprogramozási felület, egy protokoll- és eszközkészlet a szoftveralkalmazások építéséhez.
+* HTTPS: A Hipertext Transzfer Protokoll biztonságos kiterjesztése, amely biztonságos kommunikációt biztosít az interneten.
+* MVC: A Model-View-Controller szoftvertervezési minta, amely három összekapcsolt részre bontja az alkalmazást: a modellre, a nézetre és az irányítóra.
+* SSL: A Secure Sockets Layer protokoll, amely biztonságos kommunikációs kapcsolatokat hoz létre a hálózaton keresztül kapcsolódó  számítógépek között.

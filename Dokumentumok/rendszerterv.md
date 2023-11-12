@@ -132,13 +132,19 @@ A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
 
 ## 6. Fizikai környezet
 
+
+
 ### Vásárolt softwarekomponensek és külső rendszerek
+
+
 
 ### Hardver topológia
 
 ### Fizikai alrendszerek
 
 ### Fejlesztő eszközök
+
+-Visual Studio Code
 
 
 ## 8. Architekturális terv

@@ -137,22 +137,22 @@ Az alkalmazás webböngésző felületre készül, amit  Mozzilla Firefox és Go
 
 ### Fejlesztői eszközök
 
--Visual Studio Code
--Krita
+- Visual Studio Code
+- Krita
 
 
 ## 8. Architekturális terv
 
-### Webszerver
+### Backend
+A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használtunk
 
-### Adatbázis rendszer
-
-### A program elérése, kezelése
+### Web Kliens
+A web alkalmazás React JS keretrendszer használatával készül el. A rendszer el van látva megfelelő erőforrásokkal.
 
 ## 9. Adatbázis terv
 
 ## 10. Implementációs terv
-1. Adatbázis tervezése és létrehozása: Egy relációs adatbázist használunk, amelyben a felhasználók profil adatait(jelszó, email, felhasználónév), illetve a kitöltött kérdőívekre adaott válaszokat tároljuk.
+1. Adatbázis tervezése és létrehozása: Egy relációs adatbázist használunk, amelyben a felhasználók profil adatait(jelszó, email, felhasználónév), illetve a kitöltött kérdőívekre adott válaszokat tároljuk.
 2. Projekt létrehozása: Visual Studio Code-ban egy projektet hozunk létre, amiben a weboldalt tudjuk formázni, megalkotni, valamint összeköttetni az adatbázissal.
 3. Felhasználók kezelése: A felhasználók kezelése is fontos része az alkalmazásnak. A regisztráció előtt csak vendégfelhasználóként, utánna felhasználóként vagy adminként léphetnek be a weboldalba.
 4. Főoldal: Kérdőívek létrehozása.

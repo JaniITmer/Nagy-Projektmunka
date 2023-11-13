@@ -62,8 +62,10 @@ A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit
 
 ## 9. Forgatókönyvek
 - A felhasználó megnyitja az oldalt, nem jelentkezik be, megtekinti a kérdőívek témáit
-- A felhasználó regisztrál az oldalon, majd bejelentkezik, ekkor két lehetőség van:
-   - ha admin, kérdőíveket hozhat létre az oldalon
+- Regisztrációnál nem tölt ki minden mezőt, helytelenül ad meg valamilyen adatot
+- Bejelentkezésnél nem tölt ki minden mezőt, helytelen bejelentkezési adatokat ad meg
+- A felhasználó regisztrál, majd bejelentkezik, ekkor jogosultságától függően használhatja az oldalt:
+   - ha admin, kérdőíveket hozhat létre az oldalon, törölhet kérdőíveket és statisztikákat
    - ha nem admin, kitöltheti a kérdőíveket, megnézheti a statisztikákat
 
 ## 10. Funkció - követelmény megfeleltetése

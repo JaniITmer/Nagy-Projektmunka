@@ -5,7 +5,7 @@ Az applikáció célja, hogy statisztikát tudjunk gyűjteni különböző kérd
 ## 2. A jelenlegi helyzet leírása
 Napjainkban egyre elterjettebb, hogy kérdőíveket töltenek ki az emberek. Ezért gondoltuk, hogy egy olyan portált érdemes létrehozni, ahol kérdőívek szerepelnek. A weboldalon statisztikát tudunk gyűjteni a kérdőívekről. Ezzel a funkcióval kiderül, hogy a közösség mégis hogyan gondolkodik. Természetesen a statisztikák anoním módon vannak tárolva.
 ## 3. Vágyálomrendszer
-A cél egy kérdőívportál elkészítése, web applikáció formájában. Lehetőség lesz kérdőíveket létrehozni, a leadott eredmények alapján pedig az oldal statisztikát készít. 
+A cél egy kérdőívportál elkészítése, web applikáció formájában. Lehetőség lesz kérdőíveket létrehozni, a leadott eredmények alapján pedig az oldal statisztikát készít. Az oldal magyar nyelvű lesz, felhasználóbarát kezelőfelülettel, könnyű kezelhetőséggel. Modern és jól átláható design-nal törekszünk a minél szélesebb felhasználói kör bevonzására.
 ## 4. Jelenlegi üzleti folyamatok modellje
 Az oldalon különböző kérdőíveket tölthetnek ki a felhasználók, a kitöltés után a statisztikákat is láthatják, visszajelzést kapnak, hogy a többi felhasználó milyen válaszokat adott.
 ## 5. Igényelt üzleti folyamatok modellje

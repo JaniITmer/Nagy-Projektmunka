@@ -169,10 +169,7 @@ A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
 
 ## 11. Tesztterv
 
-A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata,
-ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása.
-A teszteléseket a fejlesztői csapat minden tagja elvégzi.
-Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
+A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata, ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása. A teszteléseket a fejlesztői csapat minden tagja elvégzi. Egy teszt eredményeit a tagok dokumentálják külön fájlokba. Több féle tesztet is végzünk a projekt készítése során, elöszőr alfa és béte teszteket, majd a projekt befejeztével a kész weboldalt teszteljük és vizsgáljuk.
 
 ### Tesztesetek
 

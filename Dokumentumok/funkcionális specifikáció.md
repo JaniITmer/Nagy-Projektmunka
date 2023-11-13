@@ -54,7 +54,16 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 -  Admin: Az admin elsősorban új kérdőíveket tud létrehozni, a témára való kattintás után egy gomb segítségével. Viszont rendelkezik ugyanazokkal a funkciókkal, mint a felhasználó. 
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
-A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit, ilyenkor vendég módban van. Ezenkívül a megfelelő gombra kattintva egy bejelentkező, illetve regisztációs felületen regisztrálhat, majd bejelentkezhet, hogy további funkciókat érjen el. A bejelentkezés után a felhasználó jogosultsággal rendelkezők kitölthetnek kérdőíveket, megnézhetik a statiszikát, jelszót módosíthatnak. Az admin jogosultsággal rendelkezőknek lehetőségük van a kérdőívek létrehozására is. Válogathatunk a különböző témák közül, a témára kattintással pedig felsorolásra kerülnek az ahhoz tartozó kérdőívek.
+- Követelménylista K1 és K2 funkció:
+   - A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit, ilyenkor vendég módban van. 
+- Követelménylista K3 és K4 funkció:
+   - A megfelelő gombra kattintva egy bejelentkező, illetve regisztációs felületen regisztrálhat, majd bejelentkezhet, hogy további funkciókat érjen el.
+- Követelménylista K5 funkció:
+   - Ha a felhasználó be van jelentkezve, lehetősége van megváltoztatnia a jelszavát.
+- Követelménylista K6 funkció:
+   - A bejelentkezés után a felhasználó jogosultsággal rendelkezők kitölthetnek kérdőíveket, megnézhetik a statiszikát, jelszót módosíthatnak. Az admin jogosultsággal rendelkezőknek lehetőségük van a kérdőívek létrehozására, kérdőív és statisztika törlésre.
+- Követelménylista K7 és K8 funkció:
+   - Válogathatunk a különböző témák közül, a témára kattintással pedig felsorolásra kerülnek az ahhoz tartozó kérdőívek.
 
 ## 8. Képernyőtervek
 

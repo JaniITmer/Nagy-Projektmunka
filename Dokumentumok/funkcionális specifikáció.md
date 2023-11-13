@@ -62,8 +62,8 @@ A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit
 
 ## 9. Forgatókönyvek
 - A felhasználó megnyitja az oldalt, nem jelentkezik be, megtekinti a kérdőívek témáit
-- Regisztrációnál nem tölt ki minden mezőt, helytelenül ad meg valamilyen adatot
-- Bejelentkezésnél nem tölt ki minden mezőt, helytelen bejelentkezési adatokat ad meg
+- Regisztrációnál nem tölt ki minden mezőt, helytelenül ad meg valamilyen adatot, az oldal értesíti a hibáról és a felhasználó a regisztrációs felületen marad
+- Bejelentkezésnél nem tölt ki minden mezőt, helytelen bejelentkezési adatokat ad meg, az oldal értesíti a hibáról és a felhasználó a bejelentkező felületen marad
 - A felhasználó regisztrál, majd bejelentkezik, ekkor jogosultságától függően használhatja az oldalt:
    - ha admin, kérdőíveket hozhat létre az oldalon, törölhet kérdőíveket és statisztikákat
    - ha nem admin, kitöltheti a kérdőíveket, megnézheti a statisztikákat

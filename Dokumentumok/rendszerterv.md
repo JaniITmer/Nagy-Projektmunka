@@ -132,19 +132,13 @@ A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
 
 ## 6. Fizikai környezet
 
+Az alkalmazás webböngésző felületre készül, amit  Mozzilla Firefox és Google Chrome, valamint más hasonló böngészőkből lehet elérni a megadott URL cím segítségével számítógépeken vagy telefonokon. 
 
 
-### Vásárolt softwarekomponensek és külső rendszerek
-
-
-
-### Hardver topológia
-
-### Fizikai alrendszerek
-
-### Fejlesztő eszközök
+### Fejlesztői eszközök
 
 -Visual Studio Code
+-Krita
 
 
 ## 8. Architekturális terv

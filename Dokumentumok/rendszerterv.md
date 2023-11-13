@@ -150,6 +150,8 @@ A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t h
 A web alkalmazás React JS keretrendszer használatával készül el. A rendszer el van látva megfelelő erőforrásokkal.
 
 ## 9. Adatbázis terv
+![kép](https://github.com/JaniITmer/Nagy-Projektmunka/assets/145230109/1690e73b-1dcf-4005-aa4d-aaad1eb2ffa5)
+
 
 ## 10. Implementációs terv
 1. Adatbázis tervezése és létrehozása: Egy relációs adatbázist használunk, amelyben a felhasználók profil adatait(jelszó, email, felhasználónév), illetve a kitöltött kérdőívekre adott válaszokat tároljuk.

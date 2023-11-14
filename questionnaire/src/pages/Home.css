@@ -1,10 +1,10 @@
 .card {
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 24%;
+    width: 45%;
     border-radius: 5px;
 }
 
@@ -17,10 +17,21 @@
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
 }
 
 .card-content {
     padding-left: 10px;
     text-align: left;
+}
+
+.topics{
+    text-align: center;
+    float:left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.main-page-info {
+    width: 40%;
+    float:right;
 }

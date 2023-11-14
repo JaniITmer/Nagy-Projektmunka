@@ -1,16 +1,3 @@
-import React from "react";
-function Register() {
-  return (
-    <div className="Register">
-      <header className="App-header">
-        
-      
-        
-         
-        
-      </header>
-    </div>
-  );
+export default function Register() {
+    return <h1>Bejelentkezés</h1>
 }
-
-export default Register;

@@ -67,7 +67,8 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 
 ## 8. Képernyőtervek
 
-![képnév](gitlink ahol a kép van)
+![képernyőterv](https://github.com/JaniITmer/Nagy-Projektmunka/assets/145230109/954c045a-a30e-481e-9a37-ec2635fc07aa)
+
 
 ## 9. Forgatókönyvek
 - A felhasználó megnyitja az oldalt, nem jelentkezik be, megtekinti a kérdőívek témáit

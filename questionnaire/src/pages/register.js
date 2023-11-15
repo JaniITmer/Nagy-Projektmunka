@@ -7,7 +7,9 @@ export default function Register() {
     return (
     
         <div className="form">
-        <div className="form-body">
+           
+        <div className="form-body red-rounded-border">
+        <div className='cim'>Ahhoz hogy kérdőívet tudjon kitölteni regisztráljon itt egy új fiókot</div>
           
             <div className="fullname">
                 <label className="form__label" for="fullname">Teljes név: </label>
@@ -25,10 +27,11 @@ export default function Register() {
                 <label className="form__label" for="confirmPassword">Jelszó megerősítése </label>
                 <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése"/>
             </div>
+            <div class="footer">
+            <button className="button" class="btn" type="submit"  variant="outlined">Regisztráció</button>
         </div>
-        <div class="footer">
-            <button class="btn" type="submit"  variant="outlined">Regisztráció</button>
         </div>
+        
     </div>      
     )
 }

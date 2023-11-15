@@ -7,8 +7,8 @@ export default function Navbar() {
         Questionnaire
       </Link>
       <ul>
-        <CustomLink to="/login">Login</CustomLink>
-        <CustomLink to="/register">Register</CustomLink>
+        <CustomLink to="/login">Bejelentkezés</CustomLink>
+        <CustomLink to="/register">Regisztráció</CustomLink>
       </ul>
     </nav>
   )

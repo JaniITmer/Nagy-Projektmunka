@@ -20,10 +20,12 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+
 }
 
 .site-title {
   font-size: 2rem;
+  
 }
 
 .nav ul {
@@ -32,6 +34,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  text-align: center;
+  
 }
 
 .nav a {
@@ -46,8 +50,16 @@ body {
 .nav li.active {
   color: black;
   background-color: yellow;
+  border-radius: 50px;
+  width: 100px;
+  
+  
+  
 }
 
 .nav li:hover {
   color: black;
-  background-color: yellow;}
+  background-color: yellow;
+  border-radius: 50px;
+}
+ 

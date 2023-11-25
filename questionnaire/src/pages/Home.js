@@ -9,49 +9,50 @@ export default function Home() {
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+                <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
+
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+            <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+            <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+            <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+            <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p>Kérdőív1</p>
-                <p>Kérdőív2</p>
-                <p>Kérdőív3</p>
+            <p><button className="fill-out-button">Kérdőív 1</button></p>
+                <p><button className="fill-out-button">Kérdőív 2</button></p>
+                <p><button className="fill-out-button">Kérdőív 3</button></p>
             </div>
         </div>
         

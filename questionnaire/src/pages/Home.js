@@ -8,7 +8,7 @@ export default function Home() {
         
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content1">
                 <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content2">
             <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content3">
             <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content4">
             <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content5">
             <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="card">
             <h2>Téma</h2>
-            <div class="card-content">
+            <div class="card-content6">
             <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         <div className="card">
           <h2>Saját kérdőív</h2>
-          <div class="card-content">
+          <div class="card-content7">
             <button className="ujKerdoivGomb">+</button>
           </div>
         </div>

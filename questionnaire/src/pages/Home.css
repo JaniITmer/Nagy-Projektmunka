@@ -13,6 +13,14 @@
     cursor: pointer;
     transition: color 0.3s;
 }
+.ujKerdoivGomb::before{
+    content: "+";
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
 .ujKerdoivGomb:hover{
     color:#333;
@@ -46,7 +54,37 @@
     box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
 }
 
-.card-content {
+.card-content1 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content2 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content3 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content4 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content5 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content6 {
+    background-color: aliceblue;
+    padding-left: 10px;
+    text-align: left;
+}
+.card-content7 {
     background-color: aliceblue;
     padding-left: 10px;
     text-align: left;

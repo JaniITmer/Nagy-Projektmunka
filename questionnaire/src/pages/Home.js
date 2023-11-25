@@ -55,7 +55,12 @@ export default function Home() {
                 <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
-        
+        <div className="card">
+          <h2>Saját kérdőív</h2>
+          <div class="card-content">
+            <button className="ujKerdoivGomb">+</button>
+          </div>
+        </div>
         
 
         </div>

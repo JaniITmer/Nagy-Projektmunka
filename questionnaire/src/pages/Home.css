@@ -5,6 +5,18 @@
     cursor: pointer;
     transition: color 0.3s;
 }
+.ujKerdoivGomb{
+    font: size 24px;
+    background-color: transparent;
+    border: none;
+    color: #add8ea;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ujKerdoivGomb:hover{
+    color:#333;
+}
 
 .kerdoivGomb:hover{
     color: #add8ea

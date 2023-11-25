@@ -1,3 +1,15 @@
+.kerdoivGomb{
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.kerdoivGomb:hover{
+    color: #add8ea
+}
+
 .card {
     background-color: aliceblue;    
     float: left;

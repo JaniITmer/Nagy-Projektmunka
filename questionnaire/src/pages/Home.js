@@ -9,50 +9,50 @@ export default function Home() {
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-                <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
 
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-            <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-            <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-            <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-            <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content">
-            <p><button className="fill-out-button">Kérdőív 1</button></p>
-                <p><button className="fill-out-button">Kérdőív 2</button></p>
-                <p><button className="fill-out-button">Kérdőív 3</button></p>
+            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
+                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
             </div>
         </div>
         

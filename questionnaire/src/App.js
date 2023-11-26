@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import MyQuestonnaire from './pages/MyQuestionnaire';
 import Questonnaire from './pages/Questionnaire';
 import Home from "./pages/Home"
+import Profile from './pages/Profile';
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/my-questionnaire" element={<MyQuestonnaire />} />
           <Route path="/questionnaire" element={<Questonnaire />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </>

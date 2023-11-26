@@ -10,50 +10,86 @@ export default function Home() {
         <div className="card">
             <h2>Utazas</h2>
             <div class="card-content1">
-                <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
 
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content2">
-            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+            <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content3">
-            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+            <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content4">
-            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+            <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content5">
-            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+            <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
             </div>
         </div>
         <div className="card">
             <h2>Téma</h2>
             <div class="card-content6">
-            <p><button className="kerdoivGomb">Kérdőív 1</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 2</button></p>
-                <p><button className="kerdoivGomb">Kérdőív 3</button></p>
+            <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
+                <p><Link to="/questionnaire" className="ujKerdoivGomb">
+              kérdőív
+            </Link></p>
             </div>
         </div>
         <div className="card">

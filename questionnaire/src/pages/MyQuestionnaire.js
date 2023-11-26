@@ -1,8 +1,8 @@
-export default function MyQuestonnaire() {
-    return (
-      <div>
-        
-        <h1>MyQuestonnaire Oldal</h1>
-      </div>
-    );
-  }
+import React, { useState } from 'react';
+
+export default function Questonnaire() {
+    
+    };
+  
+    
+  

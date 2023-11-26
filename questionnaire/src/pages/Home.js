@@ -1,4 +1,5 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -7,7 +8,7 @@ export default function Home() {
         <h1>Elérhető kérdőív témák</h1>
         
         <div className="card">
-            <h2>Téma</h2>
+            <h2>Utazas</h2>
             <div class="card-content1">
                 <p><button className="kerdoivGomb">Kérdőív 1</button></p>
                 <p><button className="kerdoivGomb">Kérdőív 2</button></p>
@@ -57,9 +58,9 @@ export default function Home() {
         </div>
         <div className="card">
           <h2>Saját kérdőív</h2>
-          <div class="card-content7">
-            <button className="ujKerdoivGomb">+</button>
-          </div>
+          <Link to="/my-questionnaire" className="ujKerdoivGomb">
+              +
+            </Link>
         </div>
         
 

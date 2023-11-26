@@ -13,14 +13,7 @@
     cursor: pointer;
     transition: color 0.3s;
 }
-.ujKerdoivGomb::before{
-    content: "+";
-    font-size: 32px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+
 
 .ujKerdoivGomb:hover{
     color:#333;

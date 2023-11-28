@@ -6,6 +6,7 @@
     font-size: 40px;
     font-weight: 700;
     color: blue;
+    font-family: Tahoma, sans-serif;
 }
 .login-page{
     display: flex;
@@ -28,8 +29,8 @@
     margin-top: 30px;
 }
 .button{
-    width: 200px;
-    height: 40px;
+    width: 220px;
+    height: 50px;
     background: #2f4d57;
     display: flex;
     justify-content: center;
@@ -37,8 +38,7 @@
     transition: 0.5s;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 20px;
-
+    font-size: 18pt;
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -53,15 +53,12 @@
     margin-right: 10px;
     font-size: 20px;
 }
-/*.control{
-    text-align: center;
-    margin-right: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-}*/
+.control{
+    font-size: 13pt;
+}
 
 .underline{
-    width: 60px;
+    width: 100px;
     height: 5px;
     background-color: blue;
     border-radius: 10px;
@@ -69,17 +66,25 @@
 }
 
 .inputs{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
     display: flex;
     align-items: center;
     margin: auto;
-    width: 500px;
-    height: 80px;
-    background: #eaeaea;
+    width: 350px;
+    height: 70px;
+    background-color: #eaeaea;
     border-radius: 8px;
 }
 
 .input img{
-    margin: 0 30;
+    margin: 30;
+    margin-left: 10px;
 }
 
 .input input{

@@ -47,12 +47,12 @@ export default function Login() {
                 <form className="inputs" action="" onSubmit={handleSubmit}>
                     <div className='input'>
                         <img src={user_icon} alt=''/>
-                        <input type="email" placeholder='Enter Email' name='email'
+                        <input type="email" placeholder='Email' name='email'
                         onChange={handleInput}/>
                     </div>
                     <div className='input'>
                         <img src={passwd_icon} alt=''/>
-                        <input type="password" placeholder='Enter Password' name='password'
+                        <input type="password" placeholder='Jelszó' name='password'
                         onChange={handleInput}/>
                     </div>
                     <button className='button' type='submit'>Bejelentkezés</button>

@@ -8,7 +8,6 @@ import passwd_icon from '../images/password.png'
 
 export default function Login() {
     const [values, setValues] = useState({
-
         email: '',
         password: ''
     })
@@ -31,8 +30,6 @@ export default function Login() {
                 } else {
                     alert("Hibás felhasználónév vagy jelszó!");
                 }
-
-                console.log("siker");
             })
             .catch(err => console.log(err));
     }

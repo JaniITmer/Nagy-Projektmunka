@@ -26,64 +26,44 @@ export default function Register() {
         axios.post('http://localhost:8081/questionnaire_db', values)
             .then(res => {
                 navigate('/login');
-                console.log("siker");
             })
             .catch(err => console.log(err));
     }
 
     return (
-        <div>
-            <div>
-                <form action="" onSubmit={handleSubmit}>
-                    <div className='mb-3'>
-                        <label htmlFor="username">Name</label>
-                        <input type="text" placeholder='Felhasználónév' name='username'
-                        onChange={handleInput}/>
-                    </div>
-                    <div className='mb-3'>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" placeholder='Email' name='email'
-                        onChange={handleInput}/>
-                    </div>
-                    <div className='mb-3'>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" placeholder='Jelszó' name='password'
-                        onChange={handleInput}/>
-                    </div>
-                    <button type='submit'>Regisztráció</button>
-                </form>
-            </div>
-        </div>
-        /*
         <div className='register-page'>
-            <div className="form">
+            <div>
                 <div className='header'>
-                    <div className="form-body red-rounded-border">
+                    <form className="form-body red-rounded-border" action="" onSubmit={handleSubmit}>
                         <div className='cim'>Ahhoz hogy kérdőívet tudjon kitölteni regisztráljon itt egy új fiókot</div>
                         <div className="username">
-                            <label className="form__label" for="username">Teljes név: </label>
-                            <input  type="text" name="" id="username"  className="form__input" placeholder="felhasználónév"/>
+                            <label className="form__label" htmlFor="username">Teljes név: </label>
+                            <input  type="text" id="username"  className="form__input" placeholder="felhasználónév" 
+                            name="username" onChange={handleInput}/>
                         </div>
                         <div className="email">
-                            <label className="form__label" for="email">Email cím:</label>
-                            <input  type="email" id="email" className="form__input" placeholder="Email"/>
+                            <label className="form__label" htmlFor="email">Email cím:</label>
+                            <input  type="email" id="email" className="form__input" placeholder="Email"
+                            name="email" onChange={handleInput}/>
                         </div>
                         <div className="password">
-                            <label className="form__label" for="password">Jelszó: </label>
-                            <input className="form__input" type="password"  id="password" placeholder="Jelszó"/>
+                            <label className="form__label" htmlFor="password">Jelszó: </label>
+                            <input className="form__input" type="password"  id="password" placeholder="Jelszó"
+                            name="password" onChange={handleInput}/>
                         </div>
                         <div className="confirm-password">
-                            <label className="form__label" for="confirmPassword">Jelszó megerősítése </label>
-                            <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése"/>
+                            <label className="form__label" htmlFor="confirmPassword">Jelszó megerősítése </label>
+                            <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése"
+                            name="password" onChange={handleInput}/>
                         </div>
-                        <div class="footer">
-                            <button className="button" class="btn" type="submit"  variant="outlined">Regisztráció</button>
+                        <div className="footer">
+                            <button className="button" type="submit"  variant="outlined">Regisztráció</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-        */        
+    
     )
 }
 

@@ -44,6 +44,37 @@ app.post('/users', (req, res) =>{
     
 })
 
+// Kérdőívek tábla létrehozása, ha még nem létezik
+db.query(`
+    CREATE TABLE IF NOT EXISTS Questionnaires (
+        questionnaire_id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )`, (err) => {
+    if (err) {
+        console.error("Error creating Questionnaires table:", err);
+    } else {
+        console.log("Questionnaires table created or already exists");
+    }
+});
+
+
+// Új kérdőív hozzáadása
+app.post('/questionnaires', (req, res) => {
+    const { title } = req.body;
+    const sql = "INSERT INTO Questionnaires (title) VALUES (?)";
+    db.query(sql, [title], (err, data) => {
+        if (err) {
+            console.error("Error adding questionnaire:", err);
+            return res.json("Error");
+        }
+        console.log("Questionnaire added:", data);
+        return res.json(data);
+    });
+});
+
+
+
 app.listen(8081, () => {
     console.log("listening");
 })

@@ -28,7 +28,7 @@ export default function Login() {
                 if(res.data === "Success") {
                     navigate('/');
                 } else {
-                    alert("Hibás felhasználónév vagy jelszó!");
+                    alert("Hibás email vagy jelszó!");
                 }
             })
             .catch(err => console.log(err));

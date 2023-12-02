@@ -23,7 +23,7 @@ export default function Register() {
         /*if(errors.name === "" && errors.email === "" && errors.password === ""){
             
         }*/
-        axios.post('http://localhost:8081/questionnaire_db', values)
+        axios.post('http://localhost:8082/questionnaire_db', values)
             .then(res => {
                 navigate('/login');
             })

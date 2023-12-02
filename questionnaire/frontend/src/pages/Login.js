@@ -23,7 +23,7 @@ export default function Login() {
         /*if(errors.name === "" && errors.email === "" && errors.password === ""){
             
         }*/
-        axios.post('http://localhost:8081/users', values)
+        axios.post('http://localhost:8082/users', values)
             .then(res => {
                 if(res.data === "Success") {
                     navigate('/');

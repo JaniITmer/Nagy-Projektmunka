@@ -18,6 +18,6 @@ CREATE TABLE Valaszok (
     ValaszID INT PRIMARY KEY AUTO_INCREMENT,
     KerdesID INT,
     ValaszSzam TEXT NOT NULL,
-    FOREIGN KEY (QuestionID) REFERENCES Questions(QuestionID)
+    FOREIGN KEY (ValaszID) REFERENCES Questions(ValaszID)
 );
 

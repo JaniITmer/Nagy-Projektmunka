@@ -12,7 +12,7 @@ CREATE TABLE Kerdesek (
     KerdesID INT PRIMARY KEY AUTO_INCREMENT,
     KerdoivID INT,
     QuestionText TEXT NOT NULL,
-    FOREIGN KEY (SurveyID) REFERENCES Surveys(SurveyID)
+    FOREIGN KEY (KerdoivID) REFERENCES Kerdoivek(KerdoivID)
 );
 CREATE TABLE Valaszok (
     ValaszID INT PRIMARY KEY AUTO_INCREMENT,

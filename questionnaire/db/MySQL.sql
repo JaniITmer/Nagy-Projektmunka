@@ -2,7 +2,8 @@ CREATE TABLE Felhasznalok (
     FelhasznaloID INT PRIMARY KEY AUTO_INCREMENT,
     FelhasznaloNev VARCHAR(50) NOT NULL,
     Email VARCHAR(100) NOT NULL,
-    Jelszo VARCHAR(255) NOT NULL
+    Jelszo VARCHAR(255) NOT NULL,
+    KitoltottKerdoivek INT DEFAULT NULL
 );
 
 CREATE TABLE Kerdoivek (

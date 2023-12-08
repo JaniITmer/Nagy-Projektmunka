@@ -1,54 +1,63 @@
 import React, { useState } from 'react';
 
-export default function MyQuestionnaire({ title, setTitle }) {
-  const [questions, setQuestions] = useState([]);
+const MyQuestionnaire = () => {
+  const [title, setTitle] = useState("");
+  const [questions, setQuestions] = useState([
+    { question: "", options: ["", "", "", ""] },
+    { question: "", options: ["", "", "", ""] },
+    { question: "", options: ["", "", "", ""] },
+    { question: "", options: ["", "", "", ""] },
+  ]);
 
-  const addQuestion = () => {
-    setQuestions([...questions, '']);
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
   };
 
-  const handleQuestionChange = (index, value) => {
-    const updatedQuestions = [...questions];
-    updatedQuestions[index] = value;
-    setQuestions(updatedQuestions);
+  const handleQuestionChange = (index, event) => {
+    const newQuestions = [...questions];
+    newQuestions[index].question = event.target.value;
+    setQuestions(newQuestions);
   };
 
-  const saveQuestionnaire = () => {
-    // Itt további lépéseket tehetsz a mentéshez, például AJAX kérést küldhetsz a szervernek.
-    console.log('Kérdőív címe:', title);
-    console.log('Kérdések:', questions);
+  const handleOptionChange = (questionIndex, optionIndex, event) => {
+    const newQuestions = [...questions];
+    newQuestions[questionIndex].options[optionIndex] = event.target.value;
+    setQuestions(newQuestions);
   };
 
   return (
     <div>
-      <label htmlFor="questionnaireTitle">Kérdőív címe:</label>
-      <input
-        type="text"
-        id="questionnaireTitle"
-        placeholder="Kérdőív címe"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-
-      <button onClick={addQuestion}>+</button>
-
-      <div id="questionsContainer">
-        {questions.map((question, index) => (
-          <div key={index}>
-            <label htmlFor={`question${index + 1}`}>{`Kérdés ${index + 1}:`}</label>
+      <h1>{title}</h1>
+      <label>Cím: 
+        <input type="text" value={title} onChange={handleTitleChange} />
+      </label>
+      {questions.map((q, questionIndex) => (
+        <div key={questionIndex}>
+          <label>Kérdés {questionIndex + 1}: 
             <input
               type="text"
-              className="questionInput"
-              id={`question${index + 1}`}
-              placeholder="Írja be a kérdést"
-              value={question}
-              onChange={(e) => handleQuestionChange(index, e.target.value)}
+              value={q.question}
+              onChange={(event) => handleQuestionChange(questionIndex, event)}
             />
-          </div>
-        ))}
-      </div>
-
-      <button onClick={saveQuestionnaire}>Mentés</button>
+          </label>
+          <ul>
+            {q.options.map((option, optionIndex) => (
+              <li key={optionIndex}>
+                <label>
+                  Válasz {optionIndex + 1}: 
+                  <input
+                    type="text"
+                    value={option}
+                    onChange={(event) => handleOptionChange(questionIndex, optionIndex, event)}
+                  />
+                </label>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
-}
+};
+
+export default MyQuestionnaire;

@@ -86,11 +86,12 @@ export default function Register() {
         <div className='register-page'>
             <div>
                 <div className='header'>
+                <div className='cim'>Ahhoz hogy kérdőívet tudjon kitölteni regisztráljon itt egy új fiókot:</div>
                     <form className="form-body red-rounded-border" action="" onSubmit={handleSubmit}>
-                        <div className='cim'>Ahhoz hogy kérdőívet tudjon kitölteni regisztráljon itt egy új fiókot</div>
+                       
                         <div className="username">
                             <label className="form__label" htmlFor="username">Teljes név: </label>
-                            <input  type="text" id="username"  className="form__input" placeholder="felhasználónév" 
+                            <input  type="text" id="username"  className="form__input" placeholder="Felhasználónév" 
                             name="username" onChange={handleInput}/>
                         </div>
                         <div className="email">
@@ -177,7 +178,7 @@ export default function Register() {
         </main>
                         </div>
                         <div className="confirm-password">
-                            <label className="form__label" htmlFor="confirmPassword">Jelszó megerősítése </label>
+                            <label className="form__label" htmlFor="confirmPassword">Jelszó megerősítése: </label>
                             <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése"
                             name="password" onChange={handleInput}/>
                         </div>

@@ -2,15 +2,17 @@ import React, {useState} from 'react';
 import './styles/Register.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import {basic_eye} from 'react-icons-kit/linea/basic_eye'
-import {basic_eye_closed} from 'react-icons-kit/linea/basic_eye_closed'
-import {arrows_exclamation} from 'react-icons-kit/linea/arrows_exclamation'
-import {arrows_circle_check} from 'react-icons-kit/linea/arrows_circle_check'
+import {basic_eye} from 'react-icons-kit/linea/basic_eye';
+import {basic_eye_closed} from 'react-icons-kit/linea/basic_eye_closed';
+import {arrows_exclamation} from 'react-icons-kit/linea/arrows_exclamation';
+import {arrows_circle_check} from 'react-icons-kit/linea/arrows_circle_check';
+import Icon from 'react-icons-kit';
 
 
 
 export default function Register() {
 
+  const [type, setType] = useState('password');
 
     const [lowerValidated, setLowerValidated]=useState(false);
     const [upperValidated, setUpperValidated]=useState(false);
@@ -22,7 +24,7 @@ export default function Register() {
         const lower = new RegExp('(?=.*[a-z])');
         const upper = new RegExp('(?=.*[A-Z])');
         const number = new RegExp('(?=.*[0-9])');
-        const special = new RegExp('(?=.*[!@#\$%\^&\*])');
+        const special = new RegExp('(?=.*[!@#\$%\^&\*+-])');
         const length = new RegExp('(?=.{8,})')
         if(lower.test(value)){
           setLowerValidated(true);
@@ -98,7 +100,7 @@ export default function Register() {
                         </div>
                         <div className="password">
                             <label className="form__label" htmlFor="password">Jelszó: </label>
-                            <input className="form__input" type="password"  id="password" placeholder="Jelszó"
+                            <input className="form__input" type="{type}"  id="password" placeholder="Jelszó"
                             name="password" onChange={(e)=>handleChange(e.target.value)}handleInput/>
                            {type==="password"?(
             <span className='icon-span' onClick={()=>setType("text")}>
@@ -111,6 +113,7 @@ export default function Register() {
           )}
 
 <main className='tracker-box'>
+  <div>A jelszó beállításához a következő feltételek szükségesek:</div>
           <div className={lowerValidated?'validated':'not-validated'}>
             {lowerValidated?(
               <span className='list-icon green'>
@@ -121,7 +124,7 @@ export default function Register() {
                 <Icon icon={arrows_exclamation}/>  
               </span>
             )}
-            At least one lowercase letter
+            Legalább egy kisbetűt tartalmaz
           </div>
           <div className={upperValidated?'validated':'not-validated'}>
             {upperValidated?(
@@ -133,7 +136,7 @@ export default function Register() {
                 <Icon icon={arrows_exclamation}/>  
               </span>
             )}
-            At least one uppercase letter
+            Legalább egy nagybetűt tartalmaz
           </div>
           <div className={numberValidated?'validated':'not-validated'}>
             {numberValidated?(
@@ -145,7 +148,7 @@ export default function Register() {
                 <Icon icon={arrows_exclamation}/>  
               </span>
             )}
-            At least one number
+            Legalább egy számot tartalmaz
           </div>
           <div className={specialValidated?'validated':'not-validated'}>
             {specialValidated?(
@@ -157,7 +160,7 @@ export default function Register() {
                 <Icon icon={arrows_exclamation}/>  
               </span>
             )}
-            At least one special character
+            Legalább egy speciális karatkert tartalmaz
           </div>
           <div className={lengthValidated?'validated':'not-validated'}>
             {lengthValidated?(
@@ -169,7 +172,7 @@ export default function Register() {
                 <Icon icon={arrows_exclamation}/>  
               </span>
             )}
-            At least 8 characters
+            Legalább 8 karaktert tartalmaz
           </div>
         </main>
                         </div>

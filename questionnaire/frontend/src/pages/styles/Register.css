@@ -18,16 +18,17 @@
 
 .form__label{
     margin-top: 10px;
-    color:yellow;
+    color:royalblue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .form__input{
    width: 200px;
 }
 
-
+.cim{
+    color: blue;
+}
 .red-rounded-border {
     border: 1px solid #3e2be3;
     border-radius: 20px;
@@ -37,17 +38,13 @@
   
 
 .cim{
-    color:yellow;
+    color: red;
     font-weight: bold;
     font-size: larger;
-    font-size: 40px;
-
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 
 .register-page{
-    cursor:crosshair;
     display: flex;
     flex-direction: column;
     background:cadetblue;

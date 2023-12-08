@@ -32,26 +32,26 @@ const MyQuestionnaire = () => {
   };
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <label>Cím: 
-        <input type="text" value={title} onChange={handleTitleChange} />
+    <div className='myQues-div'>
+      <h1 className='myQues-h1'>{title}</h1>
+      <label className='myQues-label'>Cím: 
+        <input className='myQues-ciminput' type="text" value={title} onChange={handleTitleChange} />
       </label>
       {questions.map((q, questionIndex) => (
-        <div key={questionIndex}>
-          <label>Kérdés {questionIndex + 1}: 
-            <input
+        <div className='myQues-div2' key={questionIndex}>
+          <label className='myQues-label'>Kérdés {questionIndex + 1}: 
+            <input className='myQues-input'
               type="text"
               value={q.question}
               onChange={(event) => handleQuestionChange(questionIndex, event)}
             />
           </label>
-          <ul>
+          <ul className='myQues-ul'>
             {q.options.map((option, optionIndex) => (
-              <li key={optionIndex}>
-                <label>
+              <li className='myQues-li' key={optionIndex}>
+                <label className='myQues-label'>
                   Válasz {optionIndex + 1}: 
-                  <input
+                  <input className='myQues-input'
                     type="text"
                     value={option}
                     onChange={(event) => handleOptionChange(questionIndex, optionIndex, event)}
@@ -64,7 +64,7 @@ const MyQuestionnaire = () => {
       ))}
       
       
-      <button className="save-button" onClick={handleSave}>
+      <button className="myQues-button" onClick={handleSave}>
         Mentés
       </button>
     </div>

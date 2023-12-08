@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './MyQuestionnaire.css';
 
 const MyQuestionnaire = () => {
   const [title, setTitle] = useState("");
@@ -23,6 +24,11 @@ const MyQuestionnaire = () => {
     const newQuestions = [...questions];
     newQuestions[questionIndex].options[optionIndex] = event.target.value;
     setQuestions(newQuestions);
+  };
+
+  const handleSave = () => {
+    
+    console.log("Mentés gombra kattintva...");
   };
 
   return (
@@ -56,6 +62,11 @@ const MyQuestionnaire = () => {
           </ul>
         </div>
       ))}
+      
+      
+      <button className="save-button" onClick={handleSave}>
+        Mentés
+      </button>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './MyQuestionnaire.css';
 
 const MyQuestionnaire = () => {
@@ -26,9 +27,32 @@ const MyQuestionnaire = () => {
     setQuestions(newQuestions);
   };
 
-  const handleSave = () => {
-    
-    console.log("Mentés gombra kattintva...");
+  const handleSave = async (event) => {
+    event.preventDefault();
+  
+    try {
+      // Üres mezők ellenőrzése
+      if (!title || questions.some(q => !q.question || q.options.some(opt => !opt))) {
+        alert("Minden mezőt ki kell töltenie!");
+        return;
+      }
+  
+      // Adatok elküldése a szerverre
+      const response = await axios.post('http://localhost:8082/questionnaire_db', {
+        title,
+        questions,
+      });
+  
+      console.log("Adatok sikeresen elmentve az adatbázisba:", response.data);
+  
+      // További logika, ha szükséges
+      // ...
+  
+    } catch (error) {
+      console.error("Hiba történt a mentés során:", error.message);
+      // Hibaüzenet megjelenítése a felhasználónak, ha szükséges
+      alert("Hiba történt a mentés során. Kérjük, próbálja újra később.");
+    }
   };
 
   return (

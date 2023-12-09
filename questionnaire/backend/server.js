@@ -14,7 +14,7 @@ const db = mysql.createConnection({
 })
 
 // Regisztráció
-app.post('/questionnaire_db', (req, res) =>{
+app.post('/register', (req, res) =>{
     const sql = "INSERT INTO users (`username`, `email`, `password`) VALUES (?)";
     const values = [
         req.body.username,

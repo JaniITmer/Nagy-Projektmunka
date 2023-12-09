@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require('mysql');
 const cors = require("cors");
 
 const app = express();
@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "questionnaire_db"
+    database: "my-questionnaire"
 })
 
 // Regisztráció
@@ -98,8 +98,8 @@ app.post('/questionnaires', (req, res) => {
 
 //----------------------------------------------
 
-// Új kérdőív létrehozása
-app.post('/new_questionnaire', (req, res) =>{
+
+/*app.post('/new_questionnaire', (req, res) =>{
     const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`) VALUES (?)";
     const values = [
         req.body.title,
@@ -116,7 +116,6 @@ app.post('/new_questionnaire', (req, res) =>{
     })
     
 })
-
 //Válasz beküldése
 app.post('/answer_questions', (req, res) =>{
     const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, option4`) VALUES (?)";
@@ -136,7 +135,20 @@ app.post('/answer_questions', (req, res) =>{
     })
     
 })
+//---
+// Adatbázis kapcsolat konfiguráció*/
 
-app.listen(8082, () => {
+connection.connect((err) => {
+    
+  });
+  
+  app.post('/my-questionnaire', (req, res) => {
+    const { title, questions } = req.body;
+  
+  });
+
+
+
+app.listen(8080, () => {
     console.log("listening");
 })

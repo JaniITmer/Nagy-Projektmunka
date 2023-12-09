@@ -35,8 +35,12 @@ export default function Home() {
 
         <div className="card">
           <h2>Saját kérdőív</h2>
+<<<<<<< HEAD
           <p>
             <Link to="/new-questionnaire" className="ujKerdoivGomb">
+=======
+          <p><Link to="/my-questionnaire" className="ujKerdoivGomb">
+>>>>>>> 2a2c58cb205dddf72e44cd8a3d359657319841cd
               +
             </Link>
           </p>

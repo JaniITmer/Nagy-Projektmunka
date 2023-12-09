@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require('mysql');
 const cors = require("cors");
 
 const app = express();
@@ -98,8 +98,8 @@ app.post('/questionnaires', (req, res) => {
 
 //----------------------------------------------
 
-// Új kérdőív létrehozása
-app.post('/new_questionnaire', (req, res) =>{
+
+/*app.post('/new_questionnaire', (req, res) =>{
     const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`) VALUES (?)";
     const values = [
         req.body.title,
@@ -116,6 +116,7 @@ app.post('/new_questionnaire', (req, res) =>{
     })
     
 })
+<<<<<<< HEAD
 
 //Kérdőívek megjelenítése
 app.get('/questionnaires', (req, res) => {
@@ -153,6 +154,8 @@ app.get('/answers/:questionId', (req, res) => {
     });
 });
 
+=======
+>>>>>>> 2a2c58cb205dddf72e44cd8a3d359657319841cd
 //Válasz beküldése
 app.post('/answer', (req, res) => {
     const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?)";
@@ -169,11 +172,21 @@ app.post('/answer', (req, res) => {
         if (err) {
             return res.json("Error");
         }
+<<<<<<< HEAD
         return res.json(data);
     });
 });
 
+=======
+        return res.json(data); 
+    })
+    
+})
+//---
+// Adatbázis kapcsolat konfiguráció*/
+>>>>>>> 2a2c58cb205dddf72e44cd8a3d359657319841cd
 
-app.listen(8082, () => {
+
+app.listen(8080, () => {
     console.log("listening");
 })

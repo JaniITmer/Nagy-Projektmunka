@@ -26,32 +26,31 @@ const MyQuestionnaire = () => {
     newQuestions[questionIndex].options[optionIndex] = event.target.value;
     setQuestions(newQuestions);
   };
-
-  const handleSave = async (event) => {
-    event.preventDefault();
   
+
+  const handleSave = async () => {
     try {
-      // Üres mezők ellenőrzése
-      if (!title || questions.some(q => !q.question || q.options.some(opt => !opt))) {
-        alert("Minden mezőt ki kell töltenie!");
+      // Ellenőrizzük, hogy a cím és a kérdések kitöltve vannak-e
+      if (!title || questions.some(q => q.question.trim() === '' || q.options.some(opt => opt.trim() === ''))) {
+        alert('Kérem, töltse ki a címet és minden kérdést az összes válasszal.');
         return;
       }
   
-      // Adatok elküldése a szerverre
-      const response = await axios.post('http://localhost:8082/questionnaire_db', {
+      // Elküldjük a kérdőív adatait a szervernek
+      const response = await axios.post('http://localhost:8080/my-questionnaire', {
         title,
         questions,
       });
   
-      console.log("Adatok sikeresen elmentve az adatbázisba:", response.data);
-  
-      // További logika, ha szükséges
-      // ...
-  
+      // A válasz feldolgozása
+      if (response.data.success) {
+        alert(response.data.message);
+      } else {
+        alert('Hiba történt a mentés során.');
+      }
     } catch (error) {
-      console.error("Hiba történt a mentés során:", error.message);
-      // Hibaüzenet megjelenítése a felhasználónak, ha szükséges
-      alert("Hiba történt a mentés során. Kérjük, próbálja újra később.");
+      console.error('Hiba a mentés során:', error.message);
+      alert('Hiba történt a mentés során.');
     }
   };
 

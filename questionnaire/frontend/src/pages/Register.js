@@ -106,10 +106,6 @@ export default function Register() {
     if (response.data && response.data.exists) {
       alert("Az email cím már foglalt!");
     } else {
-<<<<<<< HEAD
-=======
-      // Az e-mail még nem létezik, folytasd a regisztrációs logikát
->>>>>>> a7a87653c84e4bd911aed636f8010a03cb7c21cb
       axios.post('http://localhost:8082/register', values)
         .then(res => {
           navigate('/login');

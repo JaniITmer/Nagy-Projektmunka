@@ -65,9 +65,15 @@ export default function Register() {
     })
     const navigate = useNavigate();
     //const [errors, setErrors] = useState({})
+
     const handleInput = (event) => {
-        setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
-    }
+      const { name, value } = event.target;
+  
+      setValues((prev) => ({
+          ...prev,
+          [name]: value,
+      }));
+  };
     
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -75,11 +81,41 @@ export default function Register() {
         /*if(errors.name === "" && errors.email === "" && errors.password === ""){
             
         }*/
-        axios.post('http://localhost:8082/questionnaire_db', values)
-            .then(res => {
-                navigate('/login');
-            })
-            .catch(err => console.log(err));
+
+        // Üres hagyott mező hibaüzenet
+        if (!values.username || !values.email || !values.password) {
+          alert("Minden mezőt ki kell töltenie!");
+          return;
+        }
+
+        // Nem megfelelő jelszó hibaüzenet
+        if (!(lowerValidated && upperValidated && numberValidated && specialValidated && lengthValidated)) {
+          alert("A jelszó nem megfelelő!");
+          return;
+        }
+
+        // 
+        if(values.password !== values.confirmPassword){
+          alert("A jelszavak nem egyeznek!");
+          return;
+        }
+          
+
+        axios.get(`http://localhost:8082/check-email/${values.email}`)
+  .then(response => {
+    if (response.data && response.data.exists) {
+      // Az e-mail már létezik, végezd el a szükséges intézkedéseket
+      alert("Az email cím már foglalt!");
+    } else {
+      // Az e-mail még nem létezik, folytasd a regisztrációs logikát
+      axios.post('http://localhost:8082/questionnaire_db', values)
+        .then(res => {
+          navigate('/login');
+        })
+        .catch(err => console.log(err));
+    }
+  })
+  .catch(err => console.log(err));
     }
 
     return (
@@ -100,8 +136,8 @@ export default function Register() {
                         </div>
                         <div className="password">
                             <label className="form__label" htmlFor="password">Jelszó: </label>
-                            <input className="form__input" type="{type}"  id="password" placeholder="Jelszó"
-                            name="password" onChange={(e)=>handleChange(e.target.value)}handleInput/>
+                            <input className="form__input" type={type} id="password" placeholder="Jelszó" name="password"
+                            onChange={(e) => {handleChange(e.target.value); handleInput(e);}}/>
                            {type==="password"?(
             <span className='icon-span' onClick={()=>setType("text")}>
               <Icon icon={basic_eye_closed} size={18}/>
@@ -178,8 +214,8 @@ export default function Register() {
                         </div>
                         <div className="confirm-password">
                             <label className="form__label" htmlFor="confirmPassword">Jelszó megerősítése </label>
-                            <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése"
-                            name="password" onChange={handleInput}/>
+                            <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése" name="confirmPassword"
+                            onChange={handleInput}/>
                         </div>
                         <div className="footer">
                             <button className="button" type="submit"  variant="outlined">Regisztráció</button>

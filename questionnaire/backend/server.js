@@ -13,6 +13,7 @@ const db = mysql.createConnection({
     database: "questionnaire_db"
 })
 
+// Regisztráció
 app.post('/questionnaire_db', (req, res) =>{
     const sql = "INSERT INTO users (`username`, `email`, `password`) VALUES (?)";
     const values = [
@@ -29,6 +30,8 @@ app.post('/questionnaire_db', (req, res) =>{
     
 })
 
+
+// Bejelentkezés
 app.post('/users', (req, res) =>{
     const sql = "SELECT * FROM users WHERE `email` = ? AND `password` = ?";
     db.query(sql, [req.body.email, req.body.password], (err, data) => {
@@ -44,6 +47,24 @@ app.post('/users', (req, res) =>{
     
 })
 
+// E-mail ellenőrzése
+app.get('/check-email/:email', (req, res) => {
+    const email = req.params.email;
+    const sql = "SELECT * FROM users WHERE `email` = ?";
+    db.query(sql, [email], (err, data) => {
+        if (err) {
+            console.error("Error checking email:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+
+        if (data.length > 0) {
+            return res.json({ exists: true });
+        } else {
+            return res.json({ exists: false });
+        }
+    });
+});
+
 // Kérdőívek tábla létrehozása, ha még nem létezik
 db.query(`
     CREATE TABLE IF NOT EXISTS Questionnaires (
@@ -57,7 +78,6 @@ db.query(`
         console.log("Questionnaires table created or already exists");
     }
 });
-
 
 // Új kérdőív hozzáadása
 app.post('/questionnaires', (req, res) => {

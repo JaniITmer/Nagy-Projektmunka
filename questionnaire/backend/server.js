@@ -117,25 +117,62 @@ app.post('/new_questionnaire', (req, res) =>{
     
 })
 
+//Kérdőívek megjelenítése
+app.get('/questionnaires', (req, res) => {
+    const sql = "SELECT * FROM questions";
+    db.query(sql, (err, data) => {
+      if (err) {
+        return res.json("Error");
+      }
+      return res.json(data);
+    });
+  });
+
+//Kérdések listázása
+app.get('/questions/:questionId', (req, res) => {
+    const { questionId } = req.params;
+    const sql = "SELECT * FROM questions WHERE question_id = ?";
+    db.query(sql, [questionId], (err, data) => {
+        if (err) {
+            return res.json("Error");
+        }
+        return res.json(data);
+    });
+});
+
+
+//Válaszok listázása
+app.get('/answers/:questionId', (req, res) => {
+    const { questionId } = req.params;
+    const sql = "SELECT * FROM questions WHERE question_id = ?";
+    db.query(sql, [questionId], (err, data) => {
+        if (err) {
+            return res.json("Error");
+        }
+        return res.json(data);
+    });
+});
+
 //Válasz beküldése
-app.post('/answer_questions', (req, res) =>{
-    const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, option4`) VALUES (?)";
+app.post('/answer', (req, res) => {
+    const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?)";
     const values = [
-        req.body.userId,
-        2,//req.body.questionId,
+        16,//req.body.userId,
+        req.body.question_id,
         req.body.option1,
         req.body.option2,
         req.body.option3,
-        req.body.option4,
+        req.body.option4
     ];
+    console.log(values);
     db.query(sql, [values], (err, data) => {
-        if(err) {
+        if (err) {
             return res.json("Error");
         }
-        return res.json(data); 
-    })
-    
-})
+        return res.json(data);
+    });
+});
+
 
 app.listen(8082, () => {
     console.log("listening");

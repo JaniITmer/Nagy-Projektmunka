@@ -64,7 +64,6 @@ export default function Register() {
         password: ''
     })
     const navigate = useNavigate();
-    //const [errors, setErrors] = useState({})
 
     const handleInput = (event) => {
       const { name, value } = event.target;
@@ -77,24 +76,19 @@ export default function Register() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        //setErrors(validation(values));
-        /*if(errors.name === "" && errors.email === "" && errors.password === ""){
-            
-        }*/
 
-        // Üres hagyott mező hibaüzenet
+        //Üres hagyott mező hibaüzenet
         if (!values.username || !values.email || !values.password) {
           alert("Minden mezőt ki kell töltenie!");
           return;
         }
 
-        // Nem megfelelő jelszó hibaüzenet
+        //Nem megfelelő jelszó hibaüzenet
         if (!(lowerValidated && upperValidated && numberValidated && specialValidated && lengthValidated)) {
           alert("A jelszó nem megfelelő!");
           return;
         }
 
-        // 
         if(values.password !== values.confirmPassword){
           alert("A jelszavak nem egyeznek!");
           return;

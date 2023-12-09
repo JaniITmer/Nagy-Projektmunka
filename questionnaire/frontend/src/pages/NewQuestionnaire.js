@@ -40,13 +40,11 @@ export default function NewQuestionnaire() {
     }
 
     return (
-        <div className='new-questionnaire-page'>
-            <div className='container'>
-                <div className='header'>
-                    <div className='h1'>Új kérdőív</div>
-                    <div className='underline'></div>
-                </div>
-                <form className="inputs" action="" onSubmit={handleSubmit}>
+        <div className="main-page">
+      <div className="topics">
+        <h1>Új kérdőív hozzáadása</h1>
+        
+        <form className="inputs" action="" onSubmit={handleSubmit}>
                 <div className="title">
                             <label className="form__label" htmlFor="title">Cím</label>
                             <input  type="text" id="title"  className="form__input" placeholder="cím" 
@@ -75,7 +73,12 @@ export default function NewQuestionnaire() {
 
                     <button className='button' type='submit'>Kérdőív hozzáadása</button>
                 </form>
-            </div>
-        </div>
+
+      </div>
+      <div className="main-page-info">
+        <h1>Jelenleg vendég módban van!</h1>
+        <h1>A kérdőívek kitöltéséhez jelentkezzen be!</h1>
+      </div>
+    </div>
     )
 }

@@ -12,17 +12,12 @@ export default function Login() {
         password: ''
     })
     const navigate = useNavigate();
-    //const [errors, setErrors] = useState({})
     const handleInput = (event) => {
         setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
     }
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        //setErrors(validation(values));
-        /*if(errors.name === "" && errors.email === "" && errors.password === ""){
-            
-        }*/
         axios.post('http://localhost:8082/users', values)
             .then(res => {
                 if (res.data.userId) {

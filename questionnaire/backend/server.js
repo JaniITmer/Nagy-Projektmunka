@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "my-questionnaire"
+    database: "questionnaire_db"
 })
 
 // Regisztráció
@@ -137,16 +137,6 @@ app.post('/answer_questions', (req, res) =>{
 })
 //---
 // Adatbázis kapcsolat konfiguráció*/
-
-connection.connect((err) => {
-    
-  });
-  
-  app.post('/my-questionnaire', (req, res) => {
-    const { title, questions } = req.body;
-  
-  });
-
 
 
 app.listen(8080, () => {

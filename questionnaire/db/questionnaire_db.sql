@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 09. 18:00
+-- Létrehozás ideje: 2023. Dec 10. 00:23
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -37,6 +37,13 @@ CREATE TABLE `answers` (
   `option4` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- A tábla adatainak kiíratása `answers`
+--
+
+INSERT INTO `answers` (`answer_id`, `user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES
+(8, 16, 15, 'Egészségtudatos és aktív', 'Legalább 3-4 alkalommal, 30 perc vagy több', 'Heti többször', 'Jó, néhány kisebb probléma van');
+
 -- --------------------------------------------------------
 
 --
@@ -61,16 +68,23 @@ CREATE TABLE `questions` (
   `question1` varchar(255) NOT NULL,
   `question2` varchar(255) NOT NULL,
   `question3` varchar(255) NOT NULL,
-  `question4` varchar(255) NOT NULL
+  `question4` varchar(255) NOT NULL,
+  `option1_1` varchar(255) NOT NULL,
+  `option1_2` varchar(255) NOT NULL,
+  `option2_1` varchar(255) NOT NULL,
+  `option2_2` varchar(255) NOT NULL,
+  `option3_1` varchar(255) NOT NULL,
+  `option3_2` varchar(255) NOT NULL,
+  `option4_1` varchar(255) NOT NULL,
+  `option4_2` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `questions`
 --
 
-INSERT INTO `questions` (`question_id`, `title`, `question1`, `question2`, `question3`, `question4`) VALUES
-(2, 'asd', 'asd1', 'asd2', 'asd3', 'asd4'),
-(3, 'Állatok', 'Kérdés1', 'Kérd2', 'Kérd3', 'Kérd4');
+INSERT INTO `questions` (`question_id`, `title`, `question1`, `question2`, `question3`, `question4`, `option1_1`, `option1_2`, `option2_1`, `option2_2`, `option3_1`, `option3_2`, `option4_1`, `option4_2`) VALUES
+(15, 'Sport', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -101,10 +115,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(14, 'user2', 'admin@admin', '444'),
-(16, 'test', 'test@test', '12345'),
-(33, 'user', 'user@user', 'Asd1234!'),
-(34, 'user', 'user@user1', 'Asd1234!');
+(36, 'user', 'user@user', 'User1234!'),
+(37, 'admin', 'admin@admin', 'Admin1234!');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -114,9 +126,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 -- A tábla indexei `answers`
 --
 ALTER TABLE `answers`
-  ADD PRIMARY KEY (`answer_id`),
-  ADD KEY `FK_QUESTIONS` (`question_id`),
-  ADD KEY `FK_USERS` (`user_id`);
+  ADD PRIMARY KEY (`answer_id`);
 
 --
 -- A tábla indexei `questionnaires`
@@ -147,6 +157,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT a táblához `answers`
+--
+ALTER TABLE `answers`
+  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT a táblához `questionnaires`
 --
 ALTER TABLE `questionnaires`
@@ -156,24 +172,13 @@ ALTER TABLE `questionnaires`
 -- AUTO_INCREMENT a táblához `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- Megkötések a kiírt táblákhoz
---
-
---
--- Megkötések a táblához `answers`
---
-ALTER TABLE `answers`
-  ADD CONSTRAINT `FK_QUESTIONS` FOREIGN KEY (`question_id`) REFERENCES `questions` (`question_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_USERS` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

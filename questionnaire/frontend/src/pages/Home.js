@@ -100,7 +100,7 @@ export default function Home() {
         </div>
         <div className="card">
           <h2>Saját kérdőív</h2>
-          <p><Link to="/my-questionnaire" className="ujKerdoivGomb">
+          <p><Link to="/new-questionnaire" className="ujKerdoivGomb">
               +
             </Link></p>
         </div>

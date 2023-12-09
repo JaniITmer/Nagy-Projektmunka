@@ -14,7 +14,7 @@ const db = mysql.createConnection({
 })
 
 // Regisztráció
-app.post('/questionnaire_db', (req, res) =>{
+app.post('/register', (req, res) =>{
     const sql = "INSERT INTO users (`username`, `email`, `password`) VALUES (?)";
     const values = [
         req.body.username,
@@ -38,8 +38,9 @@ app.post('/users', (req, res) =>{
         if(err) {
             return res.json("Error");
         }
-        if(data.length > 0) {
-            return res.json("Success");
+        if (data.length > 0) {
+            //Bejelentkezett felhasználó id-je
+            return res.json({ userId: data[0].id });
         } else {
             return res.json("Failed");
         }
@@ -80,6 +81,7 @@ db.query(`
 });
 
 // Új kérdőív hozzáadása
+/*
 app.post('/questionnaires', (req, res) => {
     const { title } = req.body;
     const sql = "INSERT INTO Questionnaires (title) VALUES (?)";
@@ -92,8 +94,48 @@ app.post('/questionnaires', (req, res) => {
         return res.json(data);
     });
 });
+*/
 
+//----------------------------------------------
 
+// Új kérdőív létrehozása
+app.post('/new_questionnaire', (req, res) =>{
+    const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`) VALUES (?)";
+    const values = [
+        req.body.title,
+        req.body.question1,
+        req.body.question2,
+        req.body.question3,
+        req.body.question4
+    ];
+    db.query(sql, [values], (err, data) => {
+        if(err) {
+            return res.json("Error");
+        }
+        return res.json(data); 
+    })
+    
+})
+
+//Válasz beküldése
+app.post('/answer_questions', (req, res) =>{
+    const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, option4`) VALUES (?)";
+    const values = [
+        req.body.userId,
+        2,//req.body.questionId,
+        req.body.option1,
+        req.body.option2,
+        req.body.option3,
+        req.body.option4,
+    ];
+    db.query(sql, [values], (err, data) => {
+        if(err) {
+            return res.json("Error");
+        }
+        return res.json(data); 
+    })
+    
+})
 
 app.listen(8082, () => {
     console.log("listening");

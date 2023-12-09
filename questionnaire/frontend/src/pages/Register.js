@@ -104,13 +104,12 @@ export default function Register() {
         axios.get(`http://localhost:8082/check-email/${values.email}`)
   .then(response => {
     if (response.data && response.data.exists) {
-      // Az e-mail már létezik, végezd el a szükséges intézkedéseket
       alert("Az email cím már foglalt!");
     } else {
-      // Az e-mail még nem létezik, folytasd a regisztrációs logikát
-      axios.post('http://localhost:8082/questionnaire_db', values)
+      axios.post('http://localhost:8082/register', values)
         .then(res => {
           navigate('/login');
+          console.log(res);
         })
         .catch(err => console.log(err));
     }

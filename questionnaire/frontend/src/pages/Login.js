@@ -25,13 +25,13 @@ export default function Login() {
         }*/
         axios.post('http://localhost:8082/users', values)
             .then(res => {
-                if(res.data === "Success") {
+                if (res.data.userId) {
                     navigate('/');
                 } else {
                     alert("Hibás email vagy jelszó!");
                 }
             })
-            .catch(err => console.log(err));
+  .catch(err => console.log(err));
     }
 
     return (

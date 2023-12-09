@@ -31,7 +31,7 @@ export default function NewQuestionnaire() {
     const handleSubmit = (event) => {
         event.preventDefault();
         //setErrors(validation(values));
-            axios.post('http://localhost:8082/new_questionnaire', values)
+            axios.post('http://localhost:8080/new_questionnaire', values)
             .then(res => {
                 navigate('/');
                 console.log(res);

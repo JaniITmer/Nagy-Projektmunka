@@ -18,7 +18,7 @@ export default function Login() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8082/users', values)
+        axios.post('http://localhost:8080/users', values)
             .then(res => {
                 if (res.data.userId) {
                     navigate('/');

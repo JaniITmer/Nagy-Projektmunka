@@ -31,7 +31,7 @@ const handleInput = (event) => {
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  axios.post('http://localhost:8082/answer', values)
+  axios.post('http://localhost:8080/answer', values)
   .then(res => {
     navigate('/');
     console.log(res);
@@ -40,7 +40,7 @@ const handleSubmit = (event) => {
 }
 
   useEffect(() => {
-    axios.get(`http://localhost:8082/questions/${questionId}`)
+    axios.get(`http://localhost:8080/questions/${questionId}`)
       .then(response => {
         setQuestions(response.data);
       })
@@ -53,11 +53,9 @@ const handleSubmit = (event) => {
     <div className="main-page">
       <div className="topics">
         {questions.map((question) => (
-        <div>
-
+        <div>    
               <form action="" onSubmit={handleSubmit}>
-                <h1>{question.title}</h1>      
-
+                <h1>{question.title}</h1>    
                 <h3>{question.question1}</h3>
                 <input  type="text" id="option1"  className="form__input"
                             name="option1" onChange={handleInput}/>

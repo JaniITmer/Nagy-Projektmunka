@@ -95,12 +95,12 @@ export default function Register() {
         }
           
 
-        axios.get(`http://localhost:8082/check-email/${values.email}`)
+        axios.get(`http://localhost:8080/check-email/${values.email}`)
   .then(response => {
     if (response.data && response.data.exists) {
       alert("Az email cím már foglalt!");
     } else {
-      axios.post('http://localhost:8082/register', values)
+      axios.post('http://localhost:8080/register', values)
         .then(res => {
           navigate('/login');
           console.log(res);

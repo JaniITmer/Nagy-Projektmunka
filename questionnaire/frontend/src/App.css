@@ -13,8 +13,8 @@ body {
 }
 
 .nav {
-  background-color:darkslateblue;
-  color: white;
+  background-color:white;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -25,7 +25,11 @@ body {
 
 .site-title {
   font-size: 2rem;
-  
+}
+
+.site-title:hover{
+  color:grey;
+  transition: 0.2s;
 }
 
 .nav ul {
@@ -33,7 +37,7 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 0rem;
   
   
 }
@@ -44,24 +48,19 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: .50rem;
 }
 
 .nav li.active {
   color: black;
-  background-color: yellow;
-  border-radius: 50px;
-  width: 100px;
-  
-  
-  
+  background-color: gold;
 }
 
 .nav li:hover {
   color: black;
-  background-color: yellow;
-  border-radius: 50px;
+  background-color: gold;
+  transition: 0.5s;
 }
 body{
-  background-color: aqua;
+  background-color: grey;
 }

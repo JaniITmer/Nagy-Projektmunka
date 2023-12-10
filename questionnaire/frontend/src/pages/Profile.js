@@ -8,18 +8,18 @@ export default function Profile() {
         <div className='profile-page'>
         <div className='szemelyes-adatok'> 
         
-        <div className="card">
+        <div className="profil-adatok">
 
-            <h1>Saját adatok</h1>
+            <h1 className='profil-cim'>Saját adatok</h1>
 
-            <div className="card">Felhasználónév:
+            <div className="profil-username">Felhasználónév:
             <div>Felhasználónév megváltoztatása:</div>
             <div>
-            <button className="pwchange-btn">Felhasznánév megváltoztatása </button>
+            <button className="namechange-btn">Felhasználónév megváltoztatása </button>
             </div>
             </div>
            
-            <div className="card">
+            <div className="profile-card-jelszo card">
             <div >Jelszó módosítása</div>
 
             <div >Adja meg a jelenleg használt jelszavát :
@@ -40,11 +40,11 @@ export default function Profile() {
 
              <button className="pwchange-btn">Jelszó megváltoztatása </button></div>
              </div>
-             <div className='card'>Email cím:<div>Email cím megváltoztatása:</div>  <button>Email küldése</button></div>
+             <div className='card profile-email'>Email cím:<div>Email cím megváltoztatása:</div>  <button className='profile-email-button'>Email küldése</button></div>
             
             </div>
 
-            <div className="card"> <h1>Kitöltött kérdőivek:</h1></div>
+            <div className="card profil-kerdoiv"> <h1>Kitöltött kérdőivek:</h1></div>
            
             </div>
          </div>

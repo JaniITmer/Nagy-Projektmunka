@@ -1,4 +1,5 @@
 import './styles/Home.css';
+import './styles/NewQuestionnaire.css';
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -12,10 +13,14 @@ export default function Questionnaire() {
   const [values, setValues] = useState({
     user_id: '',
     question_id: questionId,
-    option1: '',
-    option2: '',
-    option3: '',
-    option4: ''
+    option1_1: '',
+    option1_2: '',
+    option2_1: '',
+    option2_2: '',
+    option3_1: '',
+    option3_2: '',
+    option4_1: '',
+    option4_2: ''
   });
 const navigate = useNavigate();
 
@@ -55,23 +60,38 @@ const handleSubmit = (event) => {
         {questions.map((question) => (
         <div>    
               <form action="" onSubmit={handleSubmit}>
-                <h1>{question.title}</h1>    
-                <h3>{question.question1}</h3>
-                <input  type="text" id="option1"  className="form__input"
-                            name="option1" onChange={handleInput}/>
+                <h1>{question.title}</h1>   
+                <div className="Ques-div">
+                <h3 className="newQues-label">{question.question1}</h3>
+                <div className="Ques-options-container">
+                  <p className="Ques option">{question.option1_1}</p>
+                  <p className="Ques-option">{question.option1_2}</p>
+                </div>
+                
+                </div>
+                <div className="Ques-div">
+                <h3 className="newQues-label">{question.question2}</h3>
+                <div className="Ques-options-container">
+                  <p className="Ques option">{question.option2_1}</p>
+                  <p className="Ques-option">{question.option2_2}</p>
+                </div>
+                
+                </div>
+                <div className="Ques-div">
+                <h3 className="newQues-label">{question.question3}</h3>
+                <div className="Ques-options-container">
+                  <p className="Ques option">{question.option3_1}</p>
+                  <p className="Ques-option">{question.option3_2}</p>
+                </div>
 
-                <h3>{question.question2}</h3>
-                <input  type="text" id="option2"  className="form__input"
-                            name="option2" onChange={handleInput}/>
-
-                <h3>{question.question3}</h3>
-                <input  type="text" id="option3"  className="form__input"
-                            name="option3" onChange={handleInput}/>
-
-                <h3>{question.question4}</h3>
-                <input  type="text" id="option4"  className="form__input"
-                            name="option4" onChange={handleInput}/>
-
+                </div>
+                <div className="Ques-div">
+                <h3 className="newQues-label">{question.question4}</h3>
+                <div className="Ques-options-container">
+                  <p className="Ques option">{question.option4_1}</p>
+                  <p className="Ques-option">{question.option4_2}</p>
+                </div>
+                </div>
               
                     <button className='button' type='submit'>Kérdőív beküldése</button>
                 </form>

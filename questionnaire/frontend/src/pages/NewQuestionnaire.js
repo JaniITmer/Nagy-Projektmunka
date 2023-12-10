@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
+import './styles/NewQuestionnaire.css';
 import './styles/Login.css';
+
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import user_icon from '../images/username.png'
-import passwd_icon from '../images/password.png'
 
 export default function NewQuestionnaire() {
     const [values, setValues] = useState({
@@ -58,23 +58,24 @@ export default function NewQuestionnaire() {
                             <input  type="text" id="title"  className="form__input" placeholder="cím" 
                             name="title" onChange={handleInput}/>
                         </div>
-
+                <div className="newQues-div2">
                     <div className="question1">
                             <label className="form__label" htmlFor="question1">Kérdés1</label>
                             <input  type="text" id="question1" className="form__input" placeholder="kérdés1" 
                             name="question1" onChange={handleInput}/>
                         </div>
-                    <div className="option1_1">
+                        <div className="option1_1">
                             <label className="form__label" htmlFor="option1_1">Válasz1_1</label>
                             <input  type="text" id="option1_1" className="form__input" placeholder="válasz1_1" 
                             name="option1_1" onChange={handleInput}/>
                         </div>
-                    <div className="option1_2">
+                        <div className="option1_2">
                             <label className="form__label" htmlFor="option1_2">Válasz1_2</label>
                             <input  type="text" id="option1_2" className="form__input" placeholder="válasz1_2" 
                             name="option1_2" onChange={handleInput}/>
                         </div>
-
+                </div>
+                <div className="newQues-div2">
                     <div className="question2">
                             <label className="form__label" htmlFor="question2">Kérdés2</label>
                             <input  type="text" id="question2" className="form__input" placeholder="kérdés2" 
@@ -90,7 +91,8 @@ export default function NewQuestionnaire() {
                             <input  type="text" id="option2_2" className="form__input" placeholder="válasz2_2" 
                             name="option2_2" onChange={handleInput}/>
                         </div>
-
+                    </div>
+                <div className="newQues-div2">
                     <div className="question3">
                             <label className="form__label" htmlFor="question3">Kérdés3</label>
                             <input  type="text" id="question3" className="form__input" placeholder="kérdés3" 
@@ -106,7 +108,8 @@ export default function NewQuestionnaire() {
                             <input  type="text" id="option3_2" className="form__input" placeholder="válasz3_2" 
                             name="option3_2" onChange={handleInput}/>
                         </div>
-
+                </div>
+                <div className="newQues-div2">
                     <div className="question4">
                             <label className="form__label" htmlFor="question4">Kérdés4</label>
                             <input  type="text" id="question4" className="form__input" placeholder="kérdés4" 
@@ -122,7 +125,7 @@ export default function NewQuestionnaire() {
                             <input  type="text" id="option4_2" className="form__input" placeholder="válasz4_2" 
                             name="option4_2" onChange={handleInput}/>
                         </div>
-
+                </div>
                     <button className='button' type='submit'>Kérdőív hozzáadása</button>
                 </form>
 

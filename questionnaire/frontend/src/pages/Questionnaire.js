@@ -64,7 +64,7 @@ const handleSubmit = (event) => {
                 <div className="Ques-div">
                 <h3 className="newQues-label">{question.question1}</h3>
                 <div className="Ques-options-container">
-                  <p className="Ques option">{question.option1_1}</p>
+                  <p className="Ques-option">{question.option1_1}</p>
                   <p className="Ques-option">{question.option1_2}</p>
                 </div>
                 
@@ -72,7 +72,7 @@ const handleSubmit = (event) => {
                 <div className="Ques-div">
                 <h3 className="newQues-label">{question.question2}</h3>
                 <div className="Ques-options-container">
-                  <p className="Ques option">{question.option2_1}</p>
+                  <p className="Ques-option">{question.option2_1}</p>
                   <p className="Ques-option">{question.option2_2}</p>
                 </div>
                 
@@ -80,7 +80,7 @@ const handleSubmit = (event) => {
                 <div className="Ques-div">
                 <h3 className="newQues-label">{question.question3}</h3>
                 <div className="Ques-options-container">
-                  <p className="Ques option">{question.option3_1}</p>
+                  <p className="Ques-option">{question.option3_1}</p>
                   <p className="Ques-option">{question.option3_2}</p>
                 </div>
 
@@ -88,7 +88,7 @@ const handleSubmit = (event) => {
                 <div className="Ques-div">
                 <h3 className="newQues-label">{question.question4}</h3>
                 <div className="Ques-options-container">
-                  <p className="Ques option">{question.option4_1}</p>
+                  <p className="Ques-option">{question.option4_1}</p>
                   <p className="Ques-option">{question.option4_2}</p>
                 </div>
                 </div>

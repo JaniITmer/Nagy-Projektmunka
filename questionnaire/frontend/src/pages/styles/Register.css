@@ -20,6 +20,9 @@
     margin-top: 10px;
     color:royalblue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;    
+   
+      
 }
 
 .form__input{
@@ -38,9 +41,12 @@
   
 
 .cim{
-    color: red;
+    color: rgb(247, 69, 107);
     font-weight: bold;
     font-size: larger;
+    
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      
 }
 
 
@@ -79,4 +85,5 @@
     padding: 15px;
     border-radius: 5px;
     margin-top: 5px;
+    text-shadow: -1px -1px 0 #660b0b, 1px -1px 0 #000000, -1px 1px 0 #000, 1px 1px 0 #000;
   }

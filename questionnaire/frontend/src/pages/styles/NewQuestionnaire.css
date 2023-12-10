@@ -5,19 +5,80 @@
     background-color: rgb(255, 220, 23);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 70%;
-    height: 100px;
+    height: 190px;
     display: block;
     margin: auto;
     border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-.newQues-input input{
-    height: 20px;
-    width: 300px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #797979;
-    font-size: 20;
+.newQues-inputH1{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 35px;
+    background-color: #eaeaea;
+    border-radius: 8px;
     text-align: center;
+    font-size: 15pt;
+}
+
+.newQues-inputQues{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 30px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.newQues-inputAns{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 30px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.newQues-label{
+    margin-top: 10px;
+    color:rgb(33, 20, 221);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.newQues-button{
+  width: 280px;
+  height: 50px;
+  background: #2f4d57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18pt;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.newQues-button:hover{
+  transform: scale(1.25);
+}
+
+.newQues-H1{
+    margin-top: 10px;
+    font-family: Tahoma, sans-serif;
 }

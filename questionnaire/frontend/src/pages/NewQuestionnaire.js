@@ -22,6 +22,7 @@ export default function NewQuestionnaire() {
         option4_1: '',
         option4_2: ''
     })
+    const [error, setError] = useState('');
     const navigate = useNavigate();
     //const [errors, setErrors] = useState({})
     /*const handleInput = (event) => {
@@ -38,6 +39,26 @@ export default function NewQuestionnaire() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (!values.title ||
+            !values.question1 ||
+            !values.option1_1 ||
+            !values.option1_2 ||
+            !values.question2 ||
+            !values.option2_1 ||
+            !values.option2_2 ||
+            !values.question3 ||
+            !values.option3_1 ||
+            !values.option3_2 ||
+            !values.question4 ||
+            !values.option4_1 ||
+            !values.option4_2) {
+            setError('Mindent ki kell tölteni.');
+            return;
+        }
+
+        // Minden mező kitöltve, hibaüzenet törlése
+        setError('');
+
         //setErrors(validation(values));
             axios.post('http://localhost:8080/new_questionnaire', values)
             .then(res => {
@@ -45,6 +66,7 @@ export default function NewQuestionnaire() {
                 console.log(res);
             })
             .catch(err => console.log(err));
+            
     }
 
     return (
@@ -128,7 +150,7 @@ export default function NewQuestionnaire() {
                 </div>
                     <button className='newQues-button' type='submit'>Kérdőív hozzáadás</button>
                 </form>
-
+                {error && <p className="error-message">{error}</p>}
       </div>
       <div className="main-page-info">
         <h1>Jelenleg vendég módban van!</h1>

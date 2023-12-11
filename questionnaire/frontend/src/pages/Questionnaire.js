@@ -32,6 +32,20 @@ const handleInput = (event) => {
     [name]: value,
   }));
 };
+/*const handleDelete = () => {
+  const confirmDelete = window.confirm('Biztosan törölni szeretné ezt a kérdőívet?');
+  if (!confirmDelete) {
+    return;
+  }
+axios.delete(`http://localhost:8080/questionnaires/${questionId}`)
+      .then(response => {
+        console.log('Questionnaire deleted successfully:', response);
+        navigate('/'); 
+      })
+      .catch(error => {
+        console.error('Error deleting questionnaire:', error);
+      });
+  };*/
 
 const handleSubmit = (event) => {
   event.preventDefault();

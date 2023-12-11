@@ -14,16 +14,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
+  const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (email) => {
     setLoggedIn(true);
-    setUserEmail(email);
+    
+    setUserEmail('example@email.com');
+    setUsername('ExampleUser');
   };
 
   const handleLogout = () => {
     setLoggedIn(false);
+    setUserEmail('');
+    setUsername('');
     navigate('/');
+  };
+  const handleImageChange = (image) => {
+    
+    console.log('Selected image:', image);
   };
   return (
     <div>
@@ -36,7 +45,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/my-questionnaire" element={<MyQuestonnaire />} />
           <Route path="/questionnaire/:questionId" element={<Questionnaire />} />
-          <Route path="/profile" element={<Profile userEmail={userEmail} />} />
+          <Route path="/profile" element={<Profile userEmail={userEmail} username={username}onImageChange={handleImageChange} />} />
         </Routes>
       </div>
     </div>

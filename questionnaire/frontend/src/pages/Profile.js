@@ -1,53 +1,39 @@
 import React, { useState } from 'react';
 import './styles/Profile.css';
 
-export default function Profile({ userEmail }) {
-  return (
-    <div className="profile-page">
-      <div className="szemelyes-adatok">
-        <div className="profil-adatok">
-          <h1 className="profil-cim">Saját adatok</h1>
+const Profile = ({ userEmail, username, onImageChange }) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+  
+    const handleImageChange = (event) => {
+      const file = event.target.files[0];
+      setSelectedImage(file);
+      onImageChange(file);
+    };
 
-          <div className="profil-email">Email cím: {userEmail}</div>
-
-          <div className="profil-username">
-            Felhasználónév:
-            <div>Felhasználónév megváltoztatása:</div>
-            <div>
-              <button className="namechange-btn">Felhasználónév megváltoztatása </button>
-            </div>
+    return (
+        <div>
+          <h2>Profil</h2>
+          <div>
+            <strong>Email cím:</strong> {userEmail}
           </div>
-
-          <div className="profile-card-jelszo card">
-            <div>Jelszó módosítása</div>
-
-            <div>
-              Adja meg a jelenleg használt jelszavát :
-              <input type="password" id="currentPassword" placeholder="Jelenlegi jelszó"></input>
-            </div>
-            <div>
-              Adja meg az új jelszavát :
-              <input type="password" id="newPassword" placeholder="Új jelszó"></input>
-            </div>
-            <div>
-              Adja meg az új jelszavát ismét :
-              <input type="password" id="newPasswordagain" placeholder="Új jelszó"></input>
-            </div>
-
-            <div>
-              <button className="pwchange-btn">Jelszó megváltoztatása </button>
-            </div>
+          <div>
+            <strong>Felhasználónév:</strong> {username}
           </div>
-
-          <div className="card profile-email">
-            Email cím:<div>Email cím megváltoztatása:</div> <button className="profile-email-button">Email küldése</button>
+          <div>
+            <strong>Profilkép:</strong>
+            {selectedImage ? (
+              <img
+                src={URL.createObjectURL(selectedImage)}
+                alt="Selected Avatar"
+                style={{ maxWidth: '200px', maxHeight: '200px' }}
+              />
+            ) : (
+              'Nincs kiválasztva profilkép'
+            )}
           </div>
+          <input type="file" onChange={handleImageChange} accept="image/*" />
         </div>
+      );
+    };
 
-        <div className="card profil-kerdoiv">
-          <h1>Kitöltött kérdőivek:</h1>
-        </div>
-      </div>
-    </div>
-  );
-}
+export default Profile;

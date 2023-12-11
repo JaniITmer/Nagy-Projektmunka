@@ -7,15 +7,18 @@ export default function Navbar({loggedIn, onLogout}) {
         Questionnaire
       </Link>
       <ul>
-        {loggedIn && (
-          <CustomLink to="/profil">Profil</CustomLink>
+        {loggedIn ? (
+          <>
+            <CustomLink to="/profil">Profil</CustomLink>
+            <button onClick={onLogout}>Kijelentkezés</button>
+          </>
+        ) : (
+          <>
+            <CustomLink to="/login">Bejelentkezés</CustomLink>
+            <CustomLink to="/register">Regisztráció</CustomLink>
+          </>
         )}
-        <CustomLink to="/login">Bejelentkezés</CustomLink>
-        <CustomLink to="/register">Regisztráció</CustomLink>
       </ul>
-      {loggedIn && (
-        <button onClick={onLogout}>Kijelentkezés</button>
-      )}
     </nav>
   )
 }

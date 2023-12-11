@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import user_icon from '../images/username.png'
 import passwd_icon from '../images/password.png'
 
-export default function Login() {
+export default function Login({ onLogin}) {
     const [values, setValues] = useState({
         email: '',
         password: ''
     })
+
+    
     const navigate = useNavigate();
     const handleInput = (event) => {
         setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
@@ -21,7 +23,13 @@ export default function Login() {
         axios.post('http://localhost:8080/users', values)
             .then(res => {
                 if (res.data.userId) {
+                    onLogin(); 
+                    /*
+                    setUsername(res.data.username);
+                    onLogin(res.data.username);
+                    */
                     navigate('/');
+                
                 } else {
                     alert("Hibás email vagy jelszó!");
                 }

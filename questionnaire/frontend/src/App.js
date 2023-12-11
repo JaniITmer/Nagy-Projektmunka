@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Login from "./pages/Login";
 import Register from './pages/Register';
@@ -12,12 +13,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const handleLogin = () => {
+  const [userEmail, setUserEmail] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = (email) => {
     setLoggedIn(true);
+    setUserEmail(email);
   };
 
   const handleLogout = () => {
     setLoggedIn(false);
+    navigate('/');
   };
   return (
     <div>
@@ -30,7 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/my-questionnaire" element={<MyQuestonnaire />} />
           <Route path="/questionnaire/:questionId" element={<Questionnaire />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile userEmail={userEmail} />} />
         </Routes>
       </div>
     </div>

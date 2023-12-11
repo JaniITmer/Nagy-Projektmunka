@@ -9,7 +9,7 @@ export default function Navbar({loggedIn, onLogout}) {
       <ul>
         {loggedIn ? (
           <>
-            <CustomLink to="/profil">Profil</CustomLink>
+            <CustomLink to="/profile">Profil</CustomLink>
             <button onClick={onLogout}>Kijelentkezés</button>
           </>
         ) : (

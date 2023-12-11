@@ -1,0 +1,59 @@
+.profil-oldal {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0; /* Háttérszín a profil-oldalnak */
+    padding: 20px; /* Távolság a konténer és a tartalom között */
+  }
+  
+  .left-panel {
+    width: 45%;
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .right-panel {
+    width: 45%;
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .header {
+    color: #333;
+  }
+  
+  .email,
+  .felhasznalonev,
+  .profilkep {
+    display: block;
+    margin-bottom: 10px;
+    color: #555; 
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .file-input {
+    margin-top: 10px;
+  }
+  
+  .file-input label {
+    background-color: #3498db; 
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-input label:hover {
+    background-color: #2980b9; 
+  }

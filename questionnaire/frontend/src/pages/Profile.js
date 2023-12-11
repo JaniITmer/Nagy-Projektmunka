@@ -11,29 +11,34 @@ const Profile = ({ userEmail, username, onImageChange }) => {
     };
 
     return (
-        <div>
-          <h2>Profil</h2>
-          <div>
-            <strong>Email cím:</strong> {userEmail}
+        <div className='profil-oldal'>
+          <div className='left-panel'>
+            <h2 className='header'>Profil</h2>
+            <div>
+              <strong className="profilkep">Profilkép:</strong>
+              {selectedImage ? (
+                <img className="img"
+                  src={URL.createObjectURL(selectedImage)}
+                  alt="Selected Avatar"
+                  style={{ maxWidth: '200px', maxHeight: '200px' }}
+                />
+              ) : (
+                'Nincs kiválasztva profilkép'
+              )}
+            </div>
+            <input type="file" onChange={handleImageChange} accept="image/*" className="file-input" />
           </div>
-          <div>
-            <strong>Felhasználónév:</strong> {username}
+          <div className='right-panel'>
+            <div>
+              <strong className="felhasznalonev">Felhasználónév:</strong> {username}
+            </div>
+            <div>
+              <strong className="email">Email cím:</strong> {userEmail}
+            </div>
           </div>
-          <div>
-            <strong>Profilkép:</strong>
-            {selectedImage ? (
-              <img
-                src={URL.createObjectURL(selectedImage)}
-                alt="Selected Avatar"
-                style={{ maxWidth: '200px', maxHeight: '200px' }}
-              />
-            ) : (
-              'Nincs kiválasztva profilkép'
-            )}
-          </div>
-          <input type="file" onChange={handleImageChange} accept="image/*" />
         </div>
       );
+    
     };
 
 export default Profile;

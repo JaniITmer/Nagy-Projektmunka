@@ -20,6 +20,9 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 |Rossz jelszó megadása bejelentkezéskor| 2022.12.12. | Bejelentkezés művelet nem hajtódik végre. | Nem találtam problémát. | ... |
 |Saját profil megjelenítése ha bejelentkezett a felhasználó | 2022.12.12. | Megjelennik a saját profil fül , a felhasználók adatai is megjelennek a profil oldalon belül| Nem találtam problémát. | ... |
 |Saját profil elrejtése ha nincs bejelentkezve a felhasználó| 2022.12.12. | Nem jelenik meg a  Saját profil fül | Nem találtam problémát. | ... |
+|Nem regisztrált felhasználóként a főldal megtekintése| 2022.12.12. | Az oldal tudatosítja a felhasználóval hogy a kérdőívek kitöltéséhez bejelentkezés szükséges | Nem találtam problémát. | ... |
+|bejelentkezett felhasználóként a főldal megtekintése| 2022.12.12. | Az oldalon megjelennek az elérhető kérdőív témák | Nem találtam problémát. | ... |
+
 
 
 

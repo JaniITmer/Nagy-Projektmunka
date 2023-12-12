@@ -10,6 +10,7 @@ export default function Navbar({loggedIn, onLogout}) {
         {loggedIn ? (
           <>
             <CustomLink to="/profile">Profil</CustomLink>
+            <CustomLink  to="/statics">Statisztikák</CustomLink>
             <button className="kijelentkezes-btn" onClick={onLogout}>Kijelentkezés</button>
           </>
         ) : (

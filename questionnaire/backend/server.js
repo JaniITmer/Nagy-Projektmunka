@@ -136,6 +136,19 @@ app.get('/questionnaires', (req, res) => {
     });
   });
 
+  //Statiszika megjelenítése
+app.get('/statics',(req,res)=>{
+    
+    const sql="SELECT * FROM statistics "
+    db.query(sql,(err,data)=>{
+        if(err){
+            return res.json({Error:"Hiba"})
+
+        }
+        return res.json(data)
+    })
+})
+
 //Kérdések listázása
 app.get('/questions/:questionId', (req, res) => {
     const { questionId } = req.params;

@@ -20,9 +20,15 @@ export default function Login({ onLogin}) {
     
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        
+
         axios.post('http://localhost:8080/users', values)
             .then(res => {
                 console.log("Axios response:", res.data);
+                
+        
+                
                 if (res.data.userId) {
                     onLogin(res.data.email); 
                     /*
@@ -30,8 +36,14 @@ export default function Login({ onLogin}) {
                     onLogin(res.data.username);
                     */
                     navigate('/');
-                
-                } else {
+                }
+                else if(!values.email || !values.password){
+                    alert("Minden mezőt ki kell töltenie!");
+                }
+                else if(!values.password || !values.email){
+                    alert("Minden mezőt ki kell töltenie!");
+                }
+                else{
                     alert("Hibás email vagy jelszó!");
                 }
             })

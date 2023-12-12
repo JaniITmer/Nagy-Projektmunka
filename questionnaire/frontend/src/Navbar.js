@@ -10,7 +10,7 @@ export default function Navbar({loggedIn, onLogout}) {
         {loggedIn ? (
           <>
             <CustomLink to="/profile">Profil</CustomLink>
-            <button onClick={onLogout}>Kijelentkezés</button>
+            <button className="kijelentkezes-btn" onClick={onLogout}>Kijelentkezés</button>
           </>
         ) : (
           <>

@@ -1,13 +1,13 @@
 .profil-oldal {
     display: flex;
     justify-content: space-between;
-    background-color: #f0f0f0; /* Háttérszín a profil-oldalnak */
+    background-color: #fdfb70; /* Háttérszín a profil-oldalnak */
     padding: 20px; /* Távolság a konténer és a tartalom között */
   }
   
   .left-panel {
     width: 45%;
-    background-color: #fff; 
+    background-color: rgb(113, 113, 219); 
     padding: 20px; 
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -15,7 +15,7 @@
   
   .right-panel {
     width: 45%;
-    background-color: #fff; 
+    background-color:rgb(113, 113, 219); 
     padding: 20px; 
     border-radius: 8px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 

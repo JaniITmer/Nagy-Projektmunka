@@ -18,6 +18,9 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 |Jelszó megerősítése más szöveggel regisztrációkor| 2022.12.12. | Regisztráció művelet nem hajtódik végre.  Jelez a felhasználónak az oldal, hogy a két jelszónak azonosnak kell lennie| Nem találtam problémát. | ... |
 |Rossz email cím megadása bejelentkezéskor| 2022.12.12. | Bejelentkezés művelet nem hajtódik végre. | Nem találtam problémát. | ... |
 |Rossz jelszó megadása bejelentkezéskor| 2022.12.12. | Bejelentkezés művelet nem hajtódik végre. | Nem találtam problémát. | ... |
+|Saját profil megjelenítése ha bejelentkezett a felhasználó | 2022.12.12. | Megjelennik a saját profil fül , a felhasználók adatai is megjelennek a profil oldalon belül| Nem találtam problémát. | ... |
+|Saját profil elrejtése ha nincs bejelentkezve a felhasználó| 2022.12.12. | Nem jelenik meg a  Saját profil fül | Nem találtam problémát. | ... |
+
 
 
 

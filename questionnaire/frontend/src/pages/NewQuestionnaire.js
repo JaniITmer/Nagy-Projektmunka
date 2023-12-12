@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function NewQuestionnaire() {
+export default function NewQuestionnaire({loggedIn}) {
     const [values, setValues] = useState({
         title: '',
         question1: '',
@@ -39,6 +39,8 @@ export default function NewQuestionnaire() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        
         if (!values.title ||
             !values.question1 ||
             !values.option1_1 ||

@@ -18,7 +18,9 @@ export default function Navbar({loggedIn, onLogout}) {
             <CustomLink to="/register">Regisztráció</CustomLink>
           </>
         )}
+        
       </ul>
+      
     </nav>
   )
 }

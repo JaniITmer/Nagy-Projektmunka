@@ -31,9 +31,7 @@ const Profile = ({ userEmail, username, onImageChange }) => {
             <input type="file" onChange={handleImageChange} accept="image/*" className="file-input" />
           </div>
           <div className='right-panel'>
-            <div>
-              <strong className="felhasznalonev">Felhasználónév:</strong> {username}
-            </div>
+            
             <div>
             <strong className="email">Email cím:</strong> {userEmail}
             </div>

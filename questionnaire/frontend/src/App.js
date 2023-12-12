@@ -38,7 +38,7 @@ function App() {
      <Navbar loggedIn={isLoggedIn} onLogout={handleLogout} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home loggedIn={isLoggedIn}/>} />
           <Route path="/new-questionnaire" element={<NewQuestionnaire />} />
           <Route path="/login" element={<Login onLogin={handleLogin}/>} />
           <Route path="/register" element={<Register />} />

@@ -112,12 +112,7 @@ const handleSubmit = (event) => {
         </div>
     ))}
 
-        <div className="card">
-        </div>
-      </div>
-      <div className="main-page-info">
-        <h1>Jelenleg vendég módban van!</h1>
-        <h1>A kérdőívek kitöltéséhez jelentkezzen be!</h1>
+      
       </div>
     </div>
   );

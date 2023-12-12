@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Home() {
+export default function Home({ loggedIn, userEmail}) {
   const [questionnaires, setQuestionnaires] = useState([]);
 
   useEffect(() => {
@@ -43,9 +43,34 @@ export default function Home() {
         </div>
       </div>
       <div className="main-page-info">
-        <h1>Jelenleg vendég módban van!</h1>
-        <h1>A kérdőívek kitöltéséhez jelentkezzen be!</h1>
+      {loggedIn ? (
+        <>
+          <h1>Üdvözöljük, {userEmail}!</h1>
+          <h1>Kitöltött kérdőívek: </h1>
+        </>
+      ) : (
+        <>
+          <h1>Jelenleg vendég módban van!</h1>
+          <h1>A kérdőívek kitöltéséhez jelentkezzen be!</h1>
+        </>
+      )}
+
+
+    
       </div>
     </div>
   );
 }
+/*
+    {loggedIn ? (
+          <>
+            <CustomLink to="/profile">Profil</CustomLink>
+            <button onClick={onLogout}>Kijelentkezés</button>
+          </>
+        ) : (
+          <>
+            <CustomLink to="/login">Bejelentkezés</CustomLink>
+            <CustomLink to="/register">Regisztráció</CustomLink>
+          </>
+        )}
+    */

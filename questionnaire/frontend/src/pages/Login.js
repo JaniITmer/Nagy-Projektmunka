@@ -22,8 +22,9 @@ export default function Login({ onLogin}) {
         event.preventDefault();
         axios.post('http://localhost:8080/users', values)
             .then(res => {
+                console.log("Axios response:", res.data);
                 if (res.data.userId) {
-                    onLogin(); 
+                    onLogin(res.data.email); 
                     /*
                     setUsername(res.data.username);
                     onLogin(res.data.username);

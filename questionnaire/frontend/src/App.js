@@ -19,9 +19,8 @@ function App() {
 
   const handleLogin = (email) => {
     setLoggedIn(true);
+    setUserEmail(email);
     
-    setUserEmail('example@email.com');
-    setUsername('ExampleUser');
   };
 
   const handleLogout = () => {
@@ -45,7 +44,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/my-questionnaire" element={<MyQuestonnaire />} />
           <Route path="/questionnaire/:questionId" element={<Questionnaire />} />
-          <Route path="/profile" element={<Profile userEmail={userEmail} username={username}onImageChange={handleImageChange} />} />
+          <Route path="/profile" element={<Profile userEmail={userEmail} username={username} onImageChange={handleImageChange} />} />
         </Routes>
       </div>
     </div>

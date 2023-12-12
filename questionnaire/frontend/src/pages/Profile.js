@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/Profile.css';
 
 const Profile = ({ userEmail, username, onImageChange }) => {
     const [selectedImage, setSelectedImage] = useState(null);
-  
+    console.log("userEmail in Profile component:", userEmail);
     const handleImageChange = (event) => {
       const file = event.target.files[0];
       setSelectedImage(file);
       onImageChange(file);
     };
-
+    useEffect(() => {
+      console.log("userEmail updated:", userEmail);
+    }, [userEmail]);
     return (
         <div className='profil-oldal'>
           <div className='left-panel'>
@@ -33,7 +35,7 @@ const Profile = ({ userEmail, username, onImageChange }) => {
               <strong className="felhasznalonev">Felhasználónév:</strong> {username}
             </div>
             <div>
-              <strong className="email">Email cím:</strong> {userEmail}
+            <strong className="email">Email cím:</strong> {userEmail}
             </div>
           </div>
         </div>

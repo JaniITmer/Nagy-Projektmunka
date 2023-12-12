@@ -40,7 +40,7 @@ app.post('/users', (req, res) =>{
         }
         if (data.length > 0) {
             //Bejelentkezett felhasználó id-je
-            return res.json({ userId: data[0].id });
+            return res.json({ userId: data[0].id, email: data[0].email });
         } else {
             return res.json("Failed");
         }

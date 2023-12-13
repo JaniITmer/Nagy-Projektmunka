@@ -11,11 +11,16 @@
   margin-bottom: 20px;
 }
 
+.radioBtn {
+  margin-left: 20px;
+}
+
 .Ques-options-container{
   margin-bottom: 5px;
     display: flex;
     flex-direction: row;
     gap: 5px;
+    margin-left: 10px;
 }
 
 .Ques-option{
@@ -32,7 +37,7 @@
   text-align: center;
   margin-top: 5px;
   width: 40%;
-  
+  margin-left: 0px; 
 }
 .Ques-option:hover{
   background-color: rgb(13, 86, 95);;

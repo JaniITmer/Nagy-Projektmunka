@@ -178,7 +178,7 @@ app.get('/answers/:questionId', (req, res) => {
 app.post('/answer', (req, res) => {
     const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?)";
     const values = [
-        16,//req.body.userId,
+        36,//req.body.userId,
         req.body.question_id,
         req.body.option1,
         req.body.option2,

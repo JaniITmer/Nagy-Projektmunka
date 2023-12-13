@@ -29,7 +29,7 @@ Következő tesztelésnél a többi funkció kerül vizsgálatra illetve elemzé
 ## Béta teszt
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
-
+| :-------: | ------------------- | ------- | -------- | ----- |
 |Regisztrációs gomb|2023.12.13|A regisztrációs gombra rákattintva regisztráció felület megjelenítése. |A regisztrációs felület megjelenik.|Megfelelően működik, nem találtam hibát.|
 |Regisztráció|2023.12.13|A regisztráció során felhasználónév, email, jelszó megadása és elmentése.|A regisztráció során az adatokat az adatbázisba kerülnek.|Megfelelően működik, nem találtam hibát.|
 |Regisztráció ellenőrzés (jelszó) |2023.12.13|A regisztráció során a program ellenőrizze a jelszót.|A program ellenőrzi a jelszó hosszát, speciális karaktereket, kis és nagy betűket.|Megfelelően működik, nem találtam hibát.|

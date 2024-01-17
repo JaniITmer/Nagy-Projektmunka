@@ -1,41 +1,76 @@
-import './styles/Home.css';
+import "./styles/Home.css";
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
-export default function Home({ loggedIn, userEmail}) {
+export default function Home({ loggedIn }) {
   const [questionnaires, setQuestionnaires] = useState([]);
-  console.log('loggedIn:', loggedIn);
+
   useEffect(() => {
     if (loggedIn) {
-    axios.get('http://localhost:8080/questionnaires')
-      .then(response => {
-        setQuestionnaires(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching questionnaires:', error);
-      });
+      axios
+        .get("http://localhost:8080/questionnaires")
+        .then((response) => {
+          const { categories, questionnaires } = processData(response.data);
+
+          setQuestionnaires(categories);
+        })
+        .catch((error) => {
+          console.error("Error fetching questionnaires:", error);
+        });
     }
   }, [loggedIn]);
+
+  const processData = (data) => {
+    const categoriesMap = new Map();
+
+    data.forEach((item) => {
+      const category = item.category;
+
+      if (!categoriesMap.has(category)) {
+        categoriesMap.set(category, {
+          name: category,
+          questionnaires: [],
+        });
+      }
+
+      categoriesMap.get(category).questionnaires.push({
+        id: item.question_id,
+        title: item.title,
+      });
+    });
+
+    return {
+      categories: Array.from(categoriesMap.values()),
+      questionnaires: [],
+    };
+  };
 
   return (
     <div className="main-page">
       {loggedIn ? (
         <div className="topics">
-          <h1>Elérhető kérdőív témák</h1>
-          {questionnaires.map(questionnaire => (
-            <div key={questionnaire.id} className="card">
-              <h2>{questionnaire.title}</h2>
-              <p>
-                <Link to={`/questionnaire/${questionnaire.question_id}`} className="ujKerdoivGomb">
-                  {questionnaire.title}
-                </Link>
-              </p>
+          <h1>Elérhető kérdőívek</h1>
+          {questionnaires.map((category) => (
+            <div key={category.name} className="card">
+              <h2>{category.name}</h2>
+              {category.questionnaires.map((questionnaire) => (
+                <div key={questionnaire.id} className="card">
+                  <p>
+                    <Link
+                      to={`/questionnaire/${questionnaire.id}`}
+                      className="ujKerdoivGomb"
+                    >
+                      {questionnaire.title}
+                    </Link>
+                  </p>
+                </div>
+              ))}
             </div>
           ))}
           <div className="card">
-            <h2>Saját kérdőív</h2>
+            <h2>Új kérdőív</h2>
             <p>
               <Link to="/new-questionnaire" className="ujKerdoivGomb">
                 +
@@ -46,7 +81,7 @@ export default function Home({ loggedIn, userEmail}) {
       ) : (
         <div className="topics">
           <h1>Jelenleg vendég módban van!</h1>
-          <h1>A kérdőívek kitöltéséhez jelentkezzen be!</h1>
+          <h1>A kérdőívek megtekintéséhez jelentkezzen be!</h1>
         </div>
       )}
     </div>
@@ -54,15 +89,15 @@ export default function Home({ loggedIn, userEmail}) {
 }
 
 /*
-    {loggedIn ? (
-          <>
-            <CustomLink to="/profile">Profil</CustomLink>
-            <button onClick={onLogout}>Kijelentkezés</button>
-          </>
-        ) : (
-          <>
-            <CustomLink to="/login">Bejelentkezés</CustomLink>
-            <CustomLink to="/register">Regisztráció</CustomLink>
-          </>
-        )}
-    */
+            {loggedIn ? (
+                  <>
+                    <CustomLink to="/profile">Profil</CustomLink>
+                    <button onClick={onLogout}>Kijelentkezés</button>
+                  </>
+                ) : (
+                  <>
+                    <CustomLink to="/login">Bejelentkezés</CustomLink>
+                    <CustomLink to="/register">Regisztráció</CustomLink>
+                  </>
+                )}
+            */

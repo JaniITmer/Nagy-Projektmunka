@@ -100,50 +100,27 @@ app.post('/questionnaires', (req, res) => {
 
 
 app.post('/new_questionnaire', (req, res) =>{
-    const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`,`option1_1`, `option1_2`, `option1_3`, `option1_4`,`option2_1`, `option2_2`, `option2_3`, `option2_4`, `option3_1`, `option3_2`, `option3_3`, `option3_4`,`option4_1`,`option4_2`, `option4_3`, `option4_4` ) VALUES (?)";
-    const values = [
-        req.body.title,
-        req.body.question1,
-        req.body.question2,
-        req.body.question3,
-        req.body.question4,
-        req.body.option1_1,
-        req.body.option1_2,
-        req.body.option1_3,
-        req.body.option1_4,
-        req.body.option2_1,
-        req.body.option2_2,
-        req.body.option2_3,
-        req.body.option2_4,
-        req.body.option3_1,
-        req.body.option3_2,
-        req.body.option3_3,
-        req.body.option3_4,
-        req.body.option4_1,
-        req.body.option4_2,
-        req.body.option4_3,
-        req.body.option4_4
-    ];
-    
-    db.query(sql, [values], (err, data) => {
-        if(err) {
-            return res.json("Error");
+    var postData = req.body;
+    db.query('INSERT INTO questions SET ?', postData, function (error, results, fields) {
+        if (error) {
+            return res.status(500).json({ error: 'Az adatok beszúrása közben hiba történt' });
         }
-        return res.json(data); 
-    })
-    
+        res.status(200).json(results);
+    });
 })
 
 //Kérdőívek megjelenítése
-app.get('/questionnaires', (req, res) => {
-    const sql = "SELECT * FROM questions";
-    db.query(sql, (err, data) => {
-      if (err) {
-        return res.json("Error");
-      }
-      return res.json(data);
-    });
-  });
+app.get('/questionnaires',(req,res)=>{
+    
+    const sql="SELECT * FROM questions"
+    db.query(sql,(err,data)=>{
+        if(err){
+            return res.json({Error:"Hiba"})
+
+        }
+        return res.json(data)
+    })
+})
 
   //Statiszika megjelenítése
 app.get('/statics',(req,res)=>{

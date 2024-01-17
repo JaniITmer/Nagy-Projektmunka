@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 10. 00:23
+-- Létrehozás ideje: 2024. Jan 17. 18:00
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -42,7 +42,9 @@ CREATE TABLE `answers` (
 --
 
 INSERT INTO `answers` (`answer_id`, `user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES
-(8, 16, 15, 'Egészségtudatos és aktív', 'Legalább 3-4 alkalommal, 30 perc vagy több', 'Heti többször', 'Jó, néhány kisebb probléma van');
+(8, 16, 15, 'Egészségtudatos és aktív', 'Legalább 3-4 alkalommal, 30 perc vagy több', 'Heti többször', 'Jó, néhány kisebb probléma van'),
+(10, 36, 18, '', '', '', ''),
+(13, 36, 15, 'Egészségtudatos és aktív', '', 'Heti többször\r\n', 'Jó, néhány kisebb probléma van');
 
 -- --------------------------------------------------------
 
@@ -64,6 +66,7 @@ CREATE TABLE `questionnaires` (
 
 CREATE TABLE `questions` (
   `question_id` int(11) NOT NULL,
+  `category` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `question1` varchar(255) NOT NULL,
   `question2` varchar(255) NOT NULL,
@@ -91,8 +94,9 @@ CREATE TABLE `questions` (
 -- A tábla adatainak kiíratása `questions`
 --
 
-INSERT INTO `questions` (`question_id`, `title`, `question1`, `question2`, `question3`, `question4`, `option1_1`, `option1_2`, `option1_3`, `option1_4`,`option2_1`, `option2_2`,`option2_3`, `option2_4`, `option3_1`, `option3_2`, `option3_3`, `option3_4`,`option4_1`, `option4_2`, `option4_3`, `option4_4`) VALUES
-(15, 'Sport', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `questions` (`question_id`, `category`, `title`, `question1`, `question2`, `question3`, `question4`, `option1_1`, `option1_2`, `option1_3`, `option1_4`, `option2_1`, `option2_2`, `option2_3`, `option2_4`, `option3_1`, `option3_2`, `option3_3`, `option3_4`, `option4_1`, `option4_2`, `option4_3`, `option4_4`) VALUES
+(15, 'Sport', 'Másik sportos kérdőív', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', 'Egészségtudatos és aktív', '', '', '', 'Legalább 3-4 alkalommal, 30 perc vagy több\r\n', '', '', '', 'Heti többször\r\n', '', '', '', 'Jó, néhány kisebb probléma van', '', '', ''),
+(18, 'Sport', 'Sportolási szokások', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -168,7 +172,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT a táblához `questionnaires`
@@ -180,7 +184,7 @@ ALTER TABLE `questionnaires`
 -- AUTO_INCREMENT a táblához `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT a táblához `users`

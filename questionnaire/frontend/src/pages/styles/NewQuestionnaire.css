@@ -3,11 +3,11 @@
   background-color: rgb(255, 220, 23);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 70%;
-  height: 100px;
+  height: auto;
   display: block;
   margin: auto;
   border-radius: 10px;
-  padding-top: 10px;
+  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -47,7 +47,7 @@
     background-color: rgb(255, 220, 23);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 70%;
-    height: 190px;
+    height: auto;
     display: block;
     margin: auto;
     border-radius: 10px;

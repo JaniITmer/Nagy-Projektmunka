@@ -100,7 +100,7 @@ app.post('/questionnaires', (req, res) => {
 
 
 app.post('/new_questionnaire', (req, res) =>{
-    const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`,`option1_1`, `option1_2`, `option2_1`, `option2_2`, `option3_1`, `option3_2`,`option4_1`,`option4_2` ) VALUES (?)";
+    const sql = "INSERT INTO questions (`title`, `question1`, `question2`, `question3`, `question4`,`option1_1`, `option1_2`, `option1_3`, `option1_4`,`option2_1`, `option2_2`, `option2_3`, `option2_4`, `option3_1`, `option3_2`, `option3_3`, `option3_4`,`option4_1`,`option4_2`, `option4_3`, `option4_4` ) VALUES (?)";
     const values = [
         req.body.title,
         req.body.question1,
@@ -109,13 +109,22 @@ app.post('/new_questionnaire', (req, res) =>{
         req.body.question4,
         req.body.option1_1,
         req.body.option1_2,
+        req.body.option1_1,
+        req.body.option1_2,
         req.body.option2_1,
         req.body.option2_2,
+        req.body.option1_1,
+        req.body.option1_2,
         req.body.option3_1,
-        req.body.option3_2,
+        req.body.option3_3,
+        req.body.option3_4,
+        req.body.option1_2,
         req.body.option4_1,
-        req.body.option4_2
+        req.body.option4_2,
+        req.body.option4_3,
+        req.body.option4_4
     ];
+    
     db.query(sql, [values], (err, data) => {
         if(err) {
             return res.json("Error");

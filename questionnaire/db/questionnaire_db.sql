@@ -71,20 +71,28 @@ CREATE TABLE `questions` (
   `question4` varchar(255) NOT NULL,
   `option1_1` varchar(255) NOT NULL,
   `option1_2` varchar(255) NOT NULL,
+  `option1_3` varchar(255) NOT NULL,
+  `option1_4` varchar(255) NOT NULL,
   `option2_1` varchar(255) NOT NULL,
   `option2_2` varchar(255) NOT NULL,
+  `option2_3` varchar(255) NOT NULL,
+  `option2_4` varchar(255) NOT NULL,
   `option3_1` varchar(255) NOT NULL,
   `option3_2` varchar(255) NOT NULL,
+  `option3_3` varchar(255) NOT NULL,
+  `option3_4` varchar(255) NOT NULL,
   `option4_1` varchar(255) NOT NULL,
-  `option4_2` varchar(255) NOT NULL
+  `option4_2` varchar(255) NOT NULL,
+  `option4_3` varchar(255) NOT NULL,
+  `option4_4` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `questions`
 --
 
-INSERT INTO `questions` (`question_id`, `title`, `question1`, `question2`, `question3`, `question4`, `option1_1`, `option1_2`, `option2_1`, `option2_2`, `option3_1`, `option3_2`, `option4_1`, `option4_2`) VALUES
-(15, 'Sport', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', '', '', '', '', '', '', '', '');
+INSERT INTO `questions` (`question_id`, `title`, `question1`, `question2`, `question3`, `question4`, `option1_1`, `option1_2`, `option1_3`, `option1_4`,`option2_1`, `option2_2`,`option2_3`, `option2_4`, `option3_1`, `option3_2`, `option3_3`, `option3_4`,`option4_1`, `option4_2`, `option4_3`, `option4_4`) VALUES
+(15, 'Sport', 'Hogyan írnád le jelenlegi életmódodat?', 'Mennyi időt szánsz hetente testmozgásra?', 'Milyen gyakran fogyasztasz egészséges ételeket és zöldségeket?', 'Hogyan értékeled az egészségi állapotodat?', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 

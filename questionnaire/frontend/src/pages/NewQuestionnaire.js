@@ -15,12 +15,20 @@ export default function NewQuestionnaire({loggedIn}) {
         question4: '',
         option1_1: '',
         option1_2: '',
+        option1_3: '',
+        option1_4: '',
         option2_1: '',
         option2_2: '',
+        option2_3: '',
+        option2_4: '',
         option3_1: '',
         option3_2: '',
+        option3_3: '',
+        option3_4: '',
         option4_1: '',
-        option4_2: ''
+        option4_2: '',
+        option4_3: '',
+        option4_4: ''
     })
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -45,15 +53,23 @@ export default function NewQuestionnaire({loggedIn}) {
             !values.question1 ||
             !values.option1_1 ||
             !values.option1_2 ||
+            !values.option1_3 ||
+            !values.option1_4 ||
             !values.question2 ||
             !values.option2_1 ||
             !values.option2_2 ||
+            !values.option2_3 ||
+            !values.option2_4 ||
             !values.question3 ||
             !values.option3_1 ||
             !values.option3_2 ||
+            !values.option3_3 ||
+            !values.option3_4 ||
             !values.question4 ||
             !values.option4_1 ||
-            !values.option4_2) {
+            !values.option4_2 ||
+            !values.option4_3 ||
+            !values.option4_4 ) {
             setError('Mindent ki kell tölteni.');
             return;
         }
@@ -83,6 +99,8 @@ export default function NewQuestionnaire({loggedIn}) {
                             name="title" onChange={handleInput}/>
                         </div>
                 <div className="newQues-div2">
+
+
                     <div className="question1">
                             <label className="newQues-label" htmlFor="question1">Kérdés1</label>
                             <input  type="text" id="question1" className="newQues-inputQues" placeholder="kérdés1" 
@@ -98,7 +116,19 @@ export default function NewQuestionnaire({loggedIn}) {
                             <input  type="text" id="option1_2" className="newQues-inputAns" placeholder="válasz1_2" 
                             name="option1_2" onChange={handleInput}/>
                         </div>
+                        <div className="option1_3">
+                            <label className="newQues-label" htmlFor="option1_3">Válasz1_3</label>
+                            <input  type="text" id="option1_3" className="newQues-inputAns" placeholder="válasz1_3" 
+                            name="option1_3" onChange={handleInput}/>
+                        </div>
+                        <div className="option1_4">
+                            <label className="newQues-label" htmlFor="option1_4">Válasz1_4</label>
+                            <input  type="text" id="option1_4" className="newQues-inputAns" placeholder="válasz1_4" 
+                            name="option1_4" onChange={handleInput}/>
+                        </div>  
                 </div>
+
+
                 <div className="newQues-div2">
                     <div className="question2">
                             <label className="newQues-label" htmlFor="question2">Kérdés2</label>
@@ -115,7 +145,19 @@ export default function NewQuestionnaire({loggedIn}) {
                             <input  type="text" id="option2_2" className="newQues-inputAns" placeholder="válasz2_2" 
                             name="option2_2" onChange={handleInput}/>
                         </div>
+                        <div className="option2_3">
+                            <label className="newQues-label" htmlFor="option2_3">Válasz2_3</label>
+                            <input  type="text" id="option2_3" className="newQues-inputAns" placeholder="válasz2_3" 
+                            name="option2_3" onChange={handleInput}/>
+                        </div>
+                        <div className="option2_4">
+                            <label className="newQues-label" htmlFor="option2_4">Válasz2_4</label>
+                            <input  type="text" id="option2_4" className="newQues-inputAns" placeholder="válasz2_4" 
+                            name="option2_4" onChange={handleInput}/>
+                        </div>
                     </div>
+
+
                 <div className="newQues-div2">
                     <div className="question3">
                             <label className="newQues-label" htmlFor="question3">Kérdés3</label>
@@ -132,7 +174,19 @@ export default function NewQuestionnaire({loggedIn}) {
                             <input  type="text" id="option3_2" className="newQues-inputAns" placeholder="válasz3_2" 
                             name="option3_2" onChange={handleInput}/>
                         </div>
+                        <div className="option3_3">
+                            <label className="newQues-label" htmlFor="option3_3">Válasz3_3</label>
+                            <input  type="text" id="option3_3" className="newQues-inputAns" placeholder="válasz3_3" 
+                            name="option3_3" onChange={handleInput}/>
+                        </div>
+                        <div className="option3_4">
+                            <label className="newQues-label" htmlFor="option3_4">Válasz3_4</label>
+                            <input  type="text" id="option3_4" className="newQues-inputAns" placeholder="válasz3_4" 
+                            name="option3_4" onChange={handleInput}/>
+                        </div>
                 </div>
+
+
                 <div className="newQues-div2">
                     <div className="question4">
                             <label className="newQues-label" htmlFor="question4">Kérdés4</label>
@@ -149,7 +203,19 @@ export default function NewQuestionnaire({loggedIn}) {
                             <input  type="text" id="option4_2" className="newQues-inputAns" placeholder="válasz4_2" 
                             name="option4_2" onChange={handleInput}/>
                         </div>
+                        <div className="option4_3">
+                            <label className="newQues-label" htmlFor="option4_3">Válasz4_3</label>
+                            <input  type="text" id="option4_3" className="newQues-inputAns" placeholder="válasz4_3" 
+                            name="option4_3" onChange={handleInput}/>
+                        </div>
+                        <div className="option4_4">
+                            <label className="newQues-label" htmlFor="option4_4">Válasz4_4</label>
+                            <input  type="text" id="option4_4" className="newQues-inputAns" placeholder="válasz4_4" 
+                            name="option4_4" onChange={handleInput}/>
+                        </div>
                 </div>
+
+
                     <button className='newQues-button' type='submit'>Kérdőív hozzáadás</button>
                 </form>
                 {error && <p className="error-message">{error}</p>}

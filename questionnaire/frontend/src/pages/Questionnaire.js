@@ -15,12 +15,20 @@ export default function Questionnaire() {
     question_id: questionId,
     option1_1: '',
     option1_2: '',
+    option1_3: '',
+    option1_4: '',
     option2_1: '',
     option2_2: '',
+    option2_3: '',
+    option2_4: '',
     option3_1: '',
     option3_2: '',
+    option3_3: '',
+    option3_4: '',
     option4_1: '',
-    option4_2: ''
+    option4_2: '',
+    option4_3: '',
+    option4_4: ''
   });
 const navigate = useNavigate();
 
@@ -80,6 +88,8 @@ const handleSubmit = (event) => {
                 <div className="Ques-options-container">
                   <input className='radioBtn' type='radio' name='option1' value={question.option1_1} onChange={handleInput}></input><p className="Ques-option">{question.option1_1}</p>
                   <input className='radioBtn' type='radio' name='option1' value={question.option1_2} onChange={handleInput}></input><p className="Ques-option">{question.option1_2}</p>
+                  <input className='radioBtn' type='radio' name='option1' value={question.option1_3} onChange={handleInput}></input><p className="Ques-option">{question.option1_3}</p>
+                  <input className='radioBtn' type='radio' name='option1' value={question.option1_4} onChange={handleInput}></input><p className="Ques-option">{question.option1_4}</p>
                 </div>
                 
                 </div>
@@ -88,6 +98,8 @@ const handleSubmit = (event) => {
                 <div className="Ques-options-container">
                   <input className='radioBtn' type='radio' name='option2' value={question.option2_1} onChange={handleInput}></input><p className="Ques-option">{question.option2_1}</p>
                   <input className='radioBtn' type='radio' name='option2' value={question.option2_2} onChange={handleInput}></input><p className="Ques-option">{question.option2_2}</p>
+                  <input className='radioBtn' type='radio' name='option2' value={question.option2_3} onChange={handleInput}></input><p className="Ques-option">{question.option2_3}</p>
+                  <input className='radioBtn' type='radio' name='option2' value={question.option2_4} onChange={handleInput}></input><p className="Ques-option">{question.option2_4}</p>
                 </div>
                 
                 </div>
@@ -96,6 +108,8 @@ const handleSubmit = (event) => {
                 <div className="Ques-options-container">
                   <input className='radioBtn' type='radio' name='option3' value={question.option3_1} onChange={handleInput}></input><p className="Ques-option">{question.option3_1}</p>
                   <input className='radioBtn' type='radio' name='option3' value={question.option3_2} onChange={handleInput}></input><p className="Ques-option">{question.option3_2}</p>
+                  <input className='radioBtn' type='radio' name='option3' value={question.option3_3} onChange={handleInput}></input><p className="Ques-option">{question.option3_3}</p>
+                  <input className='radioBtn' type='radio' name='option3' value={question.option3_4} onChange={handleInput}></input><p className="Ques-option">{question.option3_4}</p>
                 </div>
 
                 </div>
@@ -104,6 +118,8 @@ const handleSubmit = (event) => {
                 <div className="Ques-options-container">
                   <input className='radioBtn' type='radio' name='option4' value={question.option4_1} onChange={handleInput}></input><p className="Ques-option">{question.option4_1}</p>
                   <input className='radioBtn' type='radio' name='option4' value={question.option4_2} onChange={handleInput}></input><p className="Ques-option">{question.option4_2}</p>
+                  <input className='radioBtn' type='radio' name='option4' value={question.option4_3} onChange={handleInput}></input><p className="Ques-option">{question.option4_3}</p>
+                  <input className='radioBtn' type='radio' name='option4' value={question.option4_4} onChange={handleInput}></input><p className="Ques-option">{question.option4_4}</p>
                 </div>
                 </div>
               

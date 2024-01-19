@@ -30,7 +30,7 @@ export default function Login({ onLogin}) {
         
                 
                 if (res.data.userId) {
-                    onLogin(res.data.email); 
+                    onLogin(res.data.email, res.data.userId);
                     /*
                     setUsername(res.data.username);
                     onLogin(res.data.username);

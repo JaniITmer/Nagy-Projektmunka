@@ -17,18 +17,22 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [username, setUsername] = useState('');
+  const [loggedInUserId, setLoggedInUserId] = useState(null);
   const navigate = useNavigate();
 
-  const handleLogin = (email) => {
+  const handleLogin = (email, userId) => {
+    console.log('Login successful. User ID:', userId);
     setLoggedIn(true);
     setUserEmail(email);
-    
+    setUsername(username);
+    setLoggedInUserId(userId); // Set loggedInUserId on login
+    navigate('/');
   };
-
   const handleLogout = () => {
     setLoggedIn(false);
     setUserEmail('');
     setUsername('');
+    setLoggedInUserId(null); 
     navigate('/');
   };
   const handleImageChange = (image) => {
@@ -41,7 +45,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home loggedIn={isLoggedIn}/>} />
-          <Route path="/statics" element={<Statics/>} />
+          <Route path="/statics" element={<Statics loggedInUserId={loggedInUserId} />} />
           <Route path="/new-questionnaire" element={<NewQuestionnaire />} />
           <Route path="/login" element={<Login onLogin={handleLogin}/>} />
           <Route path="/register" element={<Register />} />

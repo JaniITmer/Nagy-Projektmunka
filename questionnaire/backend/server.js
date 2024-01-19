@@ -32,21 +32,23 @@ app.post('/register', (req, res) =>{
 
 
 // Bejelentkezés
-app.post('/users', (req, res) =>{
+app.post('/users', (req, res) => {
     const sql = "SELECT * FROM users WHERE `email` = ? AND `password` = ?";
     db.query(sql, [req.body.email, req.body.password], (err, data) => {
-        if(err) {
+        if (err) {
             return res.json("Error");
         }
         if (data.length > 0) {
-            //Bejelentkezett felhasználó id-je
-            return res.json({ userId: data[0].id, email: data[0].email, username: data[0].username});
+            // Bejelentkezett felhasználó id-je
+            const userId = data[0].id;
+
+            // Továbbítjuk a felhasználó id-jét a válaszban
+            return res.json({ userId, email: data[0].email, username: data[0].username });
         } else {
             return res.json("Failed");
         }
-    })
-    
-})
+    });
+});
 
 // E-mail ellenőrzése
 app.get('/check-email/:email', (req, res) => {
@@ -161,10 +163,11 @@ app.get('/answers/:questionId', (req, res) => {
 });
 
 //Válasz beküldése
-app.post('/answer', (req, res) => {
+app.post('/answer_questions/:userId', (req, res) => {
+    const userId = req.params.userId;
     const sql = "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?)";
     const values = [
-        36,//req.body.userId,
+        userId,
         req.body.question_id,
         req.body.option1,
         req.body.option2,
@@ -180,8 +183,21 @@ app.post('/answer', (req, res) => {
     });
 });
 
+app.get('/filled-questionnaires/:userId', (req, res) => {
+    const { userId } = req.params;
+    const sql = "SELECT COUNT(*) AS filledQuestionnaires FROM answers WHERE user_id = ?";
+    
+    db.query(sql, [userId], (err, data) => {
+        if (err) {
+            console.error("Error fetching filled questionnaires:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
 
+        const filledQuestionnaires = data[0].filledQuestionnaires; // Megváltozott a kinyerés módja
 
+        return res.json({ filledQuestionnaires });
+    });
+});
 app.listen(8080, () => {
     console.log("listening");
 });

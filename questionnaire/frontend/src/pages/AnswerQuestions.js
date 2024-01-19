@@ -27,8 +27,10 @@ export default function AnswerQuestions() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        //setErrors(validation(values));
-            axios.post('http://localhost:8082/answer_questions', values)
+        // Assuming you have loggedInUserId in your component state
+        const userId = loggedInUserId;
+    
+        axios.post(`http://localhost:8082/answer_questions/${userId}`, values)
             .then(res => {
                 navigate('/');
                 console.log(res);

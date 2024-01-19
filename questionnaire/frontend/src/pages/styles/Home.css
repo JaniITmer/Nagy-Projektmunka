@@ -9,18 +9,21 @@
     font: size 24px;
     background-color: transparent;
     border: none;
-    color: #add8ea;
+    color: blue;
     cursor: pointer;
     transition: color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
 .ujKerdoivGomb:hover{
-    color:#333;
+    color:gold;
 }
 
 .kerdoivGomb:hover{
     color: #add8ea
+
 }
 
 .card {
@@ -29,14 +32,15 @@
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 gold;
     transition: 0.3s;
     width: 45%;
     border-radius: 5px;
+    
 }
 
 .card h2 {
-    background-color: #333;
+    background-color: blue;
     color:aliceblue;
     margin-top: 0;
     border-top-right-radius: 5px;
@@ -44,7 +48,7 @@
 }
 
 .card:hover {
-    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 12px 0 blue;
 }
 
 .card-content1 {

@@ -23,7 +23,6 @@ function App() {
     setLoggedIn(true);
     setUserEmail(email);
   };
-
   const handleLogout = () => {
     setLoggedIn(false);
     setUserEmail("");

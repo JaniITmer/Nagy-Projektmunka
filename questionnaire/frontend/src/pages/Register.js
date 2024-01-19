@@ -114,30 +114,32 @@ export default function Register() {
     return (
         <div className='register-page'>
             <div>
+            
                 <div className='header'>
                     <form className="form-body red-rounded-border" action="" onSubmit={handleSubmit}>
-                        <div className='cim'>Ahhoz hogy kérdőívet tudjon kitölteni regisztráljon itt egy új fiókot</div>
-                        <div className="username">
+                        <div className='h1'>Regisztráció</div>
+                        
+                        <div className="">
                             <label className="form__label" htmlFor="username">Teljes név: </label>
-                            <input  type="text" id="username"  className="form__input" placeholder="felhasználónév" 
+                            <input  type="text" id="username"  className="form__input" placeholder="Felhasználónév" 
                             name="username" onChange={handleInput}/>
                         </div>
-                        <div className="email">
+                        
                             <label className="form__label" htmlFor="email">Email cím:</label>
                             <input  type="email" id="email" className="form__input" placeholder="Email"
                             name="email" onChange={handleInput}/>
-                        </div>
-                        <div className="password">
+                        
+                        <div className="">
                             <label className="form__label" htmlFor="password">Jelszó: </label>
                             <input className="form__input" type={type} id="password" placeholder="Jelszó" name="password"
                             onChange={(e) => {handleChange(e.target.value); handleInput(e);}}/>
                            {type==="password"?(
             <span className='icon-span' onClick={()=>setType("text")}>
-              <Icon icon={basic_eye_closed} size={18}/>
+              <Icon icon={basic_eye_closed} size={30}/>
             </span>
           ):(
             <span className='icon-span' onClick={()=>setType("password")}>
-              <Icon icon={basic_eye} size={18}/>
+              <Icon icon={basic_eye} size={30}/>
             </span>
           )}
 
@@ -205,7 +207,7 @@ export default function Register() {
           </div>
         </main>
                         </div>
-                        <div className="confirm-password">
+                        <div className="">
                             <label className="form__label" htmlFor="confirmPassword">Jelszó megerősítése </label>
                             <input className="form__input" type="password" id="confirmPassword" placeholder="Jelszó megerősítése" name="confirmPassword"
                             onChange={handleInput}/>
@@ -217,7 +219,7 @@ export default function Register() {
                 </div>
             </div>
         </div>
-    
+   
     )
 }
 

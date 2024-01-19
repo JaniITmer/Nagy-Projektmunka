@@ -16,8 +16,11 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 |Csak betűk megadása jelszóként regisztrációkor | 2023.12.10. | Regisztráció művelet nem hajtódik végre.  Jelez a felhasználónak az oldal, hogy a jelszónak számot és speciális karaktert is kell tartalmaznia| Az oldal jelzi, hogy a jelszónak számot és speciális karaktert is kell tartalmaznia|Nem találtam hibát. |
 |Csak speciális karakterek megadása jelszóként regisztrációkor | 2023.12.10. | Regisztráció művelet nem hajtódik végre.  Jelez a felhasználónak az oldal, hogy a jelszónak számot és Nagybetűt is kell tartalmaznia| Az oldal jelez a hiányzó speciális karakterrel kapcsolatban | Nem találtam hibát.|
 |Jelszó megerősítése más szöveggel regisztrációkor| 2023.12.10. | Regisztráció művelet nem hajtódik végre.  Jelez a felhasználónak az oldal, hogy a két jelszónak azonosnak kell lennie| Nem találtam problémát. | Nem találtam hibát. |
-
-
+|Navigálás a főoldalak között| 2023.12.11. | Az oldal tetején található navigációs sávon elhelyezett gombokra kattintva átléphetünk egy másik oldalra| A funkció az elvárásnak megfelelően működik  | Nem találtam hibát. |
+|Új kérdőívnek a létrehozása| 2023.12.11. | Az elkészített kérdőív bekerül az adatbázisba| A funkció az elvárásnak megfelelően működik  | Nem találtam hibát. |
+|Egy adott kérdőív kitöltése | 2023.12.11. | A kérdőívben kiválasztjuk az adott kérdéshez hozzátartozó válaszokat | A válaszok megjelennek, de nem lehet kiválasztani őket | Nincs megvalósítva a funkció |
+|Kitöltött Kérdőív beküldése | 2023.12.11 | A kérdőívet kitöltjük, majd beküldés után bekerül az adatbázisba | A beküldés során hiba lép fel, nem töltődik fel az adatbázisba | Adatbáziskezelés hiba |
+|Kijelentkezés gomb használata| 2023.12.11| Az oldal kijelentkezteti a felhasználót, majd visszakerül a főoldalra | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
 
 
 
@@ -35,10 +38,13 @@ Következő tesztelésnél a többi funkció kerül vizsgálatra illetve elemzé
 |Saját profil megjelenítése ha bejelentkezett a felhasználó | 2023.12.12. | Megjelennik a saját profil fül , a felhasználók adatai is megjelennek a profil oldalon belül| Elérhető a profil fül |Nem találtam hibát.|
 |Saját profil elrejtése ha nincs bejelentkezve a felhasználó| 2023.12.12. | Nem jelenik meg a  Saját profil fül |  Nem jelenik meg a  Saját profil fül  | Nem találtam hibát. |
 |Nem regisztrált felhasználóként a főldal megtekintése| 2023.12.12. | Az oldal tudatosítja a felhasználóval hogy a kérdőívek kitöltéséhez bejelentkezés szükséges | Az oldal közli, hogy a Kérdőív megtekintéséhez regisztráció szükséges | Nem találtam hibát. |
-|bejelentkezett felhasználóként a főldal megtekintése| 2023.12.12. | Az oldalon megjelennek az elérhető kérdőív témák bejelentkezett felhasználóként |Az oldalon megjelennek az elérhető kérdőív témák | Nem találtam hibát. |
+|Bejelentkezett felhasználóként a főldal megtekintése| 2023.12.12. | Az oldalon megjelennek az elérhető kérdőív témák bejelentkezett felhasználóként |Az oldalon megjelennek az elérhető kérdőív témák | Nem találtam hibát. |
 |Bejelentkezéskor üres email és jelszó mező megadása | 2023.12.12. | Minden mezőt ki kell töltenie hibaüzenet megjelenítése.  | Hibás email vagy jelszó üzenet jelenik meg  | Nem megfelelő a hibára figyelmeztető üzenet |
-
-
+|Egy adott kérdőív kitöltése | 2023.12.12. | A kérdőívben kiválasztjuk az adott kérdéshez hozzátartozó válaszokat | A válaszok megjelennek, de nem lehet kiválasztani őket | Nincs megvalósítva a funkció |
+|Egy adott kérdőív kitöltése | 2023.12.12. | A kérdőívben kiválasztjuk az adott kérdéshez hozzátartozó válaszokat | A válaszok megjelennek, de nem lehet kiválasztani őket | Nincs megvalósítva a funkció |
+|Új kérdőívnek a létrehozása| 2023.12.12. | Az elkészített kérdőív bekerül az adatbázisba| A funkció az elvárásnak megfelelően működik  | Nem találtam hibát. |
+|Kijelentkezés gomb használata| 2023.12.12| Az oldal kijelentkezteti a felhasználót, majd visszakerül a főoldalra | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+|Statisztika menüpont| 2023.12.12| A statisztikák menüpontot csak bejelentkezett felhasználók láthatják | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
 
 
 A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra ellenőrzésre kerül. Ezzel együtt az új funkciók is tesztelésre kerültek.
@@ -54,4 +60,4 @@ A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikail
 
 Tesztelést végezte és írta: Nagy János
 
-Befejezve: 2023.12.xx.
+Befejezve: 2023.01.xx.

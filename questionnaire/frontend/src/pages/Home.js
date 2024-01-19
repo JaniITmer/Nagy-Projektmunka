@@ -10,10 +10,9 @@ export default function Home({ loggedIn }) {
   useEffect(() => {
     if (loggedIn) {
       axios
-        .get("http://localhost:8080/questionnaires")
+        .get("http://localhost:8080/questions")
         .then((response) => {
-          const { categories, questionnaires } = processData(response.data);
-
+          const { categories } = processData(response.data);
           setQuestionnaires(categories);
         })
         .catch((error) => {
@@ -36,7 +35,7 @@ export default function Home({ loggedIn }) {
       }
 
       categoriesMap.get(category).questionnaires.push({
-        id: item.question_id,
+        id: item.id,
         title: item.title,
       });
     });

@@ -10,7 +10,7 @@ export default function Home({ loggedIn }) {
   useEffect(() => {
     if (loggedIn) {
       axios
-        .get("http://localhost:8080/questions")
+        .get("http://localhost:8080/questions", { withCredentials: true })
         .then((response) => {
           const { categories } = processData(response.data);
           setQuestionnaires(categories);

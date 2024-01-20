@@ -40,7 +40,9 @@ export default function Questionnaire() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/questions/${questionId}`)
+      .get(`http://localhost:8080/questions/${questionId}`, {
+        withCredentials: true,
+      })
       .then((response) => {
         setQuestions(response.data);
       })

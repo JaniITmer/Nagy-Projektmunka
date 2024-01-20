@@ -81,7 +81,9 @@ export default function NewQuestionnaire({ loggedIn }) {
 
     //setErrors(validation(values));
     axios
-      .post("http://localhost:8080/new_questionnaire", values)
+      .post("http://localhost:8080/new_questionnaire", values, {
+        withCredentials: true,
+      })
       .then((res) => {
         navigate("/");
         console.log(res);

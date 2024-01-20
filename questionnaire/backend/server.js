@@ -2,12 +2,13 @@ const express = require("express");
 const session = require("express-session");
 const mysql = require("mysql");
 const cors = require("cors");
+const bcrypt = require("bcrypt");
 
 const app = express();
 
 app.use(
   session({
-    secret: "your-secret-key",
+    secret: "secret-key",
     resave: true,
     saveUninitialized: true,
   })
@@ -29,48 +30,77 @@ const db = mysql.createConnection({
   database: "questionnaire_db",
 });
 
+var server = app.listen(8080, "127.0.0.1", function () {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log("Listening on http://%s:%s", host, port);
+});
+
 // Regisztráció
-app.post("/register", (req, res) => {
-  const sql = "INSERT INTO users (`username`, `email`, `password`) VALUES (?)";
-  const values = [req.body.username, req.body.email, req.body.password];
-  db.query(sql, [values], (err, data) => {
-    if (err) {
-      return res.json("Error");
-    }
-    return res.json(data);
-  });
+app.post("/register", async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+    const sql =
+      "INSERT INTO users (`username`, `email`, `password`) VALUES (?, ?, ?)";
+    const values = [req.body.username, req.body.email, hashedPassword];
+
+    db.query(sql, values, (err, data) => {
+      if (err) {
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+      return res.status(200).json(data);
+    });
+  } catch (error) {
+    console.error("Error hashing password:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 const authenticateUser = (req, res, next) => {
   if (req.session.userId) {
-    // User is authenticated, move to the next middleware or route handler
     next();
   } else {
-    // User is not authenticated, send an unauthorized response
-    res.status(401).json({ error: "Unauthorized" });
+    res
+      .status(401)
+      .json({ error: "Hozzáférés megtagadva. Bejelentkezés szükséges." });
   }
 };
 
 // Bejelentkezés
-app.post("/login", (req, res) => {
-  const sql = "SELECT * FROM users WHERE `email` = ? AND `password` = ?";
-  db.query(sql, [req.body.email, req.body.password], (err, data) => {
+app.post("/login", async (req, res) => {
+  const sql = "SELECT * FROM users WHERE `email` = ?";
+  db.query(sql, [req.body.email], async (err, data) => {
     if (err) {
-      return res.json("Error");
+      return res.status(500).json({ error: "Internal Server Error" });
     }
-    if (data.length > 0) {
-      req.session.userId = data[0].id;
-      req.session.email = data[0].email;
-      req.session.username = data[0].username;
 
-      //Bejelentkezett felhasználó id-je
-      return res.json({
-        userId: data[0].id,
-        email: data[0].email,
-        username: data[0].username,
-      });
+    if (data.length > 0) {
+      const passwordMatch = await bcrypt.compare(
+        req.body.password,
+        data[0].password
+      );
+
+      if (passwordMatch) {
+        req.session.userId = data[0].id;
+        req.session.email = data[0].email;
+        req.session.username = data[0].username;
+
+        return res.status(200).json({
+          userId: data[0].id,
+          email: data[0].email,
+          username: data[0].username,
+        });
+      } else {
+        return res
+          .status(401)
+          .json({ error: "Helytelen email cím vagy jelszó!" });
+      }
     } else {
-      return res.json("Failed");
+      return res
+        .status(401)
+        .json({ error: "Helytelen email cím vagy jelszó!" });
     }
   });
 });
@@ -87,7 +117,7 @@ app.get("/logout", (req, res) => {
 });
 
 // E-mail ellenőrzése
-app.get("/check-email/:email", (req, res) => {
+app.get("/check-email/:email", authenticateUser, (req, res) => {
   const email = req.params.email;
   const sql = "SELECT * FROM users WHERE `email` = ?";
   db.query(sql, [email], (err, data) => {
@@ -104,42 +134,8 @@ app.get("/check-email/:email", (req, res) => {
   });
 });
 
-// Kérdőívek tábla létrehozása, ha még nem létezik
-db.query(
-  `
-    CREATE TABLE IF NOT EXISTS Questionnaires (
-        questionnaire_id INT AUTO_INCREMENT PRIMARY KEY,
-        title VARCHAR(255) NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )`,
-  (err) => {
-    if (err) {
-      console.error("Error creating Questionnaires table:", err);
-    } else {
-      console.log("Questionnaires table created or already exists");
-    }
-  }
-);
-
 // Új kérdőív hozzáadása
-/*
-app.post('/questionnaires', (req, res) => {
-    const { title } = req.body;
-    const sql = "INSERT INTO Questionnaires (title) VALUES (?)";
-    db.query(sql, [title], (err, data) => {
-        if (err) {
-            console.error("Error adding questionnaire:", err);
-            return res.json("Error");
-        }
-        console.log("Questionnaire added:", data);
-        return res.json(data);
-    });
-});
-*/
-
-//----------------------------------------------
-
-app.post("/new_questionnaire", (req, res) => {
+app.post("/new_questionnaire", authenticateUser, (req, res) => {
   var postData = req.body;
   db.query(
     "INSERT INTO questions SET ?",
@@ -156,7 +152,7 @@ app.post("/new_questionnaire", (req, res) => {
 });
 
 //Kérdőívek megjelenítése
-app.get("/questions", (req, res) => {
+app.get("/questions", authenticateUser, (req, res) => {
   const sql = "SELECT * FROM questions";
   db.query(sql, (err, data) => {
     if (err) {
@@ -166,7 +162,7 @@ app.get("/questions", (req, res) => {
   });
 });
 
-app.get("/questions/:id", (req, res) => {
+app.get("/questions/:id", authenticateUser, (req, res) => {
   const questionId = req.params.id;
   const sql = "SELECT * FROM questions WHERE id = ?";
 
@@ -183,9 +179,10 @@ app.get("/statistics", authenticateUser, (req, res) => {
   const userId = req.session.userId;
 
   const sql = `
-      SELECT * FROM answers
-      INNER JOIN questions ON answers.question_id = questions.id
-      WHERE answers.user_id = ?`;
+  SELECT answers.id AS id, user_id, answers.question_id, option1, option2, option3, option4, category, title, question1, question2, question3, question4, option1_1, option1_2, option1_3, option1_4, option2_1, option2_2, option2_3, option2_4, option3_1, option3_2, option3_3, option3_4, option4_1, option4_2, option4_3, option4_4
+  FROM answers
+  INNER JOIN questions ON answers.question_id = questions.id
+  WHERE answers.user_id = ?;`;
 
   db.query(sql, [userId], (err, data) => {
     if (err) {
@@ -195,12 +192,12 @@ app.get("/statistics", authenticateUser, (req, res) => {
   });
 });
 
-// Kitöltések száma
-app.get("/statistics-count", (req, res) => {
+// Kérdőív kitöltések száma (minden felhasználó)
+app.get("/statistics-count", authenticateUser, (req, res) => {
   const sql = `
-      SELECT question_id, COUNT(*) AS fillCount
-      FROM answers
-      GROUP BY question_id`;
+        SELECT question_id, COUNT(*) AS fillCount
+        FROM answers
+        GROUP BY question_id`;
 
   db.query(sql, (err, data) => {
     if (err) {
@@ -211,27 +208,22 @@ app.get("/statistics-count", (req, res) => {
   });
 });
 
-//Kérdések listázása
-app.get("/questions/:id", (req, res) => {
-  const { questionId } = req.params;
-  const sql = "SELECT * FROM questions WHERE id = ?";
-  db.query(sql, [questionId], (err, data) => {
-    if (err) {
-      return res.json("Error");
-    }
-    return res.json(data);
-  });
-});
+// Kérdőív kitöltések (felhasználóé)
+app.get("/statistics-all-count", authenticateUser, (req, res) => {
+  const userId = req.session.userId;
 
-//Válaszok listázása
-app.get("/answers/:id", (req, res) => {
-  const { questionId } = req.params;
-  const sql = "SELECT * FROM questions WHERE id = ?";
-  db.query(sql, [questionId], (err, data) => {
+  const sql = `
+      SELECT COUNT(*) AS totalCount
+      FROM answers
+      WHERE user_id = ?;`;
+
+  db.query(sql, [userId], (err, data) => {
     if (err) {
-      return res.json("Error");
+      return res.json({ Error: "Hiba" });
     }
-    return res.json(data);
+    return res.json({
+      totalCount: data[0].totalCount,
+    });
   });
 });
 
@@ -249,53 +241,11 @@ app.post("/answer/:questionId", authenticateUser, (req, res) => {
     req.body.option4,
   ];
 
-  // Insert az answers táblába
   db.query(sqlInsert, insertValues, (err, result) => {
     if (err) {
       return res.json("Error");
     }
 
-    const answerId = result.insertId;
-
-    // Frissítés a statistics táblában
-    const sqlUpdate = `
-          INSERT INTO statistics (answer_id, answer_count)
-          VALUES (?, 1)
-          ON DUPLICATE KEY UPDATE answer_count = answer_count + 1;`;
-
-    db.query(sqlUpdate, [questionId], (errUpdate, resultUpdate) => {
-      if (errUpdate) {
-        return res.json("Error updating statistics");
-      }
-
-      return res.json(resultUpdate);
-    });
+    return res.json(result);
   });
-});
-
-/*
-app.post("/answer/:questionId", authenticateUser, (req, res) => {
-  const { questionId } = req.params;
-  const sql =
-    "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?, ?, ?, ?, ?, ?)";
-  const values = [
-    req.session.userId,
-    questionId,
-    req.body.option1,
-    req.body.option2,
-    req.body.option3,
-    req.body.option4,
-  ];
-
-  db.query(sql, values, (err, data) => {
-    if (err) {
-      return res.json("Error");
-    }
-    return res.json(data);
-  });
-});
-*/
-
-app.listen(8080, () => {
-  console.log("listening");
 });

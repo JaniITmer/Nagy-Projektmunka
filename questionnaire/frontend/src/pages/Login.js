@@ -16,7 +16,7 @@ export default function Login({ onLogin }) {
   const handleInput = (event) => {
     setValues((prev) => ({
       ...prev,
-      [event.target.name]: [event.target.value],
+      [event.target.name]: event.target.value,
     }));
   };
 
@@ -26,20 +26,22 @@ export default function Login({ onLogin }) {
     axios
       .post("http://localhost:8080/login", values, { withCredentials: true })
       .then((res) => {
-        console.log("Axios response:", res.data);
-
+        console.log("Sikeres bejelentkezés");
         if (res.data.userId) {
           onLogin(res.data.email);
           navigate("/");
-        } else if (!values.email || !values.password) {
+        }
+      })
+      .catch((err) => {
+        if (!values.email || !values.password) {
           alert("Minden mezőt ki kell töltenie!");
         } else if (!values.password || !values.email) {
           alert("Minden mezőt ki kell töltenie!");
         } else {
           alert("Hibás email vagy jelszó!");
         }
-      })
-      .catch((err) => console.log(err));
+        console.log(err);
+      });
   };
 
   return (

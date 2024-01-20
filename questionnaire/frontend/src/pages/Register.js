@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/Register.css";
+import "./styles/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { basic_eye } from "react-icons-kit/linea/basic_eye";
@@ -7,6 +8,10 @@ import { basic_eye_closed } from "react-icons-kit/linea/basic_eye_closed";
 import { arrows_exclamation } from "react-icons-kit/linea/arrows_exclamation";
 import { arrows_circle_check } from "react-icons-kit/linea/arrows_circle_check";
 import Icon from "react-icons-kit";
+
+import user_icon from "../images/username.png";
+import passwd_icon from "../images/password.png";
+import email_icon from "../images/email.png";
 
 export default function Register() {
   const [type, setType] = useState("password");
@@ -118,21 +123,29 @@ export default function Register() {
 
   return (
     <div className="register-page">
-      <div>
+      <div className="container">
         <div className="header">
+          <div className="h1">Regisztráció</div>
+          <div className="underline"></div>
+        </div>
           <form
-            className="form-body red-rounded-border"
+            className="inputs"
             action=""
             onSubmit={handleSubmit}
           >
-            <div className="header">
-            <div className="h1">Regisztráció</div>
-            <div className="underline"></div>
-          </div>
-
-            <div className="">
+            
+            <div className="input">
+              <img src={user_icon} alt="" />
+              <input
+                type="text"
+                placeholder="Felhasználónév"
+                name="username"
+                onChange={handleInput}
+              />
+            </div>
+            {/*<div className="">
               <label className="form__label" htmlFor="username">
-                Teljes név:{" "}
+                Felhasználónév:{" "}
               </label>
               <input
                 type="text"
@@ -142,9 +155,17 @@ export default function Register() {
                 name="username"
                 onChange={handleInput}
               />
+            </div>*/}
+            <div className="input">
+              <img src={email_icon} alt="" />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                onChange={handleInput}
+              />
             </div>
-
-            <label className="form__label" htmlFor="email">
+            {/*<label className="form__label" htmlFor="email">
               Email cím:
             </label>
             <input
@@ -154,10 +175,39 @@ export default function Register() {
               placeholder="Email"
               name="email"
               onChange={handleInput}
+            />*/}
+            <div className="input">
+            <img src={passwd_icon} alt="" />
+            <input
+              type={type}
+              placeholder="Jelszó"
+              name="password"
+              onChange={(e) => {
+                handleChange(e.target.value);
+                handleInput(e);
+              }}
             />
-
+            {type === "password" ? (
+                <span className="icon-span" onClick={() => setType("text")}>
+                  <Icon icon={basic_eye_closed} size={30} />
+                </span>
+              ) : (
+                <span className="icon-span" onClick={() => setType("password")}>
+                  <Icon icon={basic_eye} size={30} />
+                </span>
+              )}
+          </div>
+          <div className="input">
+              <img src={passwd_icon} alt="" />
+              <input
+                type="password"
+                placeholder="Jelszó megerősítése"
+                name="confirmPassword"
+                onChange={handleInput}
+              />
+            </div>
             <div className="">
-              <label className="form__label" htmlFor="password">
+              {/*<label className="form__label" htmlFor="password">
                 Jelszó:{" "}
               </label>
               <input
@@ -179,10 +229,10 @@ export default function Register() {
                 <span className="icon-span" onClick={() => setType("password")}>
                   <Icon icon={basic_eye} size={30} />
                 </span>
-              )}
-
+              )}*/}
+            
               <main className="tracker-box">
-                <div>
+                <div className="password_felt">
                   A jelszó beállításához a következő feltételek szükségesek:
                 </div>
                 <div className={lowerValidated ? "validated" : "not-validated"}>
@@ -253,7 +303,9 @@ export default function Register() {
                 </div>
               </main>
             </div>
-            <div className="">
+
+            
+            {/*<div className="">
               <label className="form__label" htmlFor="confirmPassword">
                 Jelszó megerősítése{" "}
               </label>
@@ -265,15 +317,14 @@ export default function Register() {
                 name="confirmPassword"
                 onChange={handleInput}
               />
-            </div>
+                  </div>*/}
             <div className="footer">
-              <button className="button" type="submit" variant="outlined">
+              <button className="button btn_reg" type="submit" variant="outlined">
                 Regisztráció
               </button>
             </div>
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
+  </div>
   );
 }

@@ -3,7 +3,7 @@ import "./styles/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import user_icon from "../images/username.png";
+import email_icon from "../images/email.png";
 import passwd_icon from "../images/password.png";
 
 export default function Login({ onLogin }) {
@@ -53,7 +53,7 @@ export default function Login({ onLogin }) {
         </div>
         <form className="inputs" action="" onSubmit={handleSubmit}>
           <div className="input">
-            <img src={user_icon} alt="" />
+            <img src={email_icon} alt="" />
             <input
               type="email"
               placeholder="Email"

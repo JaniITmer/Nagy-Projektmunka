@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     background:white;
-    height: 600px;
+    height: 750px;
     margin: auto;
     margin-top: 100px;
     padding-bottom: 20px;
@@ -73,13 +73,25 @@
 }
 
 .tracker-box{
-    background-color: white;
+    display: block;
+    margin: 0 auto;
+    background-color: #eaeaea;
     font-size: 14px;
     color: black;
     letter-spacing: 0.09em;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 5px;
-   
+    width: 30%;
+    box-shadow: 0 10px 20px rgb(156,156,156);
   }
   
+  .btn_reg{
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .password_felt{
+    margin-bottom: 5px;
+    font-weight: bold;
+  }

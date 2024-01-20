@@ -50,7 +50,10 @@ export default function Home({ loggedIn }) {
     <div className="main-page">
       {loggedIn ? (
         <div className="topics">
-          <h1>Elérhető kérdőívek</h1>
+          <div className="header">
+          <div className="h1">Elérhető kérdőívek</div>
+          <div className="underline"></div>
+        </div>
           {questionnaires.map((category) => (
             <div key={category.name} className="card">
               <h2>{category.name}</h2>

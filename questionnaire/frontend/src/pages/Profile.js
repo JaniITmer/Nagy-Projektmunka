@@ -15,8 +15,7 @@ const Profile = ({ userEmail, username, onImageChange }) => {
           <div className="header">
             <div className="h1">Profil</div>
             <div className="underline"></div>
-        </div>
-         
+          </div>
           <div className='left-panel'>
             
             <div>

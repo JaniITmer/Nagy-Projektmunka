@@ -83,7 +83,7 @@ export default function Statistics({ loggedIn }) {
           <div className="h1">Kitöltött kérdőívek</div>
           <div className="underline"></div>
         </div>
-          <p>Az általad kitöltött kérdőívek száma: {totalCount}</p>
+          <p><strong>Az általad kitöltött kérdőívek száma: {totalCount}</strong></p>
           {questionnaires.map((category) => (
             <div key={category.name} className="card">
               <h2>{category.name}</h2>

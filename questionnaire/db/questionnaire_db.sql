@@ -112,6 +112,8 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (1, 'admin', 'admin@admin', '$2b$10$sbMS5vyuFnmFzOKwXLgjwey/YSal1eQVTspHpTsDETaC3aDGQK/Oq'),
 (2, 'user', 'user@user', '$2b$10$XI0pJ8zHpMIqfNAnpPLBfOsov3XW5UBR3WTiQaZapAIwK53lXqKK2');
 
+
+
 --
 -- Indexek a kiírt táblákhoz
 --

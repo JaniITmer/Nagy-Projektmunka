@@ -117,7 +117,9 @@ app.get("/logout", (req, res) => {
 });
 
 // E-mail ellenőrzése
-app.get("/check-email/:email", authenticateUser, (req, res) => {
+app.get("/check-email/:email", (req, res) => {
+  console.log("Received check-email request:", req.method, req.url, req.headers);
+
   const email = req.params.email;
   const sql = "SELECT * FROM users WHERE `email` = ?";
   db.query(sql, [email], (err, data) => {

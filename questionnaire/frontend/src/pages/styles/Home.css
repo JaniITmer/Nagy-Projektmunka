@@ -9,7 +9,7 @@
     font: size 24px;
     background-color: transparent;
     border: none;
-    color: blue;
+    color: rgb(23, 23, 31);
     cursor: pointer;
     transition: color 0.3s;
     text-decoration: none;
@@ -18,7 +18,7 @@
 
 
 .ujKerdoivGomb:hover{
-    color:gold;
+    color: grey;
 }
 
 .kerdoivGomb:hover{
@@ -32,7 +32,7 @@
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 gold;
+    box-shadow: 0 4px 8px 0 gray;
     transition: 0.3s;
     width: 45%;
     border-radius: 5px;

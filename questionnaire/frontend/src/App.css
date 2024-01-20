@@ -53,17 +53,17 @@ body {
 
 .nav li.active {
   color: black;
-  background-color: gold;
+  background-color: gray;
 }
 
 .nav li:hover {
   color: black;
-  background-color: gold;
+  background-color: gray;
   transition: 0.5s;
 }
 body{
   background-color: grey;
 }
 .kijelentkezes-btn{
-  background-color: brown;
+  background-color: gray;
 }

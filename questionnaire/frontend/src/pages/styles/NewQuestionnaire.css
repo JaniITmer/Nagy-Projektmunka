@@ -1,106 +1,71 @@
-
 .Ques-div {
-  background-color: rgb(255, 220, 23);
+  background-color: gray;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 70%;
-  height: auto;
-  display: block;
   margin: auto;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
 }
 
-.radioBtn {
-  margin-left: 20px;
-}
-
-.Ques-options-container{
+.Ques-options-container {
   margin-bottom: 5px;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 10px;
 }
 
-.Ques-option{
-  background-color: rgb(29, 116, 128);
+.Ques-option {
+  background-color: #1d7480;
   border-radius: 10px;
   color: #eeeeee;
   cursor: pointer;
   display: block;
   margin: auto;
-  padding: 5px;
+  padding: 10px;
   transition: 0.3s linear all;
-  border: 2px solid rgb(6, 65, 73);;
+  border: 2px solid #064149;
   font-weight: bold;
   text-align: center;
-  margin-top: 5px;
   width: 40%;
-  margin-left: 0px; 
 }
-.Ques-option:hover{
-  background-color: rgb(13, 86, 95);;
+
+.Ques-option:hover {
+  background-color: #0d565f;
 }
 
 .newQues-div2 {
-    background-color: rgb(255, 220, 23);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-.newQues-inputH1{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 5px;
-    width: 90%;
-    height: 35px;
-    background-color: #eaeaea;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 15pt;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.newQues-inputQues{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 5px;
-    width: 90%;
-    height: 30px;
-    background-color: #eaeaea;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 12pt;
+.newQues-inputH1,
+.newQues-inputQues,
+.newQues-inputAns {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14pt;
 }
 
-.newQues-inputAns{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 5px;
-    width: 90%;
-    height: 30px;
-    background-color: #eaeaea;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 12pt;
+.newQues-label {
+  margin-top: 10px;
+  color: gray;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.newQues-label{
-    margin-top: 10px;
-    color:rgb(33, 20, 221);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.newQues-button{
+.newQues-button {
   width: 280px;
   height: 50px;
   background: #2f4d57;
@@ -110,17 +75,18 @@
   transition: 0.5s;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 18pt;
+  font-size: 16pt;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.newQues-button:hover{
-  transform: scale(1.25);
+.newQues-button:hover {
+  transform: scale(1.1);
 }
 
-.newQues-H1{
-    margin-top: 10px;
-    font-family: Tahoma, sans-serif;
+.newQues-H1 {
+  margin-top: 10px;
+  font-family: Tahoma, sans-serif;
+  color: gray;
 }

@@ -5,7 +5,7 @@
     height: 50px;
     font-size: 30px;
 
-    color:blue;
+    color:black;
     font-style:italic;
     font-weight: bold;
 
@@ -19,7 +19,7 @@
 .form__label{
     font-size: large;
     margin-top: 10px;
-    color:blue;
+    color:black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    
    
@@ -31,7 +31,7 @@
 }
 
 .cim{
-    color: blue;
+    color: black;
 }
 .red-rounded-border {
    
@@ -69,13 +69,13 @@
 }
 .btn:hover{
     transform: scale(1.2);
-    color: brown;
+    color: gray ;
 }
 
 .tracker-box{
-    background-color:gold;
+    background-color: white;
     font-size: 14px;
-    color: blue;
+    color: black;
     letter-spacing: 0.09em;
     padding: 15px;
     border-radius: 5px;

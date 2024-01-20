@@ -1,17 +1,16 @@
 # Követelmény specifikáció
 
 ## 1. Áttekintés
-Az applikáció célja, hogy statisztikát tudjunk gyűjteni különböző kérdőívek alapján. Az alkalmazás web felületen elérhető. A felhasználó bejelentkezés nélkül csak a kérdőív témákat látja. Ahhoz, hogy kitölteni is tudja őket, be kell jelentkezni. Ha nem rendelkezik fiókkal a felhasználó, regisztrálnia szükséges. Az adminok különböző témájú kérdőíveket tudnak létrehozni.
+Az weboldal célja, hogy statisztikát tudjunk gyűjteni különböző kérdőívek alapján. Az szoftver web felületen elérhető. A felhasználó bejelentkezés nélkül vendég módban van, ez azt jelenti, hogy a főoldalon nem jelennek meg a kérdőívek, se a kérdőívek létrehozásának lehetősége. A kérdőívek megjelenítésére először be kell jelentkezni, ezt követőleg felhasználó rangot kapja meg az aktuális felhasználó. A felhasználói jog biztosítja a kérdőívek létrehozást, kitöltése, valamint elérhető lesz a statisztika illetve profil oldalak is. A felhasználó regisztrálása után az adatai elmentésre kerülnek az adatbázisban, amit követelőleg bejelentkezni is van lehetősége.
 ## 2. A jelenlegi helyzet leírása
-Napjainkban egyre elterjettebb, hogy kérdőíveket töltenek ki az emberek. Ezért gondoltuk, hogy egy olyan portált érdemes létrehozni, ahol kérdőívek szerepelnek. A weboldalon statisztikát tudunk gyűjteni a kérdőívekről. Ezzel a funkcióval kiderül, hogy a közösség mégis hogyan gondolkodik. Természetesen a statisztikák anoním módon vannak tárolva.
+Napjainkban egyre elterjettebb, hogy kérdőíveket töltenek ki az emberek, és ezek nagy segítséget jelenthetnek a különböző témákban való véleménynyilvánításban. A modern technológia lehetővé teszi, hogy egy online portálon keresztül könnyen elérhetőek legyenek a különböző témájú kérdőívek, amelyekre az emberek könnyedén válaszolhatnak. Egy ilyen portál segítségével nemcsak a felhasználók kényelmesen fejezhetik ki véleményüket, hanem a platform üzemeltetői is értékes adatokhoz juthatnak a felhasználói preferenciákról. A weboldalon statisztikákat gyűjthetünk a kérdőívek eredményeiről, és ezáltal betekintést nyerhetünk a közösség gondolkodásmódjába.Fontos kiemelni, hogy a felhasználók válaszai teljes mértékben anonimek és bizalmasak, hiszen a statisztikák tárolása során nem kerül rögzítésre az egyes személyek azonosítója. Ezáltal a résztvevők biztonságban érezhetik magukat, és szabadon kifejezhetik véleményüket a különféle témákról, miközben hozzájárulnak egy szélesebb közösség véleményének formálásához.
 ## 3. Vágyálomrendszer
-A cél egy kérdőívportál elkészítése, web applikáció formájában. Lehetőség lesz kérdőíveket létrehozni, a leadott eredmények alapján pedig az oldal statisztikát készít. Az oldal magyar nyelvű lesz, felhasználóbarát kezelőfelülettel, könnyű kezelhetőséggel. Modern és jól átláható design-nal törekszünk a minél szélesebb felhasználói kör bevonzására.
+A cél egy kérdőívportál elkészítése, weboldal formájában. Lehetőség lesz kérdőíveket létrehozni, a leadott eredmények alapján pedig az oldal statisztikát készít. Az oldal magyar nyelvű lesz, felhasználóbarát kezelőfelülettel, könnyű kezelhetőséggel. Modern és jól átláható design-nal törekszünk a minél szélesebb felhasználói kör bevonzására. Emellett folyamatos fejlesztéseken keresztül biztosítjuk a biztonságos és innovatív megoldásokat az optimális felhasználói élmény érdekében.
 ## 4. Jelenlegi üzleti folyamatok modellje
-Az oldalon kérdőíveket tölthetnek ki a felhasználók, témák szerint csoportosítva válogathatnak kedvük szerint. Az adott
-válaszokból statisztikák készülnek, ami hasznos lehet például, ha valaki kutatómunkát vagy valamilyen elemzést végez. Természetesen előfordulhat, hogy egy felhasználó nem valós válaszokat ad, ami torzíthatja a statisztikát. Az ilyen esetek elkerülésének érdekében, az admin jogosultsággal rendelkező felhasználóknak lehetőségük lesz a statisztikák, illetve kérdőívek törlésére. 
+Az oldalon kérdőíveket tölthetnek ki a felhasználók, témák szerint csoportosítva válogathatnak kedvük szerint. Az adott válaszokból statisztikák készülnek, ami hasznos lehet például, ha valaki kutatómunkát vagy valamilyen elemzést végez. A felhasználók könnyedén létrehozhatnak saját kérdőíveket, személyre szabva azokat saját témájuk és preferenciájuk szerint. Az oldal által készített részletes statisztikák segítik a felhasználókat az adatok mélyebb megértésében és az információk hatékonyabb felhasználásában.
 
 ## 5. Igényelt üzleti folyamatok modellje
-A felhasználó az főoldalon regisztrálhat, majd bejelentkezhet. Belépés nélkül a főoldalon csak a kérdőívek témáját látja, kitölteni nem tudja őket. Amennyiben a felhasználó admin, lehetősége lesz kérdőívet létrehozni, ha nem admin, akkor kérdőív kitöltésre van lehetősége, illetve a beérkező válaszokból készített statisztikák megtekintésére.
+A felhasználó az főoldalon regisztrálhat, majd bejelentkezhet. Amennyiben a felhasználó már nem vendég felhasználói joggal rendelkezik, lehetősége lesz kérdőívet létrehozni, kérdőív kitöltésre van lehetősége, illetve a beérkező válaszokból készített statisztikák megtekintésére.
 ## 6. Követelménylista
 
 | Id | Modul | Név | Leírás |
@@ -26,7 +25,7 @@ A felhasználó az főoldalon regisztrálhat, majd bejelentkezhet. Belépés né
 | K8 | Kérdőív | Design | Témára kattintás után kérdőívek felsorolása |
 
 ## 7. Fogalomtár
-•	Admin: Elsődleges jogosultság - teljes hozzáféréssel a weboldal összes funkciójához.
+
 •	Felhasználó: Másodlagos jogosultsági - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására.
 •	Vendég felhasználó: Harmadlagos jogosultság - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására, kérdőív kitöltésére, profil szerkeztésére.
 •	Adatbázis: Strukturált adatgyűjtemény, amelyet úgy tárolnak és szerveznek, hogy hatékony visszakeresést tesz lehetővé.

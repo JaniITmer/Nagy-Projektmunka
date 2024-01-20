@@ -10,8 +10,8 @@ A következőképpen nézz ki a kérdőív portál vágyálom rendszere:
    4. A felhasználó adatainak és a kérdőívekben leadott válaszoknak adatbázisban való kezelése. 
    5. Több oldalas megjelítés (Főoldal, regisztrációs/bejelentkzős oldal, kérdőív oldalak).
    6. A főoldal tartalmazza a profilt, a kérdőveket.
-   7. Több jogosultság (admin, felhasználó, vendég felhasznló) létrehozása.
-   8. Kérdőívek létrehozásának lehetősége. (admin jogosultsággal).
+   7. Több jogosultság (felhasználó, vendég felhasznló) létrehozása.
+   8. Kérdőívek létrehozásának lehetősége. (felhasználói jogosultsággal).
    9. Egyértelmű, felhasználóbarát kezelhetőség.
 
 A projektben a vágyálom rendszerben leírtaknak mind szerepelnie kell, ahhoz hogy mai weboldalakhoz hasonló módon tudjon működni. Mind ezek a funkciók lehetővé teszik, hogy egy olyan weboldalt hozzunk létre, amely a kérdőívek alapján egy felmérést készít különböző témákban.
@@ -44,24 +44,23 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 | K3 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
 | K4 | Regisztráció | Design | Regisztrációs felület kialakítása |
 | K5 | Funkció | Jelszó megváltoztatása | A felhasználó megtudja változtatni a jelszavát a profilján |
-| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés, Témák láthatósága</li><li> Felhasználó: kérdőívek kitöltése, statisztika megnézése, jelszó módosítás </li><li>Admin: Kérdőív létrehozása</li></ul>|
+| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés </li><li> Felhasználó: kérdőívek kitöltése, kérdőívek létrehozása, statisztika megnézése, jelszó módosítás </li></ul>|
 | K7 | Főoldal | Kérdőív témák | Kérdőívek kialakítása |
 | K8 | Kérdőív | Design | Témára kattintás után kérdőívek felsorolása |
 
 ## 6. Használati esetek
 -  Vendég: A vendég a főoldalon megtudja nézni milyen kérdőívtémák vannak az oldalon. A vendég ezen kívül regisztrálni és bejelentkezni tud.
 -  Felhasználó: A felhasználó a profilja jelszavát megtudja változtatni. Fontos, hogy ők tudnak kitölteni kérdőíveket a választott téma rákattintása után, amint megjelennek az aktuális kérdőívek. A statisztikát már a felhasználók is látják.
--  Admin: Az admin elsősorban új kérdőíveket tud létrehozni, a témára való kattintás után egy gomb segítségével. Viszont rendelkezik ugyanazokkal a funkciókkal, mint a felhasználó. 
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 - Követelménylista K1 és K2 funkció:
-   - A felhasználót egy főoldal fogadja, itt megtekintheti a kérdőívek témáit, ilyenkor vendég módban van. 
+   - A felhasználót egy főoldal fogadja, csak regisztrálni és bejelentkezni tud, ilyenkor vendég módban van. 
 - Követelménylista K3 és K4 funkció:
    - A megfelelő gombra kattintva egy bejelentkező, illetve regisztációs felületen regisztrálhat, majd bejelentkezhet, hogy további funkciókat érjen el.
 - Követelménylista K5 funkció:
    - Ha a felhasználó be van jelentkezve, lehetősége van megváltoztatnia a jelszavát.
 - Követelménylista K6 funkció:
-   - A bejelentkezés után a felhasználó jogosultsággal rendelkezők kitölthetnek kérdőíveket, megnézhetik a statiszikát, jelszót módosíthatnak. Az admin jogosultsággal rendelkezőknek lehetőségük van a kérdőívek létrehozására, kérdőív és statisztika törlésre.
+   - A bejelentkezés után a felhasználó jogosultsággal rendelkezők kitölthetnek kérdőíveket, megnézhetik a statiszikát, jelszót módosíthatnak, továbbá létrehozására, kérdőív és statisztika törlésre.
 - Követelménylista K7 és K8 funkció:
    - Válogathatunk a különböző témák közül, a témára kattintással pedig felsorolásra kerülnek az ahhoz tartozó kérdőívek.
 
@@ -71,12 +70,15 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 
 
 ## 9. Forgatókönyvek
-- A felhasználó megnyitja az oldalt, nem jelentkezik be, megtekinti a kérdőívek témáit
+- A felhasználó megnyitja az oldalt, nem jelentkezik be, csak a bejelentkezős felületek jelenennek meg.
 - Regisztrációnál nem tölt ki minden mezőt, helytelenül ad meg valamilyen adatot, az oldal értesíti a hibáról és a felhasználó a regisztrációs felületen marad
 - Bejelentkezésnél nem tölt ki minden mezőt, helytelen bejelentkezési adatokat ad meg, az oldal értesíti a hibáról és a felhasználó a bejelentkező felületen marad
 - A felhasználó regisztrál, majd bejelentkezik, ekkor jogosultságától függően használhatja az oldalt:
-   - ha admin, kérdőíveket hozhat létre az oldalon, törölhet kérdőíveket és statisztikákat
-   - ha nem admin, kitöltheti a kérdőíveket, megnézheti a statisztikákat
+   - kérdőíveket hozhat létre 
+   - kitöltheti a kérdőíveket
+   - kitöltheti a kérdőíveket
+   - megtekintheti a statisztikát
+   - megtekintheti a profil oldalt
 
 ## 10. Funkció - követelmény megfeleltetése
 
@@ -86,11 +88,10 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 | K2 | Kérdőívek kialakítása | A kérdőívek témák szerint rendszerezve |
 | K3 | Bejelentkező fül | Egy felület, ami lehetőséget biztosít a bejelentkezésre  |
 | K4 | Regisztrációs fül | Egy felület, ami lehetőséget biztosít a regisztrációra  |
-| K5 | Vendég, Felhasználó, Admin jogosultság | A különböző jogosultsági szintekhez, különböző funkciók tartoznak |
+| K5 | Vendég, Felhasználó jogosultság | A különböző jogosultsági szintekhez, különböző funkciók tartoznak |
 | K6 | Kérdőív design | A kérdőíveket a témára kattintás után érjük el |
 
 ## 11 Fogalomszótár
-* Admin: Elsődleges jogosultság - teljes hozzáféréssel a weboldal összes funkciójához.
 * Felhasználó: Másodlagos jogosultsági - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására.
 * Vendég felhasználó: Harmadlagos jogosultság - lekorlátozott hozzáférés, nincs lehetőség kérdőív létrehozására, kérdőív kitöltésére, profil szerkeztésére.
 * Adatbázis: Strukturált adatgyűjtemény, amelyet úgy tárolnak és szerveznek, hogy hatékony visszakeresést tesz lehetővé.

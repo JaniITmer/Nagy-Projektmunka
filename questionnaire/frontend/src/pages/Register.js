@@ -125,7 +125,10 @@ export default function Register() {
             action=""
             onSubmit={handleSubmit}
           >
+            <div className="header">
             <div className="h1">Regisztráció</div>
+            <div className="underline"></div>
+          </div>
 
             <div className="">
               <label className="form__label" htmlFor="username">

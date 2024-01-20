@@ -12,8 +12,13 @@ const Profile = ({ userEmail, username, onImageChange }) => {
 
     return (
         <div className='profil-oldal'>
+          <div className="header">
+            <div className="h1">Profil</div>
+            <div className="underline"></div>
+        </div>
+         
           <div className='left-panel'>
-            <h2 className='header'>Profil</h2>
+            
             <div>
               <strong className="profilkep">Profilkép:</strong>
               {selectedImage ? (

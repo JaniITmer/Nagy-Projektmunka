@@ -249,3 +249,20 @@ app.post("/answer/:questionId", authenticateUser, (req, res) => {
     return res.json(result);
   });
 });
+
+// Válasz lekérése
+app.get("/answer/:id", authenticateUser, (req, res) => {
+  const answerId = req.params.id;
+  const sql = `
+        SELECT *
+        FROM answers
+        JOIN questions ON answers.question_id = questions.id
+        WHERE answers.id = ?`;
+
+  db.query(sql, [answerId], (err, data) => {
+    if (err) {
+      return res.json({ Error: "Hiba" });
+    }
+    return res.json(data);
+  });
+});

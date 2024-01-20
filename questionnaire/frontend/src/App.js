@@ -15,6 +15,7 @@ import Questionnaire from "./pages/Questionnaire";
 
 import Profile from "./pages/Profile";
 import Statistics from "./pages/Statistics";
+import MyStatistic from "./pages/MyStatistic";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -69,9 +70,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home loggedIn={isLoggedIn} />} />
           <Route
-            path="/statics"
+            path="/statistics"
             element={<Statistics loggedIn={isLoggedIn} />}
           />
+          <Route path="/my-statistics/:questionId" element={<MyStatistic />} />
           <Route path="/new-questionnaire" element={<NewQuestionnaire />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register />} />

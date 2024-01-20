@@ -88,7 +88,7 @@ export default function Statistics({ loggedIn }) {
                 <div key={questionnaire.id} className="card">
                   <p>
                     <Link
-                      to={`/questionnaire/${questionnaire.id}`}
+                      to={`/my-statistics/${questionnaire.id}`}
                       className="ujKerdoivGomb"
                     >
                       {questionnaire.title}

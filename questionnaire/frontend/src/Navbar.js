@@ -1,6 +1,6 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
-export default function Navbar({loggedIn, onLogout}) {
+export default function Navbar({ loggedIn, onLogout }) {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
@@ -10,8 +10,10 @@ export default function Navbar({loggedIn, onLogout}) {
         {loggedIn ? (
           <>
             <CustomLink to="/profile">Profil</CustomLink>
-            <CustomLink  to="/statics">Statisztikák</CustomLink>
-            <button className="kijelentkezes-btn" onClick={onLogout}>Kijelentkezés</button>
+            <CustomLink to="/statistics">Statisztikák</CustomLink>
+            <button className="kijelentkezes-btn" onClick={onLogout}>
+              Kijelentkezés
+            </button>
           </>
         ) : (
           <>
@@ -19,16 +21,14 @@ export default function Navbar({loggedIn, onLogout}) {
             <CustomLink to="/register">Regisztráció</CustomLink>
           </>
         )}
-        
       </ul>
-      
     </nav>
-  )
+  );
 }
 
 function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
     <li className={isActive ? "active" : ""}>
@@ -36,5 +36,5 @@ function CustomLink({ to, children, ...props }) {
         {children}
       </Link>
     </li>
-  )
+  );
 }

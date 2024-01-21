@@ -94,8 +94,10 @@ export default function NewQuestionnaire({ loggedIn }) {
   return (
     <div className="main-page">
       <div className="topics">
-        <h1 className="newQues-H1">Új kérdőív hozzáadása</h1>
-
+        <div className="header">
+          <div className="h1">Új kérdőív hozzáadása</div>
+          <div className="underline"></div>
+        </div>
         <form className="inputs" action="" onSubmit={handleSubmit}>
           <div className="category">
             <label className="newQues-label" htmlFor="category">

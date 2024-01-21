@@ -66,4 +66,6 @@ body{
 }
 .kijelentkezes-btn{
   background-color: gray;
+  border-color: gray;
+  cursor: pointer;
 }

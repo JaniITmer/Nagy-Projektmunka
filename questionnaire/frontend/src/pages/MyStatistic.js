@@ -19,7 +19,6 @@ export default function MyStatistic() {
         console.error("Error fetching answers:", error);
       });
   }, [questionId]);
-  
 
   return (
     <div className="main-page">

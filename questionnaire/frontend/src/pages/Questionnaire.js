@@ -15,6 +15,7 @@ export default function Questionnaire() {
     option3: "",
     option4: "",
   });
+  const[error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleInput = (event) => {
@@ -27,6 +28,28 @@ export default function Questionnaire() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!answers.option1 ||
+        !answers.option2 ||
+        !answers.option3 ||
+        !answers.option4
+      ) {
+        setError("Mindent ki kell tölteni!");
+        return
+      }
+
+      setError("");
+
+      axios
+      .post("http://localhost:8080/questionnaire", answers, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        navigate("/");
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  
 
     axios
       .post(`http://localhost:8080/answer/${questionId}`, answers, {
@@ -211,6 +234,7 @@ export default function Questionnaire() {
                 Kérdőív beküldése
               </button>
             </form>
+            {error && <p className="error-mesage">{error}</p>}
           </div>
         ))}
       </div>

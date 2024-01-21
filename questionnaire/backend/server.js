@@ -86,11 +86,13 @@ app.post("/login", async (req, res) => {
         req.session.userId = data[0].id;
         req.session.email = data[0].email;
         req.session.username = data[0].username;
+        req.session.password = data[0].password;
 
         return res.status(200).json({
           userId: data[0].id,
           email: data[0].email,
           username: data[0].username,
+          password: data[0].password,
         });
       } else {
         return res

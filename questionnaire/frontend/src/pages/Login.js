@@ -28,7 +28,7 @@ export default function Login({ onLogin }) {
       .then((res) => {
         console.log("Sikeres bejelentkezés");
         if (res.data.userId) {
-          onLogin(res.data.email);
+          onLogin(res.data.email, res.data.username, res.data.password);
           navigate("/");
         }
       })

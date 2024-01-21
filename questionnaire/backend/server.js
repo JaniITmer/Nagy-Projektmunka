@@ -229,6 +229,44 @@ app.get("/statistics-all-count", authenticateUser, (req, res) => {
   });
 });
 
+//Jelszó módosítás
+app.post("/update-password", authenticateUser, async (req, res) => {
+  const userId = req.session.userId;
+  const { oldPassword, newPassword } = req.body;
+
+  // Lekérjük a felhasználó jelenlegi jelszavát az adatbázisból
+  const getPasswordQuery = "SELECT password FROM users WHERE id = ?";
+  db.query(getPasswordQuery, [userId], async (err, result) => {
+    if (err) {
+      console.error("Error querying database:", err);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    if (!result || result.length === 0) {
+      return res.status(500).json({ error: "Felhasználó nem található az adatbázisban." });
+    }
+
+    // Ellenőrizzük, hogy a megadott régi jelszó helyes-e
+    const isPasswordCorrect = await bcrypt.compare(oldPassword, result[0].password);
+
+    if (!isPasswordCorrect) {
+      return res.status(401).json({ error: "Helytelen régi jelszó!" });
+    }
+
+    // Ha a régi jelszó helyes, akkor frissítjük az újjal
+    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+    const updatePasswordQuery = "UPDATE users SET password = ? WHERE id = ?";
+    db.query(updatePasswordQuery, [hashedNewPassword, userId], (updateErr, updateResult) => {
+      if (updateErr) {
+        console.error("Error updating password:", updateErr);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+
+      return res.status(200).json({ message: "Jelszó sikeresen frissítve!" });
+    });
+  });
+});
+
 //Válasz beküldése
 app.post("/answer/:questionId", authenticateUser, (req, res) => {
   const { questionId } = req.params;

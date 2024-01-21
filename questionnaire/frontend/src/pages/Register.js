@@ -143,19 +143,7 @@ export default function Register() {
                 onChange={handleInput}
               />
             </div>
-            {/*<div className="">
-              <label className="form__label" htmlFor="username">
-                Felhasználónév:{" "}
-              </label>
-              <input
-                type="text"
-                id="username"
-                className="form__input"
-                placeholder="Felhasználónév"
-                name="username"
-                onChange={handleInput}
-              />
-            </div>*/}
+            
             <div className="input">
               <img src={email_icon} alt="" />
               <input
@@ -165,17 +153,7 @@ export default function Register() {
                 onChange={handleInput}
               />
             </div>
-            {/*<label className="form__label" htmlFor="email">
-              Email cím:
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="form__input"
-              placeholder="Email"
-              name="email"
-              onChange={handleInput}
-            />*/}
+            
             <div className="input">
             <img src={passwd_icon} alt="" />
             <input
@@ -206,30 +184,7 @@ export default function Register() {
                 onChange={handleInput}
               />
             </div>
-            <div className="">
-              {/*<label className="form__label" htmlFor="password">
-                Jelszó:{" "}
-              </label>
-              <input
-                className="form__input"
-                type={type}
-                id="password"
-                placeholder="Jelszó"
-                name="password"
-                onChange={(e) => {
-                  handleChange(e.target.value);
-                  handleInput(e);
-                }}
-              />
-              {type === "password" ? (
-                <span className="icon-span" onClick={() => setType("text")}>
-                  <Icon icon={basic_eye_closed} size={30} />
-                </span>
-              ) : (
-                <span className="icon-span" onClick={() => setType("password")}>
-                  <Icon icon={basic_eye} size={30} />
-                </span>
-              )}*/}
+            <div className="">              
             
               <main className="tracker-box">
                 <div className="password_felt">
@@ -302,22 +257,7 @@ export default function Register() {
                   Legalább 8 karaktert tartalmaz
                 </div>
               </main>
-            </div>
-
-            
-            {/*<div className="">
-              <label className="form__label" htmlFor="confirmPassword">
-                Jelszó megerősítése{" "}
-              </label>
-              <input
-                className="form__input"
-                type="password"
-                id="confirmPassword"
-                placeholder="Jelszó megerősítése"
-                name="confirmPassword"
-                onChange={handleInput}
-              />
-                  </div>*/}
+            </div>           
             <div className="footer">
               <button className="button btn_reg" type="submit" variant="outlined">
                 Regisztráció

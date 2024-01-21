@@ -21,24 +21,31 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const storedLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const storedUserEmail = localStorage.getItem("userEmail") || "";
     const storedUsername = localStorage.getItem("username") || "";
+    const storedPassword = localStorage.getItem("password") || "";
 
     setLoggedIn(storedLoggedIn);
     setUserEmail(storedUserEmail);
     setUsername(storedUsername);
+    setPassword(storedPassword);
   }, []);
 
-  const handleLogin = (email) => {
+  const handleLogin = (email, username, password) => {
     setLoggedIn(true);
     setUserEmail(email);
+    setUsername(username);
+    setPassword(password);
 
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userEmail", email);
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
   };
 
   const handleLogout = async () => {

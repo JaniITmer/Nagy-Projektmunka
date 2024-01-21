@@ -6,18 +6,33 @@ import axios from "axios";
 
 export default function Home({ loggedIn }) {
   const [questionnaires, setQuestionnaires] = useState([]);
+  const [completedQuestionnaires, setCompletedQuestionnaires] = useState([]);
 
   useEffect(() => {
     if (loggedIn) {
       axios
-        .get("http://localhost:8080/questions", { withCredentials: true })
-        .then((response) => {
-          const { categories } = processData(response.data);
-          setQuestionnaires(categories);
-        })
-        .catch((error) => {
-          console.error("Error fetching questionnaires:", error);
-        });
+      .get("http://localhost:8080/statistics", { withCredentials: true })
+      .then((response) => {
+        const completedQuestionnaires = response.data.map((answer) => answer.question_id);
+
+        axios
+          .get("http://localhost:8080/questions", { withCredentials: true })
+          .then((response) => {
+            const { categories } = processData(response.data);
+
+            const availableCategories = categories.filter((category) =>
+              category.questionnaires.some((questionnaire) => !completedQuestionnaires.includes(questionnaire.id))
+            );
+
+            setQuestionnaires(availableCategories);
+          })
+          .catch((error) => {
+            console.error("Error fetching questionnaires:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Error fetching completed questionnaires:", error);
+      });
     }
   }, [loggedIn]);
 
@@ -57,7 +72,9 @@ export default function Home({ loggedIn }) {
           {questionnaires.map((category) => (
             <div key={category.name} className="card">
               <h2>{category.name}</h2>
-              {category.questionnaires.map((questionnaire) => (
+              {category.questionnaires
+                .filter((questionnaire) => !completedQuestionnaires.includes(questionnaire.id))
+                .map((questionnaire) => (
                 <div key={questionnaire.id} className="card">
                   <p>
                     <Link

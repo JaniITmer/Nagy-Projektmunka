@@ -14,16 +14,24 @@ export default function Home({ loggedIn }) {
       .get("http://localhost:8080/statistics", { withCredentials: true })
       .then((response) => {
         const completedQuestionnaires = response.data.map((answer) => answer.question_id);
-
         axios
           .get("http://localhost:8080/questions", { withCredentials: true })
           .then((response) => {
             const { categories } = processData(response.data);
 
-            const availableCategories = categories.filter((category) =>
+            const availableCategories = categories
+              .filter((category) =>
               category.questionnaires.some((questionnaire) => !completedQuestionnaires.includes(questionnaire.id))
+            )
+              .map((category) => {
+            const availableQuestionnaires = category.questionnaires.filter(
+              (questionnaire) => !completedQuestionnaires.includes(questionnaire.id)
             );
-
+            return {
+              ...category,
+              questionnaires: availableQuestionnaires,
+            };
+  });
             setQuestionnaires(availableCategories);
           })
           .catch((error) => {

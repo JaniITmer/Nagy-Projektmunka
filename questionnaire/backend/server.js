@@ -268,26 +268,54 @@ app.post("/update-password", authenticateUser, async (req, res) => {
 });
 
 //Válasz beküldése
-app.post("/answer/:questionId", authenticateUser, (req, res) => {
+app.post("/answer/:questionId", authenticateUser, async (req, res) => {
   const { questionId } = req.params;
-  const sqlInsert =
-    "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?, ?, ?, ?, ?, ?)";
-  const insertValues = [
-    req.session.userId,
-    questionId,
-    req.body.option1,
-    req.body.option2,
-    req.body.option3,
-    req.body.option4,
-  ];
+  const userId = req.session.userId;
 
-  db.query(sqlInsert, insertValues, (err, result) => {
-    if (err) {
-      return res.json("Error");
+  // Ellenőrizzük, hogy a felhasználó már kitöltötte-e a kérdőívet
+  const checkExistingAnswer = "SELECT * FROM answers WHERE user_id = ? AND question_id = ?";
+  db.query(checkExistingAnswer, [userId, questionId], async (checkErr, checkResult) => {
+    if (checkErr) {
+      return res.status(500).json({ error: "Internal Server Error" });
     }
 
-    return res.json(result);
+    if (checkResult.length > 0) {
+      // A felhasználó már kitöltötte, ezért töröljük az előző válaszát
+      const deletePreviousAnswer = "DELETE FROM answers WHERE user_id = ? AND question_id = ?";
+      db.query(deletePreviousAnswer, [userId, questionId], (deleteErr, deleteResult) => {
+        if (deleteErr) {
+          return res.status(500).json({ error: "Internal Server Error" });
+        }
+        // Folytassuk az új válasz beküldését
+        insertNewAnswer();
+      });
+    } else {
+      // A felhasználó még nem töltötte ki, folytassuk az új válasz beküldését
+      insertNewAnswer();
+    }
   });
+
+  // Új válasz beküldése
+  const insertNewAnswer = () => {
+    const sqlInsert =
+      "INSERT INTO answers (`user_id`, `question_id`, `option1`, `option2`, `option3`, `option4`) VALUES (?, ?, ?, ?, ?, ?)";
+    const insertValues = [
+      userId,
+      questionId,
+      req.body.option1,
+      req.body.option2,
+      req.body.option3,
+      req.body.option4,
+    ];
+
+    db.query(sqlInsert, insertValues, (err, result) => {
+      if (err) {
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+
+      return res.json(result);
+    });
+  };
 });
 
 // Válasz lekérése

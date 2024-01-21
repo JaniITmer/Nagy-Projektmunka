@@ -60,9 +60,11 @@
 }
 
 .newQues-label {
-  margin-top: 10px;
-  color: gray;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 0px;
+  color: rgb(0, 102, 255);
+  font-family:  Tahoma, sans-serif;
+  font-size: 25px;
+  margin-bottom: 7px;
 }
 
 .newQues-button {

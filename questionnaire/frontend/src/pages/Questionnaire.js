@@ -80,7 +80,10 @@ export default function Questionnaire() {
         {questions.map((question) => (
           <div>
             <form action="" onSubmit={handleSubmit}>
-              <h1>{question.title}</h1>
+            <div className="header">
+              <div className="h1">{question.title}</div>
+              <div className="underline"></div>
+            </div>
               <div className="Ques-div">
                 <h3 className="newQues-label">{question.question1}</h3>
                 <div className="Ques-options-container">

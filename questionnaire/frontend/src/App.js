@@ -57,9 +57,12 @@ function App() {
       setLoggedIn(false);
       setUserEmail("");
       setUsername("");
+      setPassword("");
 
       localStorage.removeItem("isLoggedIn");
       localStorage.removeItem("userEmail");
+      localStorage.removeItem("username");
+      localStorage.removeItem("password");
 
       navigate("/");
     } catch (error) {
@@ -67,9 +70,7 @@ function App() {
     }
   };
 
-  const handleImageChange = (image) => {
-    console.log("Selected image:", image);
-  };
+  
   return (
     <div>
       <Navbar loggedIn={isLoggedIn} onLogout={handleLogout} />
@@ -94,7 +95,7 @@ function App() {
               <Profile
                 userEmail={userEmail}
                 username={username}
-                onImageChange={handleImageChange}
+                password={password}
               />
             }
           />

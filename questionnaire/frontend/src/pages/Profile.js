@@ -38,6 +38,9 @@ const Profile = ({ userEmail, username, password, onPasswordChange }) => {
           <div className='userDatas'>
             <strong className="email">Email cím:</strong> {userEmail}
           </div>
+          <div className='userDatas'>
+            <strong className="email">Jelszó:</strong> {password}
+          </div>
 
           {/*<form class="inputs" onChange={handleUpdatePassword}>
                         <h1 class="h2">Jelszó módosítás</h1>

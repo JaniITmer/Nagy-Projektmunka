@@ -17,12 +17,14 @@ A felhasználó az főoldalon regisztrálhat, majd bejelentkezhet. Amennyiben a 
 | :---: | --- | --- | --- |
 | K1 | Főoldal | Design, Gombok | Könnyen kezelhető, figyelemfelkeltő főoldal |
 | K2 | Főoldal | Kérdőív témák | Témák kialakítása |
-| K3 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
-| K4 | Regisztráció | Design | Regisztrációs felület kialakítása |
-| K5 | Funkció | Jelszó megváltoztatása | A felhasználó megtudja változtatni a jelszavát a profilján |
-| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés, Témák láthatósága</li><li> Felhasználó: kérdőívek kitöltése, statisztika megnézése, jelszó módosítás </li><li>Admin: Kérdőív létrehozása</li></ul>|
-| K7 | Főoldal | Kérdőív témák | Kérdőívek kialakítása |
-| K8 | Kérdőív | Design | Témára kattintás után kérdőívek felsorolása |
+| K3 | Főoldal | Kérdőívek | Kérdőívek kialakítása |
+| K4 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
+| K5 | Regisztráció | Design | Regisztrációs felület kialakítása |
+| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés </li><li> Felhasználó: kérdőívek kitöltése, kérdőívek létrehozása, statisztika megnézése, profil megnézése </li></ul>|
+| K7 | Főoldal | Kérdőív témák, kérdőívek | Témák, Kérdőívek kialakítása |
+| K8 | Kérdőív | Design | Témákon belül kérdőívek megjelenítése |
+| K9 | Statisztika | Design | Kitöltött kérdőívek megjelenítése |
+| K10 | Statisztika | Funkció | Kitöltött kérdőívre kattintás után statisztika megjelenítése |
 
 ## 7. Fogalomtár
 

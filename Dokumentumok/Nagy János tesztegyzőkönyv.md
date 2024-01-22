@@ -89,4 +89,4 @@ A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikail
 
 Tesztelést végezte és írta: Nagy János
 
-Befejezve: 2023.01.22.
+Befejezve: 2024.01.22.

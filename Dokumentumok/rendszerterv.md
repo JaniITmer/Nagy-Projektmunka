@@ -1,9 +1,10 @@
 # Rendszerterv
 ## 1. A rendszer célja
 
-A rendszernek az a célja, hogy a regisztrált felhasználó, az admin jogkörrel rendelkezők álltal létrehozott kérdőíveket ki tudja tölteni.
-A nem regisztrált felhasználó csak a kérdőív témákat láthatja a főoldalon, kitölteni viszont nem tudja őket.
+A rendszernek az a célja, hogy a regisztrált felhasználó, más felhasználói fiókkal rendelkezők álltal létrehozott kérdőíveket ki tudja tölteni.
+A nem regisztrált felhasználó nem fér hozzá a kérdőívekhez, módosítani nem tudja őket.
 A sikeres rigisztráció után a felhasználónak lehetősége van kérdőíveket kitölteni, valamint ha egy adott kérdőívet kitöltött, akkor arról egy statisztikát is megtekinthet.
+A regisztrált felhasználó új kérdőíveket is tud készíteni.
 
 
 

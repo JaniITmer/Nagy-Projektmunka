@@ -10,11 +10,11 @@ A regisztrált felhasználó új kérdőíveket is tud készíteni.
 
 A regisztrációhoz szükséges adatok(a többi felhasználó számára nem publikus adatok):
 
-- email cím*
-- teljes név*
-- születési idő
-- lakcím
-- telefonszám
+- email cím
+- felhasználónév
+- jelszó
+
+
 
 
 A rendszer webböngészőben lesz elérhető, amit React keretrendszerben készítünk el.
@@ -86,6 +86,7 @@ A mérföldkövek későbbi fázisai előzetes eggyeztetés alapján megbeszéle
 ### Nem funkcionális követelmények:
 
 A felhasználók nem férhetnek hozzá más felhasználók személyes adataihoz.
+
 
 
 

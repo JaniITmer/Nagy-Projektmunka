@@ -53,9 +53,9 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :-------: | ------------------- | ------- | -------- | ----- |
-|Főoldal - főoldal megjelenítése1|2024.01.22|A főoldalon vendég módban csak egy szöveg jelejen meg.|A főoldal felületén megjelenik a szöveg.|Megfelelően működik, nem találtam hibát.|
+|Főoldal - főoldal megjelenítése1|2024.01.22|A főoldalon vendég módban csak egy szöveg jelenjen meg.|A főoldal felületén megjelenik a szöveg.|Megfelelően működik, nem találtam hibát.|
 |Főoldal - főoldal megjelenítése1|2024.01.22|A főoldalon felhasználói módban jelenjenek meg a kérdőívek.|A főoldal felületén megjelennek a kérdőívek.|Megfelelően működik, nem találtam hibát.|
-|Regisztráció - gomb kezelés|2024.01.22|A regisztrációs gombra rákattintva regisztráció felület megjelnése.|A regisztrációs felület megjelenik.|Megfelelően működik, nem találtam hibát.|
+|Regisztráció - gomb kezelés|2024.01.22|A regisztrációs gombra rákattintva regisztráció felület megjelenése.|A regisztrációs felület megjelenik.|Megfelelően működik, nem találtam hibát.|
 |Regisztráció - jelszó megjelenítés|2024.01.22|A regisztrációs során a jelszó megjelenítő funkcióra rákattintva megjelenítse a beírt szöveget.|A jelszó megjelenik. |Megfelelően működik, nem találtam hibát.|
 |Regisztráció - adatbázis tárolás|2024.01.22|A regisztráció során felhasználónév, email, jelszó megadása és elmentése az adatbázisba.|A regisztráció során az adatokat az elvártak szerint kerülnek bele az adatbázisba.|Megfelelően működik, nem találtam hibát.|
 |Regisztráció - jelszó ellenőrzés|2024.01.22|A regisztráció során a program végezzen jelszó ellenőrzést.|A program ellenőrzi a jelszó hosszát, speciális karaktereket, kis és nagy betűket.|Megfelelően működik, nem találtam hibát.|
@@ -88,6 +88,6 @@ A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikail
 
 Átadásra készen áll a megrendelőnek.
 
-Tesztelést végezte és írta:
+Tesztelést végezte és írta: Guba Ádám
 
-Befejezve: 2022.xx.xx.
+Befejezve: 2024.01.22

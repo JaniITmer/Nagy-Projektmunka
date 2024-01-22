@@ -53,12 +53,30 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :-------: | ------------------- | ------- | -------- | ----- |
-|    ...    | 2022.xx.xx.         | ...     | ...      | ...   |
+| Főoldal navigáció az oldalak között | 2024.01.22. | A navigációs sávon elhelyezett gombok segítségével navigálhatunk a különböző oldalak, felületek között | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Regisztrációs felület hibakezelés | 2024.01.22. | Helytelen adatok megadása esetén a felhasználó tájékoztatása, nem regisztráljuk a felhasználót | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Regisztráció megfelelő adatokkal | 2024.01.22. | A felhasználó adatai bekerülnek az adatbázisba, majd az oldal a bejelentkező felületre navigálja | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Bejelentkező felület hibakezelés | 2024.01.22. | Helytelen adatok megadása esetén a felhasználó tájékoztatása, nem jelentkeztetjük be a felhasználót | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Bejelentkezés helyes adatok megadásával | 2024.01.22. | Bejelentkezés, a főoldalra navigálja a felhasználót | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Profil menüpont | 2024.01.22. | A profil menüpontot csak bejelentkezett felhasználók látják | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Profil oldal | 2024.01.22. | A profil oldalon megjelenik a bejelentkezett felhasználó felhasználóneve, email címe | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Statisztikák menüpont | 2024.01.22. | A statisztikák menüpontot csak bejelentkezett felhasználók látják | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kérdőív megjelenítés | 2024.01.22. | A kérdőíveket csak bejelentkezett felhasználók látják | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kérdőív megjelenítés témák szerint | 2024.01.22. | A kérdőívek témák szerint csoportosítva jelennek meg | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Új kérdőív létrehozása | 2024.01.22. | Az új kérdőív bekerül az adatbázisba | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Új kérdőív létrehozása üres mezőkkel | 2024.01.22. | Az oldal csak akkor hozza létre az új kérdőívet, ha előtte minden mezőt kitöltöttünk | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kérdőív kitöltése | 2024.01.22. | A kérdőívet kitöltjük, beküldjük, az bekerül az adatbázisba | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kérdőív kitöltésnél hiányos válaszadás | 2024.01.22. | Ha nem válaszolunk minden kérdésre, az oldal tájékoztat, nem küldi be a kérdőívet | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kitöltött kérdőív megjelenítése | 2024.01.22. | A kitöltött kérdőív megjelenik a statisztika oldalon | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Felhasználó kitöltött kérdőíveinek száma | 2024.01.22. | A statisztika oldalon megjelenik, hogy a bejelentkezett felhasználó eddig hány kérdőívet töltött ki | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kérdőív kitöltések száma | 2024.01.22. | A statisztika oldalon megjelenik, hogy az adott kérdőívet, hány felhasználó töltötte ki eddig | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Saját válaszok megtekintése | 2024.01.22. | A felhasználó megtekintheti az általa kitöltött kérdőívekre adott válaszait | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
+| Kijelentkezés gomb | 2024.01.22. | Az oldal kijelentkezteti a felhasználót, visszakerülünk a főoldalra | A funkció az elvárásnak megfelelően működik | Nem találtam hibát |
 
 A Végleges teszt lezajlott és minden funkció rendesen működik, esztétikailag is megfelelő a program.
 
 Átadásra készen áll a megrendelőnek.
 
-Tesztelést végezte és írta:
+Tesztelést végezte és írta: Buru Ádám
 
-Befejezve: 2022.xx.xx.
+Befejezve: 2024.01.22.

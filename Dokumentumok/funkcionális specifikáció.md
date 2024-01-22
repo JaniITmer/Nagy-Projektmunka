@@ -41,16 +41,18 @@ A fentieket figyelmbevéve alkotjuk meg a kérdőív portált, annak érdekében
 | :---: | --- | --- | --- |
 | K1 | Főoldal | Design, Gombok | Könnyen kezelhető, figyelemfelkeltő főoldal |
 | K2 | Főoldal | Kérdőív témák | Témák kialakítása |
-| K3 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
-| K4 | Regisztráció | Design | Regisztrációs felület kialakítása |
-| K5 | Funkció | Jelszó megváltoztatása | A felhasználó megtudja változtatni a jelszavát a profilján |
-| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés </li><li> Felhasználó: kérdőívek kitöltése, kérdőívek létrehozása, statisztika megnézése, jelszó módosítás </li></ul>|
-| K7 | Főoldal | Kérdőív témák | Kérdőívek kialakítása |
-| K8 | Kérdőív | Design | Témára kattintás után kérdőívek felsorolása |
+| K3 | Főoldal | Kérdőívek | Kérdőívek kialakítása |
+| K4 | Bejelentkezés | Design | Bejelentkező felület kialakítása |
+| K5 | Regisztráció | Design | Regisztrációs felület kialakítása |
+| K6 | Jogosultág | Szintek | <ul><li> Vendég: Regisztráció, Belépés </li><li> Felhasználó: kérdőívek kitöltése, kérdőívek létrehozása, statisztika megnézése, profil megnézése </li></ul>|
+| K7 | Főoldal | Kérdőív témák, kérdőívek | Témák, Kérdőívek kialakítása |
+| K8 | Kérdőív | Design | Témákon belül kérdőívek megjelenítése |
+| K9 | Statisztika | Design | Kitöltött kérdőívek megjelenítése |
+| K10 | Statisztika | Funkció | Kitöltött kérdőívre kattintás után statisztika megjelenítése |
 
 ## 6. Használati esetek
--  Vendég: A vendég a főoldalon megtudja nézni milyen kérdőívtémák vannak az oldalon. A vendég ezen kívül regisztrálni és bejelentkezni tud.
--  Felhasználó: A felhasználó a profilja jelszavát megtudja változtatni. Fontos, hogy ők tudnak kitölteni kérdőíveket a választott téma rákattintása után, amint megjelennek az aktuális kérdőívek. A statisztikát már a felhasználók is látják.
+-  Vendég: A vendég a főoldalon kap egy értesítést, hogy vendég módban van. A vendég ezen kívül regisztrálni és bejelentkezni tud.
+-  Felhasználó: A felhasználó a profilján látja a felhasználónevét, illetve az email címét. Fontos, hogy ők tudnak kitölteni kérdőíveket a választott témában, amik megjelennek az aktuális kérdőívek között. Ugyanitt Tudnak létrehozni kérdőívet is. A statisztikát a felhasználók látják egy külön fülön.
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 - Követelménylista K1 és K2 funkció:

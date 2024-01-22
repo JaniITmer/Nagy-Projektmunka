@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles/Profile.css';
 
-const Profile = ({ userEmail, username, password, onPasswordChange, isLoggedIn}) => {
+const Profile = ({ userEmail, username, password, onPasswordChange /*isLoggedIn*/}) => {
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
@@ -38,9 +38,9 @@ const Profile = ({ userEmail, username, password, onPasswordChange, isLoggedIn})
           <div className='userDatas'>
             <strong className="email">Email cím:</strong> {userEmail}
           </div>
-          <div className='userDatas'>
-    <strong className="email">Jelszó:</strong> {isLoggedIn ? password : '********'}
-  </div>
+          {/*<div className='userDatas'>
+            <strong className="email">Jelszó:</strong> {password}
+          </div>*/}
 
           {/*<form class="inputs" onChange={handleUpdatePassword}>
                         <h1 class="h2">Jelszó módosítás</h1>

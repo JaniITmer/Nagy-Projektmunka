@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import email_icon from "../images/email.png";
 import passwd_icon from "../images/password.png";
 
-export default function Login({ onLogin, islogged }) {
+export default function Login({ onLogin/*, islogged*/ }) {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -28,12 +28,12 @@ export default function Login({ onLogin, islogged }) {
       .then((res) => {
         console.log("Sikeres bejelentkezés");
         if (res.data.userId) {
-          onLogin({
-            email: res.data.email,
-            username: res.data.username,
-            password: res.data.password,
-            isLoggedIn: true, 
-          });
+          onLogin(
+            res.data.email,
+            res.data.username,
+            res.data.password
+            /*isLoggedIn: true, */
+          );
           navigate("/");
         }
       })
